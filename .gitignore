@@ -89,4 +89,5 @@
 *.cache/
 vivado-library
 __old/
+!*.md
 
