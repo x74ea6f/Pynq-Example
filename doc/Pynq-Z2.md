@@ -350,7 +350,7 @@ HDMIは、base.bit使ったキャプチャ～出力だけ。
 
 ### base.bit for 2020.1
 2019.1を入れるのはめんどうなので2020.1版を作った。  
-[Pynq/base_copy](https://) ##TODO ここにrepositoryのURL入れる.
+[Pynq/base_copy](../base_copy/)
 
 ### Jupyter
 - Jupyterを開くとサンプルがたくさんある。
