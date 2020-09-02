@@ -89,4 +89,7 @@
 *.cache/
 __old/
 !*.md
-
+pynq_vivado.srcs/sources_1/bd/top_design/ip
+sim/
+synth/
+*.runs/
