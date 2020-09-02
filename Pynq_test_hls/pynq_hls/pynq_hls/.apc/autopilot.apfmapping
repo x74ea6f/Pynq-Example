@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="sample_func.h" path="C:\Users\iizuk\Vivado_Project\Pynq-Examples\Pynq_test_hls\pynq_hls\src\sample_func.h"/>
+    <originFiles name="sample_func.cpp" path="C:\Users\iizuk\Vivado_Project\Pynq-Examples\Pynq_test_hls\pynq_hls\src\sample_func.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="tb_sample_func.cpp" path="C:\Users\iizuk\Vivado_Project\Pynq-Examples\Pynq_test_hls\pynq_hls\src\tb_sample_func.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
