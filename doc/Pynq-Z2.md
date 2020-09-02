@@ -97,45 +97,45 @@ ARMなので、コンパイルが必要。
 
 おおざっぱなやり方。  
 途中で何度か`sudo reboot now`入れてる。  
-```
-cd /lib/modules/4.19.0-xilinx-v2019.1/build
-sudo make ARCH=arm UIMAGE_LOADADDR=0x8000 uImage
+```bash
+$ cd /lib/modules/4.19.0-xilinx-v2019.1/build
+$ sudo make ARCH=arm UIMAGE_LOADADDR=0x8000 uImage
 ## これでbuild中に色々作られる。
 ## 途中でエラー出るけど気にしない。
 
-cd ~
-git clone -b v5.2.2.4 https://github.com/quickreflex/rtl8188eus.git
-cd rtl*
-make ARCH=arm
-sudo make install
+$ cd ~
+$ git clone -b v5.2.2.4 https://github.com/quickreflex/rtl8188eus.git
+$ cd rtl*
+$ make ARCH=arm
+$ sudo make install
 ## /lib/modules/4.19.0-xilinx-v2019.1/kernel/drivers/net/wireless/8188eu.ko
 ## ここにドライバがインストールされる
 
-sudo ifconfig wlan0 down
-sudo iw dev wlan0 set type managed
-sudo ifconfig wlan0 up
+$ sudo ifconfig wlan0 down
+$ sudo iw dev wlan0 set type managed
+$ sudo ifconfig wlan0 up
 
-ifconfig -a
+$ ifconfig -a
 ## ip v6しか出ない
 
 ## wpa_supplicantが相性悪い様子。
 ## NetworkManager使う。
   ## wpa_supplicantで、ハマった。
-sudo vi /etc/netplan/50-cloud-init.yaml
+$ sudo vi /etc/netplan/50-cloud-init.yaml
 
 network:
     version: 2
     renderer: NetworkManager
 
-sudo nmtui
+$ sudo nmtui
 ## TUIが起動するのでよしなに。
-ifconfig -a
+$ ifconfig -a
 ## IP v4取れてればいい。
 
-route -n
+$ route -n
 ## メトリクス低いとインターネットに繋がらない(?)。
 
-sudo ifdown eth0:1
+$ sudo ifdown eth0:1
 ## 安定したら
 ## /etc/network/interfaces.d/eth0
 ## から消す
@@ -338,7 +338,6 @@ HDMIは、base.bit使ったキャプチャ～出力だけ。
 1. base.bitの代わりに使える。
 
     ```python
-
     from pynq.overlays.base import BaseOverlay
     
     base = BaseOverlay("base.bit")
