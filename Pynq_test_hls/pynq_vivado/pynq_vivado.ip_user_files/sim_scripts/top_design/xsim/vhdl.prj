@@ -1,0 +1,6 @@
+vhdl xil_defaultlib  \
+"../../../bd/top_design/ip/top_design_rst_ps7_0_50M_0/sim/top_design_rst_ps7_0_50M_0.vhd" \
+"../../../bd/top_design/ip/top_design_axi_gpio_0_0/sim/top_design_axi_gpio_0_0.vhd" \
+"../../../bd/top_design/ip/top_design_axi_gpio_1_0/sim/top_design_axi_gpio_1_0.vhd" \
+
+nosort
