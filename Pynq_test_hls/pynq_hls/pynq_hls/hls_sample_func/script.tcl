@@ -5,9 +5,9 @@
 ############################################################
 open_project pynq_hls
 set_top pynq_sample_func
-add_files src/sample_func.h -cflags "-std=c++11"
 add_files src/sample_func.cpp -cflags "-std=c++11"
-add_files -tb src/tb_sample_func.cpp
+add_files src/sample_func.h -cflags "-std=c++11"
+add_files -tb src/tb_sample_func.cpp -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 open_solution "hls_sample_func"
 set_part {xc7z020-clg400-1}
 create_clock -period 20 -name default
