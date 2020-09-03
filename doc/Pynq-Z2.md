@@ -524,5 +524,27 @@ ERROR: [SIM 211-100] CSim failed with errors.
 めんどい。  
 
 
+### git update
+Pynq上でのgitのアップデート  
+`add-apt-repository ppa:git-core/ppa`やるとエラーが出る。  
+こんなの登録されてない的な`/etc/lsb-release`。  
 
+- [RaspbianにUbuntu用のPPAを追加する - Qiita](https://qiita.com/hnw/items/734f82bee26a40269c1b)  
+ここに沿って実行する。
 
+- [Git stable releases : “Ubuntu Git Maintainers” team](https://launchpad.net/~git-core/+archive/ubuntu/ppa)  
+Signing KeyとリポジトリURLここから。[`Technical details about this PPA`]
+
+他のソフトでもUbuntu用にバイナリあるのであれば、行けるんじゃないかなぁ?  
+
+### vim update
+Pynq上でのvimのアップデート  
+- [Vim : Jonathon F](https://launchpad.net/~jonathonf/+archive/ubuntu/vim)
+
+これで、`apt install vim`だとvim, vim-common, vim-runtimeのバージョンが違うってインストールできない。  
+バージョン合わせる。  
+`sudo apt-cache showpkg vim`で最新ぽいのを見つける。  
+
+```
+sudo apt install vim=2:8.2.1449-0york0~18.04 vim-common=2:8.2.1449-0york0~18.04 vim-runtime=2:8.2.1449-0york0~18.04
+```
