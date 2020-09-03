@@ -1,0 +1,6 @@
+impl/
+syn/
+.autopilot/
+*.log
+.debug/
+
