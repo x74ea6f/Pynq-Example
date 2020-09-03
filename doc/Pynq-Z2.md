@@ -411,16 +411,16 @@ extern "C" void select_mic(int iic_index) {
     - AXI_HPをInterConnectに繋げば、自作HLSからDDRアクセス可能
 
 ### Repos
-- [vivado]() ##TODO ここにrepositoryのURL入れる
-- [hls]() ##TODO ここにrepositoryのURL入れる
-- [JupyterNotebook]() ##TODO ここにrepositoryのURL入れる
+- [vivado](../Pynq_test_hls/pynq_vivado/)
+- [hls](../Pynq_test_hls/pynq_hls/)
+- [JupyterNotebook](../Pynq_test_hls/jupyter/)
 
 
 ### 解説
 hlsは、シンプルなもの。IOとレジスタ。  
-テストベンチも作成した。  
+hlsテストベンチも作成した。  
 vivadoデザインは、ZYNQ, GPIO(hlsのIO制御)、他は接続のみ。  
-詳細は、Notebook。  
+実行と詳細は、Notebook。  
 
 <!--- #### 挫折
 
@@ -440,8 +440,8 @@ dma_vmemが思った以上に設定レジスタがあって、挫折した。
 --->
 
 ## 機械学習
-ここらへんを実装してみる。
-[FPGAでDeep Learningしてみる - Qiita](https://qiita.com/ykshr/items/6c8cff881a200a781dc3)
+ここらへんを実装してみる。##TODO  
+- [FPGAでDeep Learningしてみる - Qiita](https://qiita.com/ykshr/items/6c8cff881a200a781dc3)
 
 
 
