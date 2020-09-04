@@ -440,13 +440,14 @@ dma_vmemが思った以上に設定レジスタがあって、挫折した。
 
 --->
 
-## 機械学習
-ここらへんを実装してみる。##TODO  
+## 機械学習 ##TODO
 - [FPGAでDeep Learningしてみる - Qiita](https://qiita.com/ykshr/items/6c8cff881a200a781dc3)
+★ ここらへんを実装してみる。
 
+- [【読解】 Binarized Neural Networks - Qiita](https://qiita.com/harmegiddo/items/8988a60430dc6184a033)  
+BNNの解説
 
-
-
+- 
 
 
 
@@ -548,3 +549,61 @@ Pynq上でのvimのアップデート
 ```
 sudo apt install vim=2:8.2.1449-0york0~18.04 vim-common=2:8.2.1449-0york0~18.04 vim-runtime=2:8.2.1449-0york0~18.04
 ```
+
+### pynq update
+Python pynqパッケージのアップデート。  
+Cythonがaptに古いのしか無いのでコンパイルする。  
+
+```
+## [Cython · PyPI](https://pypi.org/project/Cython/#files)
+
+$ wget https://files.pythonhosted.org/packages/6c/9f/f501ba9d178aeb1f5bf7da1ad5619b207c90ac235d9859961c11829d0160/Cython-0.29.21.tar.gz
+
+$ tar xvf Cython*.gz
+$ cd Cython*
+$ sudo python3 setup.py install
+
+$ sudo pip3 install --upgrade --upgrade-strategy only-if-needed pynq
+```
+
+### Jupyter by root
+PynqのライブラリがRootでしか動かないからか、Jupyterもroot権限で動いてる。`!whoami`  
+つまり、Jupyterに入れればやりたい放題できるようになる。  
+せめて初期パスワード(xilinx)は変えておこう。  
+
+```
+## これがよくわらんけどあったので捨てる。普通は無いかも。
+$ sudo mv /home/xilinx/jupyter_notebook_config.py /home/xilinx/__jupytr_notebook_config.py
+
+## このファイルから`c.NotebookApp.password = 'xx'`のところをコメントアウト。
+$ sudo vi /root/.jupyter/jupyter_notebook_config.py
+
+## パスワード設定
+$ sudo jupyter-notebook password
+
+## 再起動
+$ sudo systemctl restart jupyter.service
+```
+
+
+### mount img
+pynqのSDイメージをマウントしたい時。  
+moutコマンドのoffset=は、Startの所*512。  
+```
+$ fdisk -l -u pynq_z2_v2.5.img
+Disk pynq_z2_v2.5.img: 5.4 GiB, 5834895360 bytes, 11396280 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x7a649332
+
+Device            Boot  Start      End  Sectors  Size Id Type
+pynq_z2_v2.5.img1 *      2048   206847   204800  100M  c W95 FAT32 (LBA)
+pynq_z2_v2.5.img2      206848 11396279 11189432  5.3G 83 Linux
+
+$ sudo mkdir /mnt/img
+$ sudo mount -t ext4 -o loop,offset=$((206848*512)) pynq_z2_v2.5.img /mnt/img
+
+```
+
