@@ -442,12 +442,15 @@ dma_vmemが思った以上に設定レジスタがあって、挫折した。
 
 ## 機械学習 ##TODO
 - [FPGAでDeep Learningしてみる - Qiita](https://qiita.com/ykshr/items/6c8cff881a200a781dc3)
-★ ここらへんを実装してみる。
+★ ここらへんを実行してみる。
 
 - [【読解】 Binarized Neural Networks - Qiita](https://qiita.com/harmegiddo/items/8988a60430dc6184a033)  
 BNNの解説
 
-- 
+- [Xilinx/BNN-PYNQ: Quantized Neural Networks (QNNs) on PYNQ](https://github.com/Xilinx/BNN-PYNQ)
+BNNのライブラリ
+
+- [FPGAでDeep Learningしてみる - きゅうりを選果する - Qiita](https://qiita.com/ykshr/items/08147098516a45203761)
 
 
 
@@ -553,6 +556,7 @@ sudo apt install vim=2:8.2.1449-0york0~18.04 vim-common=2:8.2.1449-0york0~18.04 
 ### pynq update
 Python pynqパッケージのアップデート。  
 Cythonがaptに古いのしか無いのでコンパイルする。  
+あと、他にもちょいちょいエラー出るけど、単体インストールすると治ったり、ぐぐればたいてい大丈夫。  
 
 ```
 ## [Cython · PyPI](https://pypi.org/project/Cython/#files)
@@ -606,4 +610,21 @@ $ sudo mkdir /mnt/img
 $ sudo mount -t ext4 -o loop,offset=$((206848*512)) pynq_z2_v2.5.img /mnt/img
 
 ```
+
+## Mnist memo
+- [ディープ・ラーニング－ハードウエア化への道](http://digitalfilter.com/deeponhw/deeponhw01.html)  
+ここ参考。
+
+- [oreilly-japan/deep-learning-from-scratch: 『ゼロから作る Deep Learning』(O'Reilly Japan, 2016)](https://github.com/oreilly-japan/deep-learning-from-scratch)  
+Python側はここの改造`ch03/neuralnet_mnist.py`
+
+### Repos
+##TODO ここにレポジトリを貼る
+
+
+### ILA(Integrated Logic Analyzer)
+- ILAを
+- USBを繋ぐ(USB-JTAGになってるスゴイ!)
+- 
+##TODO ここに使い方を書く
 
