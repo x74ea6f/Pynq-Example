@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="copy_mem" xd:componentRef="copy_mem" xd:initiationInterval="x" xd:clockPeriod="20.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="*(extMemPtr)" xd:originalName="extMemPtr" xd:direction="inout" xd:interfaceRef="m_axi_extMemPtr_V" xd:busTypeRef="aximm" xd:arraySize="32" xd:dataWidth="32" xd:bufferDirection="inout"/>
+  <xd:arg xd:name="inputBaseMemAdr" xd:originalName="inputBaseMemAdr" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x10" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="outputBaseMemAdr" xd:originalName="outputBaseMemAdr" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x18" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="loadSize" xd:originalName="loadSize" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x20" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="1092" xd:FF="1027" xd:BRAM="2" xd:DSP="0"/>
+</xd:acceleratorMap>
