@@ -623,8 +623,17 @@ Python側はここの改造`ch03/neuralnet_mnist.py`
 
 
 ### ILA(Integrated Logic Analyzer)
-- ILAを
+- ILAをDesignに入れる。
+- ILAをAXIにして、モニタしたいところを繋ぐ。
+- クロックも繋ぐ。
+- コンパイルしてBitを書き込む。
 - USBを繋ぐ(USB-JTAGになってるスゴイ!)
-- 
+- HARDWARE MANAGERを開く
+- Open Target, Auto connect
+- FPGAデバイスの中にILAが見える。
+- Trigger Setup, +, RVALIDとか
+- Run Trigger
+- (Jupyterとかで転送をする。)
+- 波形で見える。
 ##TODO ここに使い方を書く
 

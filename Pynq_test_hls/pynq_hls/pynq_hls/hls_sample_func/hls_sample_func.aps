@@ -43,7 +43,7 @@
         </UIAutoSimConf>
     </UIConfigurations>
     <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" rtl="verilog" rtlButton="true" rtlCombo="verilog">
-        <Format description="sample function" display_name="sample_func" formatName="ip_catalog" vendor="sample" version="0.94" library="" ipname="" driver_input_dir="" taxonomy=""/>
+        <Format description="sample function" display_name="sample_func" formatName="ip_catalog" vendor="sample" version="0.94"/>
         <Format formatName="sysgen"/>
         <Format formatName="sysgen_ise"/>
         <Format formatName="syn_dcp"/>
