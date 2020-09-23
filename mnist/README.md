@@ -33,7 +33,7 @@ python3 neuralnet_mnist_int.py
 ```
 
 #### Python側、RTL版の実行
-これ参照。`mnist.ipynb`
+これ参照。[mnist.ipynb](./jupyter/mnist.ipynb)
 
 
 
