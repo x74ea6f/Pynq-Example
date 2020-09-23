@@ -36,4 +36,10 @@ python3 neuralnet_mnist_int.py
 これ参照。[mnist.ipynb](./jupyter/mnist.ipynb)
 
 
+### Links
+- [ディープ・ラーニング－ハードウエア化への道](http://digitalfilter.com/deeponhw/deeponhw01.html)  
+ここ参考。
+
+- [oreilly-japan/deep-learning-from-scratch: 『ゼロから作る Deep Learning』(O'Reilly Japan, 2016)](https://github.com/oreilly-japan/deep-learning-from-scratch)  
+Python側はここの改造`ch03/neuralnet_mnist.py`
 
