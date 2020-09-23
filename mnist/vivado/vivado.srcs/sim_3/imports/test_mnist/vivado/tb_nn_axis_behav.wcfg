@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_nn_axis_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_nn_axis" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="9712518fs"></ZoomStartTime>
+      <ZoomEndTime time="9728694fs"></ZoomEndTime>
+      <Cursor1Time time="85376000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="274"></NameColumnWidth>
+      <ValueColumnWidth column_width="99"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="19" />
+   <wvobject fp_name="group111" type="group">
+      <obj_property name="label">top</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb_nn_axis/aclk" type="logic">
+         <obj_property name="ElementShortName">aclk</obj_property>
+         <obj_property name="ObjectShortName">aclk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/aresetn" type="logic">
+         <obj_property name="ElementShortName">aresetn</obj_property>
+         <obj_property name="ObjectShortName">aresetn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/i_clear" type="logic">
+         <obj_property name="ElementShortName">i_clear</obj_property>
+         <obj_property name="ObjectShortName">i_clear</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/s_tvalid" type="logic">
+         <obj_property name="ElementShortName">s_tvalid</obj_property>
+         <obj_property name="ObjectShortName">s_tvalid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/s_tready" type="logic">
+         <obj_property name="ElementShortName">s_tready</obj_property>
+         <obj_property name="ObjectShortName">s_tready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/s_tdata" type="array">
+         <obj_property name="ElementShortName">s_tdata[0:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_tdata[0:0][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/s_tlast" type="logic">
+         <obj_property name="ElementShortName">s_tlast</obj_property>
+         <obj_property name="ObjectShortName">s_tlast</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/m_tvalid" type="logic">
+         <obj_property name="ElementShortName">m_tvalid</obj_property>
+         <obj_property name="ObjectShortName">m_tvalid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/m_tready" type="logic">
+         <obj_property name="ElementShortName">m_tready</obj_property>
+         <obj_property name="ObjectShortName">m_tready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/m_tdata" type="array">
+         <obj_property name="ElementShortName">m_tdata[3:0]</obj_property>
+         <obj_property name="ObjectShortName">m_tdata[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/m_tlast" type="logic">
+         <obj_property name="ElementShortName">m_tlast</obj_property>
+         <obj_property name="ObjectShortName">m_tlast</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/i" type="array">
+         <obj_property name="ElementShortName">i[31:0]</obj_property>
+         <obj_property name="ObjectShortName">i[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/exp_target_valid" type="logic">
+         <obj_property name="ElementShortName">exp_target_valid</obj_property>
+         <obj_property name="ObjectShortName">exp_target_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/exp_target_data" type="array">
+         <obj_property name="ElementShortName">exp_target_data[0:0][12:0]</obj_property>
+         <obj_property name="ObjectShortName">exp_target_data[0:0][12:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/exp_data" type="array">
+         <obj_property name="ElementShortName">exp_data[0:0][12:0]</obj_property>
+         <obj_property name="ObjectShortName">exp_data[0:0][12:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/exp_count" type="array">
+         <obj_property name="ElementShortName">exp_count[31:0]</obj_property>
+         <obj_property name="ObjectShortName">exp_count[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/exp_error_flag" type="logic">
+         <obj_property name="ElementShortName">exp_error_flag</obj_property>
+         <obj_property name="ObjectShortName">exp_error_flag</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group51" type="group">
+      <obj_property name="label">argmax</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/\genblk2.argmax /clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/\genblk2.argmax /rstn" type="logic">
+         <obj_property name="ElementShortName">rstn</obj_property>
+         <obj_property name="ObjectShortName">rstn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/\genblk2.argmax /i_clear" type="logic">
+         <obj_property name="ElementShortName">i_clear</obj_property>
+         <obj_property name="ObjectShortName">i_clear</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/\genblk2.argmax /i_valid" type="logic">
+         <obj_property name="ElementShortName">i_valid</obj_property>
+         <obj_property name="ObjectShortName">i_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/\genblk2.argmax /o_ready" type="logic">
+         <obj_property name="ElementShortName">o_ready</obj_property>
+         <obj_property name="ObjectShortName">o_ready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/\genblk2.argmax /i_data" type="array">
+         <obj_property name="ElementShortName">i_data[0:0][12:0]</obj_property>
+         <obj_property name="ObjectShortName">i_data[0:0][12:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/\genblk2.argmax /o_valid" type="logic">
+         <obj_property name="ElementShortName">o_valid</obj_property>
+         <obj_property name="ObjectShortName">o_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/\genblk2.argmax /i_ready" type="logic">
+         <obj_property name="ElementShortName">i_ready</obj_property>
+         <obj_property name="ObjectShortName">i_ready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/\genblk2.argmax /o_data" type="array">
+         <obj_property name="ElementShortName">o_data[3:0]</obj_property>
+         <obj_property name="ObjectShortName">o_data[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/\genblk2.argmax /max_data" type="array">
+         <obj_property name="ElementShortName">max_data[12:0]</obj_property>
+         <obj_property name="ObjectShortName">max_data[12:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/\genblk2.argmax /max_index" type="array">
+         <obj_property name="ElementShortName">max_index[3:0]</obj_property>
+         <obj_property name="ObjectShortName">max_index[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/\genblk2.argmax /now_index" type="array">
+         <obj_property name="ElementShortName">now_index[3:0]</obj_property>
+         <obj_property name="ObjectShortName">now_index[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/\genblk2.argmax /i_data_max" type="array">
+         <obj_property name="ElementShortName">i_data_max[12:0]</obj_property>
+         <obj_property name="ObjectShortName">i_data_max[12:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/\genblk2.argmax /i_data_max_index" type="array">
+         <obj_property name="ElementShortName">i_data_max_index[12:0]</obj_property>
+         <obj_property name="ObjectShortName">i_data_max_index[12:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/\genblk2.argmax /o_valid_d" type="logic">
+         <obj_property name="ElementShortName">o_valid_d</obj_property>
+         <obj_property name="ObjectShortName">o_valid_d</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/\genblk2.argmax /o_data_d" type="array">
+         <obj_property name="ElementShortName">o_data_d[3:0]</obj_property>
+         <obj_property name="ObjectShortName">o_data_d[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/\genblk2.argmax /internal_clear" type="logic">
+         <obj_property name="ElementShortName">internal_clear</obj_property>
+         <obj_property name="ObjectShortName">internal_clear</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group55" type="group">
+      <obj_property name="label">l2_dense</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/dense/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/dense/rstn" type="logic">
+         <obj_property name="ElementShortName">rstn</obj_property>
+         <obj_property name="ObjectShortName">rstn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/dense/i_clear" type="logic">
+         <obj_property name="ElementShortName">i_clear</obj_property>
+         <obj_property name="ObjectShortName">i_clear</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/dense/i_valid" type="logic">
+         <obj_property name="ElementShortName">i_valid</obj_property>
+         <obj_property name="ObjectShortName">i_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/dense/o_ready" type="logic">
+         <obj_property name="ElementShortName">o_ready</obj_property>
+         <obj_property name="ObjectShortName">o_ready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/dense/i_data" type="array">
+         <obj_property name="ElementShortName">i_data[0:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">i_data[0:0][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/dense/o_valid" type="logic">
+         <obj_property name="ElementShortName">o_valid</obj_property>
+         <obj_property name="ObjectShortName">o_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/dense/i_ready" type="logic">
+         <obj_property name="ElementShortName">i_ready</obj_property>
+         <obj_property name="ObjectShortName">i_ready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/dense/o_data" type="array">
+         <obj_property name="ElementShortName">o_data[0:0][12:0]</obj_property>
+         <obj_property name="ObjectShortName">o_data[0:0][12:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/dense/o_w_addr" type="array">
+         <obj_property name="ElementShortName">o_w_addr[6:0]</obj_property>
+         <obj_property name="ObjectShortName">o_w_addr[6:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/dense/i_w_data" type="array">
+         <obj_property name="ElementShortName">i_w_data[9:0][0:0][8:0]</obj_property>
+         <obj_property name="ObjectShortName">i_w_data[9:0][0:0][8:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/dense/o_b_addr" type="array">
+         <obj_property name="ElementShortName">o_b_addr[3:0]</obj_property>
+         <obj_property name="ObjectShortName">o_b_addr[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/dense/i_b_data" type="array">
+         <obj_property name="ElementShortName">i_b_data[0:0][8:0]</obj_property>
+         <obj_property name="ObjectShortName">i_b_data[0:0][8:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/dense/internal_valid" type="logic">
+         <obj_property name="ElementShortName">internal_valid</obj_property>
+         <obj_property name="ObjectShortName">internal_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/dense/count_in" type="array">
+         <obj_property name="ElementShortName">count_in[6:0]</obj_property>
+         <obj_property name="ObjectShortName">count_in[6:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/dense/i_data_dly" type="array">
+         <obj_property name="ElementShortName">i_data_dly[0:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">i_data_dly[0:0][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/dense/i_valid_dly" type="logic">
+         <obj_property name="ElementShortName">i_valid_dly</obj_property>
+         <obj_property name="ObjectShortName">i_valid_dly</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/dense/sums" type="array">
+         <obj_property name="ElementShortName">sums[9:0][23:0]</obj_property>
+         <obj_property name="ObjectShortName">sums[9:0][23:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/dense/o_ready_d" type="logic">
+         <obj_property name="ElementShortName">o_ready_d</obj_property>
+         <obj_property name="ObjectShortName">o_ready_d</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/dense/out_valid_d" type="logic">
+         <obj_property name="ElementShortName">out_valid_d</obj_property>
+         <obj_property name="ObjectShortName">out_valid_d</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l2/dense/out_valid_d_dly" type="logic">
+         <obj_property name="ElementShortName">out_valid_d_dly</obj_property>
+         <obj_property name="ObjectShortName">out_valid_d_dly</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group138" type="group">
+      <obj_property name="label">l0_dense</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l0/dense/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l0/dense/rstn" type="logic">
+         <obj_property name="ElementShortName">rstn</obj_property>
+         <obj_property name="ObjectShortName">rstn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l0/dense/i_clear" type="logic">
+         <obj_property name="ElementShortName">i_clear</obj_property>
+         <obj_property name="ObjectShortName">i_clear</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l0/dense/i_valid" type="logic">
+         <obj_property name="ElementShortName">i_valid</obj_property>
+         <obj_property name="ObjectShortName">i_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l0/dense/o_ready" type="logic">
+         <obj_property name="ElementShortName">o_ready</obj_property>
+         <obj_property name="ObjectShortName">o_ready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l0/dense/i_data" type="array">
+         <obj_property name="ElementShortName">i_data[0:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">i_data[0:0][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l0/dense/o_valid" type="logic">
+         <obj_property name="ElementShortName">o_valid</obj_property>
+         <obj_property name="ObjectShortName">o_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l0/dense/i_ready" type="logic">
+         <obj_property name="ElementShortName">i_ready</obj_property>
+         <obj_property name="ObjectShortName">i_ready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l0/dense/o_data" type="array">
+         <obj_property name="ElementShortName">o_data[0:0][12:0]</obj_property>
+         <obj_property name="ObjectShortName">o_data[0:0][12:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l0/dense/o_w_addr" type="array">
+         <obj_property name="ElementShortName">o_w_addr[9:0]</obj_property>
+         <obj_property name="ObjectShortName">o_w_addr[9:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l0/dense/i_w_data" type="array">
+         <obj_property name="ElementShortName">i_w_data[49:0][0:0][8:0]</obj_property>
+         <obj_property name="ObjectShortName">i_w_data[49:0][0:0][8:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l0/dense/o_b_addr" type="array">
+         <obj_property name="ElementShortName">o_b_addr[5:0]</obj_property>
+         <obj_property name="ObjectShortName">o_b_addr[5:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l0/dense/i_b_data" type="array">
+         <obj_property name="ElementShortName">i_b_data[0:0][8:0]</obj_property>
+         <obj_property name="ObjectShortName">i_b_data[0:0][8:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l0/dense/internal_valid" type="logic">
+         <obj_property name="ElementShortName">internal_valid</obj_property>
+         <obj_property name="ObjectShortName">internal_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l0/dense/count_in" type="array">
+         <obj_property name="ElementShortName">count_in[9:0]</obj_property>
+         <obj_property name="ObjectShortName">count_in[9:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l0/dense/count_out" type="array">
+      <obj_property name="ElementShortName">count_out[5:0]</obj_property>
+      <obj_property name="ObjectShortName">count_out[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l0/dense/out_valid_d" type="logic">
+      <obj_property name="ElementShortName">out_valid_d</obj_property>
+      <obj_property name="ObjectShortName">out_valid_d</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l0/dense/out_valid_d_dly" type="logic">
+      <obj_property name="ElementShortName">out_valid_d_dly</obj_property>
+      <obj_property name="ObjectShortName">out_valid_d_dly</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l0/dense/count_out_dly" type="array">
+      <obj_property name="ElementShortName">count_out_dly[5:0]</obj_property>
+      <obj_property name="ObjectShortName">count_out_dly[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l0/dense/o_data_d" type="array">
+      <obj_property name="ElementShortName">o_data_d[0:0][12:0]</obj_property>
+      <obj_property name="ObjectShortName">o_data_d[0:0][12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l0/dense/\genblk2[0].sum_sft " type="array">
+      <obj_property name="ElementShortName">\genblk2[0].sum_sft [18:0]</obj_property>
+      <obj_property name="ObjectShortName">\genblk2[0].sum_sft [18:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l0/dense/\genblk2[0].sum_bias " type="array">
+      <obj_property name="ElementShortName">\genblk2[0].sum_bias [19:0]</obj_property>
+      <obj_property name="ObjectShortName">\genblk2[0].sum_bias [19:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l0/dense/\genblk2[0].sum_clp " type="array">
+      <obj_property name="ElementShortName">\genblk2[0].sum_clp [12:0]</obj_property>
+      <obj_property name="ObjectShortName">\genblk2[0].sum_clp [12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l0/dense/\genblk1[0].mul " type="array">
+      <obj_property name="ElementShortName">\genblk1[0].mul [0:0][16:0]</obj_property>
+      <obj_property name="ObjectShortName">\genblk1[0].mul [0:0][16:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l0/dense/\genblk1[0].sum " type="array">
+      <obj_property name="ElementShortName">\genblk1[0].sum [26:0]</obj_property>
+      <obj_property name="ObjectShortName">\genblk1[0].sum [26:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l0/dense/\genblk1[0].sum_d " type="array">
+      <obj_property name="ElementShortName">\genblk1[0].sum_d [26:0]</obj_property>
+      <obj_property name="ObjectShortName">\genblk1[0].sum_d [26:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l0/dense/o_w_addr" type="array">
+      <obj_property name="ElementShortName">o_w_addr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">o_w_addr[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l0/dense/i_w_data" type="array">
+      <obj_property name="ElementShortName">i_w_data[49:0][0:0][8:0]</obj_property>
+      <obj_property name="ObjectShortName">i_w_data[49:0][0:0][8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l0/dense/i_data" type="array">
+      <obj_property name="ElementShortName">i_data[0:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">i_data[0:0][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/l0/dense/i_data_dly" type="array">
+      <obj_property name="ElementShortName">i_data_dly[0:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">i_data_dly[0:0][7:0]</obj_property>
+   </wvobject>
+</wave_config>
