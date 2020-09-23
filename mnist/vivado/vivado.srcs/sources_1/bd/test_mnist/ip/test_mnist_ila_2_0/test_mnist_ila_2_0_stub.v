@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Thu Sep 17 10:21:56 2020
+// Date        : Wed Sep 23 11:59:40 2020
 // Host        : DESKTOP-OMB4GFF running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub -rename_top test_mnist_ila_2_0 -prefix
 //               test_mnist_ila_2_0_ test_mnist_ila_0_0_stub.v

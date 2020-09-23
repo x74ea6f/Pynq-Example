@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Fri Sep 18 14:45:11 2020
+// Date        : Wed Sep 23 12:00:51 2020
 // Host        : DESKTOP-OMB4GFF running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/Vivado_Project/Pynq/test_mnist/vivado/vivado.srcs/sources_1/bd/test_mnist/ip/test_mnist_axi_dma_0/test_mnist_axi_dma_0_sim_netlist.v
+//               c:/Vivado_Project/Pynq-Examples/mnist/vivado/vivado.srcs/sources_1/bd/test_mnist/ip/test_mnist_axi_dma_0/test_mnist_axi_dma_0_sim_netlist.v
 // Design      : test_mnist_axi_dma_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.

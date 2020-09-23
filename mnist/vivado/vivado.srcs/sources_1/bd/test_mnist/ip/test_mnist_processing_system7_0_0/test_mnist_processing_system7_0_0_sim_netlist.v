@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Thu Sep 17 10:21:15 2020
+// Date        : Wed Sep 23 11:58:14 2020
 // Host        : DESKTOP-OMB4GFF running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/Vivado_Project/Pynq/test_mnist/vivado/vivado.srcs/sources_1/bd/test_mnist/ip/test_mnist_processing_system7_0_0/test_mnist_processing_system7_0_0_sim_netlist.v
+//               c:/Vivado_Project/Pynq-Examples/mnist/vivado/vivado.srcs/sources_1/bd/test_mnist/ip/test_mnist_processing_system7_0_0/test_mnist_processing_system7_0_0_sim_netlist.v
 // Design      : test_mnist_processing_system7_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
