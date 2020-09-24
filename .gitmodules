@@ -1,6 +1,3 @@
-[submodule "Pynq_test_hls/jupyter/deep-learning-from-scratch"]
-    path = Pynq_test_hls/jupyter/deep-learning-from-scratch
-    url = https://github.com/oreilly-japan/deep-learning-from-scratch.git
 [submodule "mnist/jupyter/deep-learning-from-scratch"]
-    path = mnist/jupyter/deep-learning-from-scratch
-    url = https://github.com/oreilly-japan/deep-learning-from-scratch.git
+	path = mnist/jupyter/deep-learning-from-scratch
+	url = https://github.com/oreilly-japan/deep-learning-from-scratch.git

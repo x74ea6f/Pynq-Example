@@ -440,9 +440,34 @@ dma_vmemが思った以上に設定レジスタがあって、挫折した。
 
 --->
 
+## Mnist実装
+- [ディープ・ラーニング－ハードウエア化への道](http://digitalfilter.com/deeponhw/deeponhw01.html)  
+ここ参考。
+
+- [oreilly-japan/deep-learning-from-scratch: 『ゼロから作る Deep Learning』(O'Reilly Japan, 2016)](https://github.com/oreilly-japan/deep-learning-from-scratch)  
+Python側はここの改造`ch03/neuralnet_mnist.py`
+
+### Repos
+## [mnist](./mnist)
+
+
+### ILA(Integrated Logic Analyzer)
+- ILAをDesignに入れる。
+- ILAをAXIにして、モニタしたいところを繋ぐ。
+- クロックも繋ぐ。
+- コンパイルしてBitを書き込む。
+- USBを繋ぐ(USB-JTAGになってるスゴイ!)
+- HARDWARE MANAGERを開く
+- Open Target, Auto connect
+- FPGAデバイスの中にILAが見える。
+- Trigger Setup, +, RVALIDとか
+- Run Trigger
+- (Jupyterとかで転送をする。)
+- 波形で見える。
+
 ## 機械学習 ##TODO
 - [FPGAでDeep Learningしてみる - Qiita](https://qiita.com/ykshr/items/6c8cff881a200a781dc3)
-★ ここらへんを実行してみる。
+ここらへんを実行してみる。
 
 - [【読解】 Binarized Neural Networks - Qiita](https://qiita.com/harmegiddo/items/8988a60430dc6184a033)  
 BNNの解説
@@ -451,7 +476,6 @@ BNNの解説
 BNNのライブラリ
 
 - [FPGAでDeep Learningしてみる - きゅうりを選果する - Qiita](https://qiita.com/ykshr/items/08147098516a45203761)
-
 
 
 
@@ -610,30 +634,3 @@ $ sudo mkdir /mnt/img
 $ sudo mount -t ext4 -o loop,offset=$((206848*512)) pynq_z2_v2.5.img /mnt/img
 
 ```
-
-## Mnist memo
-- [ディープ・ラーニング－ハードウエア化への道](http://digitalfilter.com/deeponhw/deeponhw01.html)  
-ここ参考。
-
-- [oreilly-japan/deep-learning-from-scratch: 『ゼロから作る Deep Learning』(O'Reilly Japan, 2016)](https://github.com/oreilly-japan/deep-learning-from-scratch)  
-Python側はここの改造`ch03/neuralnet_mnist.py`
-
-### Repos
-##TODO ここにレポジトリを貼る
-
-
-### ILA(Integrated Logic Analyzer)
-- ILAをDesignに入れる。
-- ILAをAXIにして、モニタしたいところを繋ぐ。
-- クロックも繋ぐ。
-- コンパイルしてBitを書き込む。
-- USBを繋ぐ(USB-JTAGになってるスゴイ!)
-- HARDWARE MANAGERを開く
-- Open Target, Auto connect
-- FPGAデバイスの中にILAが見える。
-- Trigger Setup, +, RVALIDとか
-- Run Trigger
-- (Jupyterとかで転送をする。)
-- 波形で見える。
-##TODO ここに使い方を書く
-

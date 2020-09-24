@@ -50,8 +50,6 @@ module nn_axis#(
 //  user logic here
 
 nn #(
-    .PARA(PARA),
-    .BITS(BITS)
 ) u_nn(
     .clk(aclk),
     .rstn(aresetn),

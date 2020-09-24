@@ -11,6 +11,7 @@ module layer #(
     parameter DENSE_INPUT_SIZE = 28*28,
     parameter DENSE_OUTPUT_SIZE = 50,
     parameter ROM_FILE_WEIGHT_PREFIX = "W1_",
+    parameter ROM_FILE_WEIGHT_POSTFIX = ".mem",
     parameter ROM_FILE_BIAS = "b1.mem"
     // parameter ROM_FILE_WEIGHT_FORMAT = "W1_%1d.mem",
     // parameter ROM_FILE_BIAS = "b1.txt"
@@ -75,7 +76,7 @@ module layer #(
                 (i>=100)? {"0"+(i/100)%10, "0"+(i/10)%10, "0"+(i%10)}:
                 (i>=10)? {"0"+(i/10)%10, "0"+(i%10)}:
                 {"0" + (i%10)},
-                ".mem"})
+                ROM_FILE_WEIGHT_POSTFIX})
             // .INIT_FILE($sformatf(ROM_FILE_WEIGHT_FORMAT, i))
         )w_rom(
             .clk(clk),

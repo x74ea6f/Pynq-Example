@@ -231,7 +231,7 @@ initial begin
 end
 
 //-- Expected data
-parameter EXP_LAY = "l2";
+parameter EXP_LAY = "l0";
 
 parameter EXP_WIDTH = BITS + 5; // Change
 parameter EXP_SIZE = // Change
@@ -249,20 +249,36 @@ integer exp_count = 0;
 logic exp_error_flag;
 
 assign exp_target_valid = // Change
-  (EXP_LAY=="l0")? u_nn_axis.u_nn.l0.dense_o_valid:
-  (EXP_LAY=="l1")? u_nn_axis.u_nn.l1.dense_o_valid:
-  (EXP_LAY=="l2")? u_nn_axis.u_nn.l2.dense_o_valid:
+  (EXP_LAY=="l0")? u_nn_axis.u_nn.gen_lay[0].layer.dense_o_valid:
+  (EXP_LAY=="l1")? u_nn_axis.u_nn.gen_lay[1].layer.dense_o_valid:
+  (EXP_LAY=="l2")? u_nn_axis.u_nn.gen_lay[2].layer.dense_o_valid:
   0;
 assign exp_target_ready = // Change
-  (EXP_LAY=="l0")? u_nn_axis.u_nn.l0.dense_i_ready:
-  (EXP_LAY=="l1")? u_nn_axis.u_nn.l1.dense_i_ready:
-  (EXP_LAY=="l2")? u_nn_axis.u_nn.l2.dense_i_ready:
+  (EXP_LAY=="l0")? u_nn_axis.u_nn.gen_lay[0].layer.dense_i_ready:
+  (EXP_LAY=="l1")? u_nn_axis.u_nn.gen_lay[1].layer.dense_i_ready:
+  (EXP_LAY=="l2")? u_nn_axis.u_nn.gen_lay[2].layer.dense_i_ready:
   0;
 assign exp_target_data = // Change
-  (EXP_LAY=="l0")? u_nn_axis.u_nn.l0.dense_o_data:
-  (EXP_LAY=="l1")? u_nn_axis.u_nn.l1.dense_o_data:
-  (EXP_LAY=="l2")? u_nn_axis.u_nn.l2.dense_o_data:
+  (EXP_LAY=="l0")? u_nn_axis.u_nn.gen_lay[0].layer.dense_o_data:
+  (EXP_LAY=="l1")? u_nn_axis.u_nn.gen_lay[1].layer.dense_o_data:
+  (EXP_LAY=="l2")? u_nn_axis.u_nn.gen_lay[2].layer.dense_o_data:
   0;
+
+// assign exp_target_valid = // Change
+//   (EXP_LAY=="l0")? u_nn_axis.u_nn.l0.dense_o_valid:
+//   (EXP_LAY=="l1")? u_nn_axis.u_nn.l1.dense_o_valid:
+//   (EXP_LAY=="l2")? u_nn_axis.u_nn.l2.dense_o_valid:
+//   0;
+// assign exp_target_ready = // Change
+//   (EXP_LAY=="l0")? u_nn_axis.u_nn.l0.dense_i_ready:
+//   (EXP_LAY=="l1")? u_nn_axis.u_nn.l1.dense_i_ready:
+//   (EXP_LAY=="l2")? u_nn_axis.u_nn.l2.dense_i_ready:
+//   0;
+// assign exp_target_data = // Change
+//   (EXP_LAY=="l0")? u_nn_axis.u_nn.l0.dense_o_data:
+//   (EXP_LAY=="l1")? u_nn_axis.u_nn.l1.dense_o_data:
+//   (EXP_LAY=="l2")? u_nn_axis.u_nn.l2.dense_o_data:
+//   0;
 
 assign exp_data = exp_mem[exp_count];
 
@@ -298,10 +314,6 @@ always_ff @(posedge aclk)begin
 end
 
 nn_axis #(
-    .PARA(PARA),
-    .BITS(BITS),
-    .INPUT_SIZE(INPUT_SIZE),
-    .OUTPUT_SIZE(OUTPUT_SIZE)
 )u_nn_axis(
     .*
 );
