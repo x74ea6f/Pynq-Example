@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="test_mnist" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1600914989"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1600914989"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1600914989"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1600914989"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1600923220"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1600923220"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1600923220"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1600923220"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\test_mnist_axi_dma_0\test_mnist_axi_dma_0.xci" Type="IP">
         <Instance HierarchyPath="axi_dma"/>

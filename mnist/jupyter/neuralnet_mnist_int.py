@@ -13,7 +13,7 @@ import code
 
 P_INT = 256
 P_INT_BITS = int(math.log2(P_INT))
-P_PARA = 1
+P_PARA = 4
 
 def int2hex(d, bits):
     d = (1<<bits) + d if (d<0) else d

@@ -1,7 +1,7 @@
 
 module tb_nn_axis();
 
-parameter PARA = 1;
+parameter PARA = 4;
 parameter BITS = 8;
 parameter INPUT_SIZE = 28*28;
 parameter OUTPUT_SIZE = 10;
@@ -314,6 +314,8 @@ always_ff @(posedge aclk)begin
 end
 
 nn_axis #(
+    .PARA(PARA),
+    .BITS(BITS)
 )u_nn_axis(
     .*
 );

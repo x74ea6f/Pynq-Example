@@ -11,12 +11,12 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="81646001fs"></ZoomEndTime>
-      <Cursor1Time time="81646000fs"></Cursor1Time>
+      <ZoomStartTime time="1778382fs"></ZoomStartTime>
+      <ZoomEndTime time="1990442fs"></ZoomEndTime>
+      <Cursor1Time time="23246000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="151"></NameColumnWidth>
+      <NameColumnWidth column_width="165"></NameColumnWidth>
       <ValueColumnWidth column_width="72"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="5" />
@@ -45,8 +45,8 @@
          <obj_property name="ObjectShortName">s_tready</obj_property>
       </wvobject>
       <wvobject fp_name="/tb_nn_axis/s_tdata" type="array">
-         <obj_property name="ElementShortName">s_tdata[0:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">s_tdata[0:0][7:0]</obj_property>
+         <obj_property name="ElementShortName">s_tdata[3:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_tdata[3:0][7:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/tb_nn_axis/s_tlast" type="logic">
          <obj_property name="ElementShortName">s_tlast</obj_property>
@@ -77,13 +77,13 @@
          <obj_property name="ObjectShortName">exp_target_valid</obj_property>
       </wvobject>
       <wvobject fp_name="/tb_nn_axis/exp_target_data" type="array">
-         <obj_property name="ElementShortName">exp_target_data[0:0][12:0]</obj_property>
-         <obj_property name="ObjectShortName">exp_target_data[0:0][12:0]</obj_property>
+         <obj_property name="ElementShortName">exp_target_data[3:0][12:0]</obj_property>
+         <obj_property name="ObjectShortName">exp_target_data[3:0][12:0]</obj_property>
          <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/tb_nn_axis/exp_data" type="array">
-         <obj_property name="ElementShortName">exp_data[0:0][12:0]</obj_property>
-         <obj_property name="ObjectShortName">exp_data[0:0][12:0]</obj_property>
+         <obj_property name="ElementShortName">exp_data[3:0][12:0]</obj_property>
+         <obj_property name="ObjectShortName">exp_data[3:0][12:0]</obj_property>
          <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/tb_nn_axis/exp_count" type="array">
@@ -128,8 +128,8 @@
          <obj_property name="ObjectShortName">o_ready</obj_property>
       </wvobject>
       <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/\gen_lay[0].layer /dense/i_data" type="array">
-         <obj_property name="ElementShortName">i_data[0:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">i_data[0:0][7:0]</obj_property>
+         <obj_property name="ElementShortName">i_data[3:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">i_data[3:0][7:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/\gen_lay[0].layer /dense/o_valid" type="logic">
          <obj_property name="ElementShortName">o_valid</obj_property>
@@ -140,34 +140,34 @@
          <obj_property name="ObjectShortName">i_ready</obj_property>
       </wvobject>
       <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/\gen_lay[0].layer /dense/o_data" type="array">
-         <obj_property name="ElementShortName">o_data[0:0][12:0]</obj_property>
-         <obj_property name="ObjectShortName">o_data[0:0][12:0]</obj_property>
+         <obj_property name="ElementShortName">o_data[3:0][12:0]</obj_property>
+         <obj_property name="ObjectShortName">o_data[3:0][12:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/\gen_lay[0].layer /dense/o_w_addr" type="array">
-         <obj_property name="ElementShortName">o_w_addr[9:0]</obj_property>
-         <obj_property name="ObjectShortName">o_w_addr[9:0]</obj_property>
+         <obj_property name="ElementShortName">o_w_addr[7:0]</obj_property>
+         <obj_property name="ObjectShortName">o_w_addr[7:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/\gen_lay[0].layer /dense/i_w_data" type="array">
-         <obj_property name="ElementShortName">i_w_data[49:0][0:0][8:0]</obj_property>
-         <obj_property name="ObjectShortName">i_w_data[49:0][0:0][8:0]</obj_property>
+         <obj_property name="ElementShortName">i_w_data[49:0][3:0][8:0]</obj_property>
+         <obj_property name="ObjectShortName">i_w_data[49:0][3:0][8:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/\gen_lay[0].layer /dense/o_b_addr" type="array">
-         <obj_property name="ElementShortName">o_b_addr[5:0]</obj_property>
-         <obj_property name="ObjectShortName">o_b_addr[5:0]</obj_property>
+         <obj_property name="ElementShortName">o_b_addr[3:0]</obj_property>
+         <obj_property name="ObjectShortName">o_b_addr[3:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/\gen_lay[0].layer /dense/i_b_data" type="array">
-         <obj_property name="ElementShortName">i_b_data[0:0][8:0]</obj_property>
-         <obj_property name="ObjectShortName">i_b_data[0:0][8:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/\gen_lay[0].layer /dense/count_out" type="array">
-         <obj_property name="ElementShortName">count_out[5:0]</obj_property>
-         <obj_property name="ObjectShortName">count_out[5:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="ElementShortName">i_b_data[3:0][8:0]</obj_property>
+         <obj_property name="ObjectShortName">i_b_data[3:0][8:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/\gen_lay[0].layer /dense/count_in" type="array">
-         <obj_property name="ElementShortName">count_in[9:0]</obj_property>
-         <obj_property name="ObjectShortName">count_in[9:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="ElementShortName">count_in[7:0]</obj_property>
+         <obj_property name="ObjectShortName">count_in[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/\gen_lay[0].layer /dense/count_out" type="array">
+         <obj_property name="ElementShortName">count_out[3:0]</obj_property>
+         <obj_property name="ObjectShortName">count_out[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="group90" type="group">
@@ -194,8 +194,8 @@
          <obj_property name="ObjectShortName">o_ready</obj_property>
       </wvobject>
       <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/i_data" type="array">
-         <obj_property name="ElementShortName">i_data[0:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">i_data[0:0][7:0]</obj_property>
+         <obj_property name="ElementShortName">i_data[3:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">i_data[3:0][7:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/o_valid" type="logic">
          <obj_property name="ElementShortName">o_valid</obj_property>
@@ -226,13 +226,13 @@
          <obj_property name="ObjectShortName">o_ready_l[2:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/i_data_l" type="array">
-         <obj_property name="ElementShortName">i_data_l[2:0][0:0][783:0]</obj_property>
-         <obj_property name="ObjectShortName">i_data_l[2:0][0:0][783:0]</obj_property>
+         <obj_property name="ElementShortName">i_data_l[2:0][3:0][783:0]</obj_property>
+         <obj_property name="ObjectShortName">i_data_l[2:0][3:0][783:0]</obj_property>
          <obj_property name="isExpanded"></obj_property>
       </wvobject>
       <wvobject fp_name="/tb_nn_axis/u_nn_axis/u_nn/o_data_l" type="array">
-         <obj_property name="ElementShortName">o_data_l[2:0][0:0][783:0]</obj_property>
-         <obj_property name="ObjectShortName">o_data_l[2:0][0:0][783:0]</obj_property>
+         <obj_property name="ElementShortName">o_data_l[2:0][3:0][783:0]</obj_property>
+         <obj_property name="ObjectShortName">o_data_l[2:0][3:0][783:0]</obj_property>
          <obj_property name="isExpanded"></obj_property>
       </wvobject>
    </wvobject>

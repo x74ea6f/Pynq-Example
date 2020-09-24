@@ -38,7 +38,7 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="pynq-z2"/>
-    <Option Name="WTXSimLaunchSim" Val="838"/>
+    <Option Name="WTXSimLaunchSim" Val="856"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -147,11 +147,8 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="test_mnist.bd" FileRelPathName="ip/test_mnist_ila_2_0/test_mnist_ila_2_0.xci">
-          <Proxy FileSetName="test_mnist_ila_2_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="test_mnist.bd" FileRelPathName="ip/test_mnist_ila_0_0/test_mnist_ila_0_0.xci">
-          <Proxy FileSetName="test_mnist_ila_0_0"/>
+        <CompFileExtendedInfo CompFileName="test_mnist.bd" FileRelPathName="ip/test_mnist_xbar_0/test_mnist_xbar_0.xci">
+          <Proxy FileSetName="test_mnist_xbar_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="test_mnist.bd" FileRelPathName="ip/test_mnist_rst_ps7_0_50M_0/test_mnist_rst_ps7_0_50M_0.xci">
           <Proxy FileSetName="test_mnist_rst_ps7_0_50M_0"/>
@@ -162,14 +159,17 @@
         <CompFileExtendedInfo CompFileName="test_mnist.bd" FileRelPathName="ip/test_mnist_xbar_1/test_mnist_xbar_1.xci">
           <Proxy FileSetName="test_mnist_xbar_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="test_mnist.bd" FileRelPathName="ip/test_mnist_xbar_0/test_mnist_xbar_0.xci">
-          <Proxy FileSetName="test_mnist_xbar_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="test_mnist.bd" FileRelPathName="ip/test_mnist_nn_axis_0_0/test_mnist_nn_axis_0_0.xci">
-          <Proxy FileSetName="test_mnist_nn_axis_0_0"/>
+        <CompFileExtendedInfo CompFileName="test_mnist.bd" FileRelPathName="ip/test_mnist_ila_0_0/test_mnist_ila_0_0.xci">
+          <Proxy FileSetName="test_mnist_ila_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="test_mnist.bd" FileRelPathName="ip/test_mnist_processing_system7_0_0/test_mnist_processing_system7_0_0.xci">
           <Proxy FileSetName="test_mnist_processing_system7_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="test_mnist.bd" FileRelPathName="ip/test_mnist_ila_2_0/test_mnist_ila_2_0.xci">
+          <Proxy FileSetName="test_mnist_ila_2_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="test_mnist.bd" FileRelPathName="ip/test_mnist_nn_axis_0_0/test_mnist_nn_axis_0_0.xci">
+          <Proxy FileSetName="test_mnist_nn_axis_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/test_mnist/hdl/test_mnist_wrapper.v">
@@ -181,1311 +181,984 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_72.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_18.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_72.mem"/>
-          <Attr Name="ImportTime" Val="1600067085"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_21.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_60.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_21.mem"/>
-          <Attr Name="ImportTime" Val="1600067077"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_56.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W3_5.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_56.mem"/>
-          <Attr Name="ImportTime" Val="1600067085"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_99.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_18.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_99.mem"/>
-          <Attr Name="ImportTime" Val="1600067087"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_13.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_95.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_13.mem"/>
-          <Attr Name="ImportTime" Val="1600067077"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_13.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_87.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_13.mem"/>
-          <Attr Name="ImportTime" Val="1600067080"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W3_2.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_69.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W3_2.mem"/>
-          <Attr Name="ImportTime" Val="1600067087"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W3_0.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_26.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W3_0.mem"/>
-          <Attr Name="ImportTime" Val="1600067087"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_80.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_26.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_80.mem"/>
-          <Attr Name="ImportTime" Val="1600067086"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_89.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_52.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_89.mem"/>
-          <Attr Name="ImportTime" Val="1600067086"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_11.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_42.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_11.mem"/>
-          <Attr Name="ImportTime" Val="1600067080"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_46.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_42.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_46.mem"/>
-          <Attr Name="ImportTime" Val="1600067079"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_3.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_85.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_3.mem"/>
-          <Attr Name="ImportTime" Val="1600067080"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_46.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_34.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_46.mem"/>
-          <Attr Name="ImportTime" Val="1600067084"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_38.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_34.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_38.mem"/>
-          <Attr Name="ImportTime" Val="1600067079"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_21.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_2.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_21.mem"/>
-          <Attr Name="ImportTime" Val="1600067082"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_6.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_8.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_6.mem"/>
-          <Attr Name="ImportTime" Val="1600067076"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_38.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_77.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_38.mem"/>
-          <Attr Name="ImportTime" Val="1600067083"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W3_9.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_16.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W3_9.mem"/>
-          <Attr Name="ImportTime" Val="1600067087"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_90.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_11.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_90.mem"/>
-          <Attr Name="ImportTime" Val="1600067086"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_64.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_32.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_64.mem"/>
-          <Attr Name="ImportTime" Val="1600067085"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_23.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_46.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_23.mem"/>
-          <Attr Name="ImportTime" Val="1600067078"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_1.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_59.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_1.mem"/>
-          <Attr Name="ImportTime" Val="1600067080"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_74.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_89.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_74.mem"/>
-          <Attr Name="ImportTime" Val="1600067085"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_36.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_91.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_36.mem"/>
-          <Attr Name="ImportTime" Val="1600067078"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_31.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_24.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_31.mem"/>
-          <Attr Name="ImportTime" Val="1600067083"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_58.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_28.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_58.mem"/>
-          <Attr Name="ImportTime" Val="1600067085"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_87.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_93.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_87.mem"/>
-          <Attr Name="ImportTime" Val="1600067086"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_11.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_50.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_11.mem"/>
-          <Attr Name="ImportTime" Val="1600067076"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_28.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_36.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_28.mem"/>
-          <Attr Name="ImportTime" Val="1600067082"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_15.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_80.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_15.mem"/>
-          <Attr Name="ImportTime" Val="1600067080"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W3_7.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_9.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W3_7.mem"/>
-          <Attr Name="ImportTime" Val="1600067087"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_41.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_44.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_41.mem"/>
-          <Attr Name="ImportTime" Val="1600067079"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/b3.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_75.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/b3.mem"/>
-          <Attr Name="ImportTime" Val="1600067087"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_48.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_49.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_48.mem"/>
-          <Attr Name="ImportTime" Val="1600067079"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_62.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W3_3.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_62.mem"/>
-          <Attr Name="ImportTime" Val="1600067085"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_18.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_14.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_18.mem"/>
-          <Attr Name="ImportTime" Val="1600067077"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_44.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_57.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_44.mem"/>
-          <Attr Name="ImportTime" Val="1600067084"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_4.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_6.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_4.mem"/>
-          <Attr Name="ImportTime" Val="1600067076"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_92.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_0.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_92.mem"/>
-          <Attr Name="ImportTime" Val="1600067086"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_42.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_40.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_42.mem"/>
-          <Attr Name="ImportTime" Val="1600067079"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_76.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_62.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_76.mem"/>
-          <Attr Name="ImportTime" Val="1600067086"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_69.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_22.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_69.mem"/>
-          <Attr Name="ImportTime" Val="1600067085"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_26.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_6.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_26.mem"/>
-          <Attr Name="ImportTime" Val="1600067082"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_93.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_30.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_93.mem"/>
-          <Attr Name="ImportTime" Val="1600067086"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_50.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_48.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_50.mem"/>
-          <Attr Name="ImportTime" Val="1600067084"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_9.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_73.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_9.mem"/>
-          <Attr Name="ImportTime" Val="1600067080"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_16.mem">
+      <File Path="$PPRDIR/../jupyter/rom/b2.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_16.mem"/>
-          <Attr Name="ImportTime" Val="1600067080"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_24.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_99.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_24.mem"/>
-          <Attr Name="ImportTime" Val="1600067082"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_59.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_48.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_59.mem"/>
-          <Attr Name="ImportTime" Val="1600067085"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_60.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_22.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_60.mem"/>
-          <Attr Name="ImportTime" Val="1600067085"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_16.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_56.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_16.mem"/>
-          <Attr Name="ImportTime" Val="1600067077"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_86.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_82.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_86.mem"/>
-          <Attr Name="ImportTime" Val="1600067086"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_33.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_39.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_33.mem"/>
-          <Attr Name="ImportTime" Val="1600067083"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_0.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W3_0.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_0.mem"/>
-          <Attr Name="ImportTime" Val="1600067080"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_33.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_13.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_33.mem"/>
-          <Attr Name="ImportTime" Val="1600067078"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_43.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_65.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_43.mem"/>
-          <Attr Name="ImportTime" Val="1600067083"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_25.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_4.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_25.mem"/>
-          <Attr Name="ImportTime" Val="1600067078"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/b1.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_20.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/b1.mem"/>
-          <Attr Name="ImportTime" Val="1600067087"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_2.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W3_9.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_2.mem"/>
-          <Attr Name="ImportTime" Val="1600067076"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W3_5.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_38.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W3_5.mem"/>
-          <Attr Name="ImportTime" Val="1600067087"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_9.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_12.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_9.mem"/>
-          <Attr Name="ImportTime" Val="1600067076"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_31.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_90.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_31.mem"/>
-          <Attr Name="ImportTime" Val="1600067078"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_37.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_16.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_37.mem"/>
-          <Attr Name="ImportTime" Val="1600067083"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_7.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_41.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_7.mem"/>
-          <Attr Name="ImportTime" Val="1600067080"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_82.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_29.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_82.mem"/>
-          <Attr Name="ImportTime" Val="1600067086"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_52.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_24.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_52.mem"/>
-          <Attr Name="ImportTime" Val="1600067084"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_65.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_54.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_65.mem"/>
-          <Attr Name="ImportTime" Val="1600067085"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_67.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_97.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_67.mem"/>
-          <Attr Name="ImportTime" Val="1600067085"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_95.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_46.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_95.mem"/>
-          <Attr Name="ImportTime" Val="1600067086"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_41.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_0.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_41.mem"/>
-          <Attr Name="ImportTime" Val="1600067083"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_97.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_71.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_97.mem"/>
-          <Attr Name="ImportTime" Val="1600067086"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_35.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_33.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_35.mem"/>
-          <Attr Name="ImportTime" Val="1600067083"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_5.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_84.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_5.mem"/>
-          <Attr Name="ImportTime" Val="1600067080"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_54.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W3_7.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_54.mem"/>
-          <Attr Name="ImportTime" Val="1600067085"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_78.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_20.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_78.mem"/>
-          <Attr Name="ImportTime" Val="1600067086"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_84.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_11.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_84.mem"/>
-          <Attr Name="ImportTime" Val="1600067086"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_48.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_67.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_48.mem"/>
-          <Attr Name="ImportTime" Val="1600067084"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_18.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_37.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_18.mem"/>
-          <Attr Name="ImportTime" Val="1600067081"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_22.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_31.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_22.mem"/>
-          <Attr Name="ImportTime" Val="1600067082"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_71.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_2.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_71.mem"/>
-          <Attr Name="ImportTime" Val="1600067085"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_44.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_14.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_44.mem"/>
-          <Attr Name="ImportTime" Val="1600067079"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_0.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_44.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_0.mem"/>
-          <Attr Name="ImportTime" Val="1600067075"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_27.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_4.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_27.mem"/>
-          <Attr Name="ImportTime" Val="1600067078"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_14.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_27.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_14.mem"/>
-          <Attr Name="ImportTime" Val="1600067077"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W3_3.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_35.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W3_3.mem"/>
-          <Attr Name="ImportTime" Val="1600067087"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W3_1.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_43.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W3_1.mem"/>
-          <Attr Name="ImportTime" Val="1600067087"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_47.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_78.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_47.mem"/>
-          <Attr Name="ImportTime" Val="1600067079"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_47.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_35.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_47.mem"/>
-          <Attr Name="ImportTime" Val="1600067084"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_4.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_43.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_4.mem"/>
-          <Attr Name="ImportTime" Val="1600067080"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_98.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_86.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_98.mem"/>
-          <Attr Name="ImportTime" Val="1600067086"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_20.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_19.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_20.mem"/>
-          <Attr Name="ImportTime" Val="1600067077"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_20.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_1.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_20.mem"/>
-          <Attr Name="ImportTime" Val="1600067081"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_63.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_9.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_63.mem"/>
-          <Attr Name="ImportTime" Val="1600067085"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_39.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_7.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_39.mem"/>
-          <Attr Name="ImportTime" Val="1600067079"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_39.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_17.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_39.mem"/>
-          <Attr Name="ImportTime" Val="1600067083"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_7.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_17.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_7.mem"/>
-          <Attr Name="ImportTime" Val="1600067076"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_29.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W3_6.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_29.mem"/>
-          <Attr Name="ImportTime" Val="1600067083"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_30.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_94.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_30.mem"/>
-          <Attr Name="ImportTime" Val="1600067083"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_73.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_51.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_73.mem"/>
-          <Attr Name="ImportTime" Val="1600067085"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_30.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_25.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_30.mem"/>
-          <Attr Name="ImportTime" Val="1600067078"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_81.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_68.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_81.mem"/>
-          <Attr Name="ImportTime" Val="1600067086"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_12.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_25.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_12.mem"/>
-          <Attr Name="ImportTime" Val="1600067080"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_29.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_41.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_29.mem"/>
-          <Attr Name="ImportTime" Val="1600067078"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_12.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_29.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_12.mem"/>
-          <Attr Name="ImportTime" Val="1600067077"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_55.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_8.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_55.mem"/>
-          <Attr Name="ImportTime" Val="1600067085"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_61.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_5.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_61.mem"/>
-          <Attr Name="ImportTime" Val="1600067085"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_10.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_37.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_10.mem"/>
-          <Attr Name="ImportTime" Val="1600067076"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_88.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_15.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_88.mem"/>
-          <Attr Name="ImportTime" Val="1600067086"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W3_8.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_76.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W3_8.mem"/>
-          <Attr Name="ImportTime" Val="1600067087"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_37.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_63.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_37.mem"/>
-          <Attr Name="ImportTime" Val="1600067079"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_19.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W3_2.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_19.mem"/>
-          <Attr Name="ImportTime" Val="1600067077"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_45.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_33.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_45.mem"/>
-          <Attr Name="ImportTime" Val="1600067084"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_2.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_45.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_2.mem"/>
-          <Attr Name="ImportTime" Val="1600067080"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_91.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_61.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_91.mem"/>
-          <Attr Name="ImportTime" Val="1600067086"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_5.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W3_4.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_5.mem"/>
-          <Attr Name="ImportTime" Val="1600067076"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_24.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_23.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_24.mem"/>
-          <Attr Name="ImportTime" Val="1600067078"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_22.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_31.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_22.mem"/>
-          <Attr Name="ImportTime" Val="1600067077"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_35.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_58.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_35.mem"/>
-          <Attr Name="ImportTime" Val="1600067078"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_32.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_74.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_32.mem"/>
-          <Attr Name="ImportTime" Val="1600067083"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_57.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_88.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_57.mem"/>
-          <Attr Name="ImportTime" Val="1600067085"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_49.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_27.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_49.mem"/>
-          <Attr Name="ImportTime" Val="1600067079"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_14.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_92.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_14.mem"/>
-          <Attr Name="ImportTime" Val="1600067080"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_75.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_10.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_75.mem"/>
-          <Attr Name="ImportTime" Val="1600067085"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_27.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_3.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_27.mem"/>
-          <Attr Name="ImportTime" Val="1600067082"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_40.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_30.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_40.mem"/>
-          <Attr Name="ImportTime" Val="1600067079"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_17.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_5.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_17.mem"/>
-          <Attr Name="ImportTime" Val="1600067077"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_17.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_13.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_17.mem"/>
-          <Attr Name="ImportTime" Val="1600067081"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_42.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_39.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_42.mem"/>
-          <Attr Name="ImportTime" Val="1600067083"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W3_6.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_55.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W3_6.mem"/>
-          <Attr Name="ImportTime" Val="1600067087"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_77.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_47.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_77.mem"/>
-          <Attr Name="ImportTime" Val="1600067086"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_34.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_7.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_34.mem"/>
-          <Attr Name="ImportTime" Val="1600067078"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_85.mem">
+      <File Path="$PPRDIR/../jupyter/rom/b3.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_85.mem"/>
-          <Attr Name="ImportTime" Val="1600067086"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_34.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_47.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_34.mem"/>
-          <Attr Name="ImportTime" Val="1600067083"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/b2.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_72.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/b2.mem"/>
-          <Attr Name="ImportTime" Val="1600067087"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_43.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_98.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_43.mem"/>
-          <Attr Name="ImportTime" Val="1600067079"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_3.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_81.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_3.mem"/>
-          <Attr Name="ImportTime" Val="1600067076"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_26.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_21.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_26.mem"/>
-          <Attr Name="ImportTime" Val="1600067078"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_1.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_38.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_1.mem"/>
-          <Attr Name="ImportTime" Val="1600067076"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_8.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_21.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_8.mem"/>
-          <Attr Name="ImportTime" Val="1600067080"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_68.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_12.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_68.mem"/>
-          <Attr Name="ImportTime" Val="1600067085"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_94.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_64.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_94.mem"/>
-          <Attr Name="ImportTime" Val="1600067086"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_51.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W3_1.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_51.mem"/>
-          <Attr Name="ImportTime" Val="1600067084"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_25.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_32.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_25.mem"/>
-          <Attr Name="ImportTime" Val="1600067082"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_23.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W3_8.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_23.mem"/>
-          <Attr Name="ImportTime" Val="1600067082"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_96.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_1.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_96.mem"/>
-          <Attr Name="ImportTime" Val="1600067086"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_36.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_3.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_36.mem"/>
-          <Attr Name="ImportTime" Val="1600067083"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_28.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_15.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_28.mem"/>
-          <Attr Name="ImportTime" Val="1600067078"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_32.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_36.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_32.mem"/>
-          <Attr Name="ImportTime" Val="1600067078"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_49.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_23.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_49.mem"/>
-          <Attr Name="ImportTime" Val="1600067084"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_45.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_96.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_45.mem"/>
-          <Attr Name="ImportTime" Val="1600067079"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_6.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_28.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_6.mem"/>
-          <Attr Name="ImportTime" Val="1600067080"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_83.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W1_45.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_83.mem"/>
-          <Attr Name="ImportTime" Val="1600067086"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_19.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_19.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_19.mem"/>
-          <Attr Name="ImportTime" Val="1600067081"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W3_4.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_83.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W3_4.mem"/>
-          <Attr Name="ImportTime" Val="1600067087"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_15.mem">
+      <File Path="$PPRDIR/../jupyter/rom/b1.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_15.mem"/>
-          <Attr Name="ImportTime" Val="1600067077"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W1_8.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_49.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W1_8.mem"/>
-          <Attr Name="ImportTime" Val="1600067076"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_70.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_40.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_70.mem"/>
-          <Attr Name="ImportTime" Val="1600067085"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_66.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_70.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_66.mem"/>
-          <Attr Name="ImportTime" Val="1600067085"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_53.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_66.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_53.mem"/>
-          <Attr Name="ImportTime" Val="1600067084"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_40.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_79.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_40.mem"/>
-          <Attr Name="ImportTime" Val="1600067083"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_10.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_10.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_10.mem"/>
-          <Attr Name="ImportTime" Val="1600067080"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/rom/W2_79.mem">
+      <File Path="$PPRDIR/../jupyter/rom/W2_53.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/W2_79.mem"/>
-          <Attr Name="ImportTime" Val="1600067086"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/archive_project_summary.txt"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="test_mnist_wrapper"/>
@@ -1551,134 +1224,6 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/vivado/tb_nn_behav.wcfg"/>
           <Attr Name="ImportTime" Val="1600399318"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_2/imports/rom/exp_l1_2.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l1_2.mem"/>
-          <Attr Name="ImportTime" Val="1600067092"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_2/imports/rom/exp_l0_2.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l0_2.mem"/>
-          <Attr Name="ImportTime" Val="1600067092"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_2/imports/rom/image3.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/image3.mem"/>
-          <Attr Name="ImportTime" Val="1600067094"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_2/imports/rom/image0.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/image0.mem"/>
-          <Attr Name="ImportTime" Val="1600067089"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_2/imports/rom/exp_l0_0.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l0_0.mem"/>
-          <Attr Name="ImportTime" Val="1600067089"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_2/imports/rom/exp_l2_1.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l2_1.mem"/>
-          <Attr Name="ImportTime" Val="1600067091"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_2/imports/rom/exp_l1_1.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l1_1.mem"/>
-          <Attr Name="ImportTime" Val="1600067091"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_2/imports/rom/exp_l2_3.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l2_3.mem"/>
-          <Attr Name="ImportTime" Val="1600067095"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_2/imports/rom/exp_l1_3.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l1_3.mem"/>
-          <Attr Name="ImportTime" Val="1600067095"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_2/imports/rom/exp_l0_1.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l0_1.mem"/>
-          <Attr Name="ImportTime" Val="1600067091"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_2/imports/rom/exp_l2_0.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l2_0.mem"/>
-          <Attr Name="ImportTime" Val="1600067089"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_2/imports/rom/image2.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/image2.mem"/>
-          <Attr Name="ImportTime" Val="1600067092"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_2/imports/rom/exp_l0_3.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l0_3.mem"/>
-          <Attr Name="ImportTime" Val="1600067094"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_2/imports/rom/exp_l2_2.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l2_2.mem"/>
-          <Attr Name="ImportTime" Val="1600067093"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_2/imports/rom/exp_l1_0.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l1_0.mem"/>
-          <Attr Name="ImportTime" Val="1600067089"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_2/imports/rom/image1.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/image1.mem"/>
-          <Attr Name="ImportTime" Val="1600067090"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
@@ -1751,134 +1296,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/exp_l1_2.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l1_2.mem"/>
-          <Attr Name="ImportTime" Val="1600420475"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/exp_l0_2.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l0_2.mem"/>
-          <Attr Name="ImportTime" Val="1600420475"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/image3.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/image3.mem"/>
-          <Attr Name="ImportTime" Val="1600420476"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/image0.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/image0.mem"/>
-          <Attr Name="ImportTime" Val="1600420475"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/exp_l0_0.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l0_0.mem"/>
-          <Attr Name="ImportTime" Val="1600420475"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/exp_l2_1.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l2_1.mem"/>
-          <Attr Name="ImportTime" Val="1600420475"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/exp_l1_1.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l1_1.mem"/>
-          <Attr Name="ImportTime" Val="1600420475"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/exp_l2_3.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l2_3.mem"/>
-          <Attr Name="ImportTime" Val="1600420476"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/exp_l1_3.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l1_3.mem"/>
-          <Attr Name="ImportTime" Val="1600420476"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/exp_l0_1.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l0_1.mem"/>
-          <Attr Name="ImportTime" Val="1600420475"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/exp_l2_0.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l2_0.mem"/>
-          <Attr Name="ImportTime" Val="1600420475"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/image2.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/image2.mem"/>
-          <Attr Name="ImportTime" Val="1600420475"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/exp_l0_3.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l0_3.mem"/>
-          <Attr Name="ImportTime" Val="1600420476"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/exp_l2_2.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l2_2.mem"/>
-          <Attr Name="ImportTime" Val="1600420475"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/exp_l1_0.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l1_0.mem"/>
-          <Attr Name="ImportTime" Val="1600420475"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/image1.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/image1.mem"/>
-          <Attr Name="ImportTime" Val="1600420475"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sim_3/imports/test_mnist/vivado/tb_nn_axis_behav.wcfg">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/vivado/tb_nn_axis_behav.wcfg"/>
@@ -1886,194 +1303,242 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/exp_l1_7.mem">
+      <File Path="$PPRDIR/../jupyter/rom/exp_l1_9.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l1_7.mem"/>
-          <Attr Name="ImportTime" Val="1600420476"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/image7.mem">
+      <File Path="$PPRDIR/../jupyter/rom/exp_l0_2.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/image7.mem"/>
-          <Attr Name="ImportTime" Val="1600420476"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/exp_l0_4.mem">
+      <File Path="$PPRDIR/../jupyter/rom/exp_l1_4.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l0_4.mem"/>
-          <Attr Name="ImportTime" Val="1600420476"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/exp_l2_9.mem">
+      <File Path="$PPRDIR/../jupyter/rom/exp_l2_2.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l2_9.mem"/>
-          <Attr Name="ImportTime" Val="1600420476"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/image9.mem">
+      <File Path="$PPRDIR/../jupyter/rom/exp_l0_3.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/image9.mem"/>
-          <Attr Name="ImportTime" Val="1600420476"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/exp_l2_5.mem">
+      <File Path="$PPRDIR/../jupyter/rom/exp_l1_0.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l2_5.mem"/>
-          <Attr Name="ImportTime" Val="1600420476"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/exp_l1_8.mem">
+      <File Path="$PPRDIR/../jupyter/rom/image4.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l1_8.mem"/>
-          <Attr Name="ImportTime" Val="1600420476"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/exp_l1_5.mem">
+      <File Path="$PPRDIR/../jupyter/rom/exp_l2_6.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l1_5.mem"/>
-          <Attr Name="ImportTime" Val="1600420476"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/image6.mem">
+      <File Path="$PPRDIR/../jupyter/rom/exp_l0_7.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/image6.mem"/>
-          <Attr Name="ImportTime" Val="1600420476"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/exp_l2_6.mem">
+      <File Path="$PPRDIR/../jupyter/rom/image8.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l2_6.mem"/>
-          <Attr Name="ImportTime" Val="1600420476"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/exp_l1_4.mem">
+      <File Path="$PPRDIR/../jupyter/rom/exp_l1_3.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l1_4.mem"/>
-          <Attr Name="ImportTime" Val="1600420476"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/exp_l1_9.mem">
+      <File Path="$PPRDIR/../jupyter/rom/exp_l0_6.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l1_9.mem"/>
-          <Attr Name="ImportTime" Val="1600420476"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/exp_l0_7.mem">
+      <File Path="$PPRDIR/../jupyter/rom/image7.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l0_7.mem"/>
-          <Attr Name="ImportTime" Val="1600420476"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/image5.mem">
+      <File Path="$PPRDIR/../jupyter/rom/exp_l0_1.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/image5.mem"/>
-          <Attr Name="ImportTime" Val="1600420476"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/exp_l0_8.mem">
+      <File Path="$PPRDIR/../jupyter/rom/exp_l1_8.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l0_8.mem"/>
-          <Attr Name="ImportTime" Val="1600420476"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/exp_l2_7.mem">
+      <File Path="$PPRDIR/../jupyter/rom/exp_l2_0.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l2_7.mem"/>
-          <Attr Name="ImportTime" Val="1600420476"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/exp_l0_6.mem">
+      <File Path="$PPRDIR/../jupyter/rom/exp_l2_1.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l0_6.mem"/>
-          <Attr Name="ImportTime" Val="1600420476"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/image4.mem">
+      <File Path="$PPRDIR/../jupyter/rom/exp_l2_5.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/image4.mem"/>
-          <Attr Name="ImportTime" Val="1600420476"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/exp_l0_5.mem">
+      <File Path="$PPRDIR/../jupyter/rom/image3.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l0_5.mem"/>
-          <Attr Name="ImportTime" Val="1600420476"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/exp_l2_8.mem">
+      <File Path="$PPRDIR/../jupyter/rom/exp_l2_9.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l2_8.mem"/>
-          <Attr Name="ImportTime" Val="1600420476"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/exp_l1_6.mem">
+      <File Path="$PPRDIR/../jupyter/rom/exp_l1_2.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l1_6.mem"/>
-          <Attr Name="ImportTime" Val="1600420476"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/exp_l0_9.mem">
+      <File Path="$PPRDIR/../jupyter/rom/exp_l2_4.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l0_9.mem"/>
-          <Attr Name="ImportTime" Val="1600420476"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/exp_l2_4.mem">
+      <File Path="$PPRDIR/../jupyter/rom/image1.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/exp_l2_4.mem"/>
-          <Attr Name="ImportTime" Val="1600420476"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_3/imports/test_mnist/py/rom/image8.mem">
+      <File Path="$PPRDIR/../jupyter/rom/exp_l1_7.mem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/py/rom/image8.mem"/>
-          <Attr Name="ImportTime" Val="1600420476"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../jupyter/rom/exp_l0_0.mem">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../jupyter/rom/exp_l0_9.mem">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../jupyter/rom/exp_l2_8.mem">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../jupyter/rom/image6.mem">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../jupyter/rom/image2.mem">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../jupyter/rom/exp_l0_5.mem">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../jupyter/rom/image0.mem">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../jupyter/rom/exp_l1_6.mem">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../jupyter/rom/exp_l0_4.mem">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../jupyter/rom/image9.mem">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../jupyter/rom/exp_l1_5.mem">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../jupyter/rom/exp_l0_8.mem">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../jupyter/rom/exp_l2_7.mem">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../jupyter/rom/image5.mem">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../jupyter/rom/exp_l1_1.mem">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../jupyter/rom/exp_l2_3.mem">
+        <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>

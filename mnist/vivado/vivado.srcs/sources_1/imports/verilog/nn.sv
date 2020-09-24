@@ -13,7 +13,7 @@ module nn #(
     parameter [8*10-1:0] ROM_FILE_WEIGHT_PREFIXS[0:LAYER_NUM-1] = {"W1_", "W2_", "W3_"},
     parameter [8*10-1:0] ROM_FILE_WEIGHT_POSTFIXS[0:LAYER_NUM-1] = {".mem", ".mem", ".mem"},
     parameter [8*10-1:0] ROM_FILE_BIASS[0:LAYER_NUM-1] = {"b1.mem", "b2.mem", "b3.mem"},
-    parameter MAX_BITS = 28*28 // Max of INPUT/OUTPUT_BITS
+    parameter MAX_BITS = 8 // Max of INPUT/OUTPUT_BITS
 )(
     input clk,
     input rstn,
