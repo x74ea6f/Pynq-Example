@@ -232,6 +232,7 @@ end
 
 //-- Expected data
 parameter EXP_LAY = "l0";
+parameter EXP_PARA = 1;
 
 parameter EXP_WIDTH = BITS + 5; // Change
 parameter EXP_SIZE = // Change
@@ -239,12 +240,12 @@ parameter EXP_SIZE = // Change
   (EXP_LAY=="l1")? 100:
   (EXP_LAY=="l2")? 10: 0;
 
-logic [EXP_WIDTH*PARA-1:0]exp_mem[0:EXP_SIZE-1];
+logic [EXP_WIDTH*EXP_PARA-1:0]exp_mem[0:EXP_SIZE-1];
 
 logic exp_target_valid;
 logic exp_target_ready;
-logic [PARA-1:0][EXP_WIDTH-1:0] exp_target_data;
-logic [PARA-1:0][EXP_WIDTH-1:0] exp_data;
+logic [EXP_PARA-1:0][EXP_WIDTH-1:0] exp_target_data;
+logic [EXP_PARA-1:0][EXP_WIDTH-1:0] exp_data;
 integer exp_count = 0;
 logic exp_error_flag;
 
@@ -309,7 +310,7 @@ end
 
 always_ff @(posedge aclk)begin
     if(exp_target_valid & exp_target_ready)begin
-        exp_count <= ((EXP_SIZE+PARA-1)/PARA-1<=exp_count)? 0: exp_count + 1;
+        exp_count <= ((EXP_SIZE+EXP_PARA-1)/EXP_PARA-1<=exp_count)? 0: exp_count + 1;
     end
 end
 

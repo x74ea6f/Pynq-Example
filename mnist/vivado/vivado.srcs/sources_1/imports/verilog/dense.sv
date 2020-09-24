@@ -1,6 +1,7 @@
 
 module dense #(
-    parameter PARA = 4, // Input Parallel
+    parameter INPUT_PARA = 4, // Input Parallel
+    parameter OUTPUT_PARA = 4, // Input Parallel
     parameter INPUT_BITS = 8, // Data width 8bit
     parameter OUTPUT_BITS = 8+5, // Data width 8bit+5
     parameter INPUT_SIZE = 28*28, // Input Size 28*28=784
@@ -13,20 +14,20 @@ module dense #(
     input i_clear, // Clear All
     input i_valid, // Data Enable
     output o_ready,
-    input unsigned [PARA-1:0][INPUT_BITS-1:0] i_data,
+    input unsigned [INPUT_PARA-1:0][INPUT_BITS-1:0] i_data,
 
     output o_valid,
     input i_ready,
-    output signed [PARA-1:0][OUTPUT_BITS-1:0] o_data,
+    output signed [OUTPUT_PARA-1:0][OUTPUT_BITS-1:0] o_data,
 
-    output [$clog2((INPUT_SIZE+PARA-1)/PARA)-1:0] o_w_addr, // weight ROM common Address
-    input signed [OUTPUT_SIZE-1:0][PARA-1:0][INPUT_BITS+1-1:0] i_w_data, // weight ROM Data
-    output [$clog2((OUTPUT_SIZE+PARA-1)/PARA)-1:0] o_b_addr, // bias ROM Address
-    input signed [PARA-1:0][INPUT_BITS+1-1:0] i_b_data // bias ROM Data
+    output [$clog2((INPUT_SIZE+INPUT_PARA-1)/INPUT_PARA)-1:0] o_w_addr, // weight ROM common Address
+    input signed [OUTPUT_SIZE-1:0][INPUT_PARA-1:0][INPUT_BITS+1-1:0] i_w_data, // weight ROM Data
+    output [$clog2((OUTPUT_SIZE+OUTPUT_PARA-1)/OUTPUT_PARA)-1:0] o_b_addr, // bias ROM Address
+    input signed [OUTPUT_PARA-1:0][INPUT_BITS+1-1:0] i_b_data // bias ROM Data
 );
 
-localparam INPUT_SIZE_INPUT_BITS = $clog2((INPUT_SIZE+PARA-1)/PARA);
-localparam OUTPUT_SIZE_INPUT_BITS = $clog2((OUTPUT_SIZE+PARA-1)/PARA);
+localparam INPUT_SIZE_INPUT_BITS = $clog2((INPUT_SIZE+INPUT_PARA-1)/INPUT_PARA);
+localparam OUTPUT_SIZE_INPUT_BITS = $clog2((OUTPUT_SIZE+OUTPUT_PARA-1)/OUTPUT_PARA);
 
 logic internal_valid;
 assign internal_valid = i_valid & o_ready;
@@ -40,7 +41,7 @@ always_ff @(posedge clk, negedge rstn)begin
     end
     else begin
         count_in <= (internal_clear)? 0:
-            ((INPUT_SIZE+PARA-1)/PARA-1 <= count_in)? 0:
+            ((INPUT_SIZE+INPUT_PARA-1)/INPUT_PARA-1 <= count_in)? 0:
             (internal_valid)? count_in + 1:
             count_in;
     end
@@ -50,12 +51,12 @@ end
 assign o_w_addr = count_in;
 
 // Input Delay, wait for ROM
-logic [PARA-1:0][INPUT_BITS-1:0] i_data_dly;
+logic [INPUT_PARA-1:0][INPUT_BITS-1:0] i_data_dly;
 logic i_valid_dly;
 
 dly#(
     .DLY(ROM_LATENCY),
-    .BITS(PARA*INPUT_BITS+1)
+    .BITS(INPUT_PARA*INPUT_BITS+1)
 )dly_input(
     .clk(clk),
     .i_data({internal_valid, i_data}),
@@ -63,11 +64,11 @@ dly#(
 );
 
 // Calc Sum for Each
-function signed [INPUT_BITS*2+1+$clog2(PARA)-1:0] f_sum_para;
-    input signed [PARA-1:0][INPUT_BITS*2+1-1:0] mul;
+function signed [INPUT_BITS*2+1+$clog2(INPUT_PARA)-1:0] f_sum_para;
+    input signed [INPUT_PARA-1:0][INPUT_BITS*2+1-1:0] mul;
 begin
     integer sum = $signed(mul[0]);
-    for(int i=1; i<PARA; i++)begin
+    for(int i=1; i<INPUT_PARA; i++)begin
         sum = sum + $signed(mul[i]);
     end
     f_sum_para = sum;
@@ -78,8 +79,8 @@ logic signed [OUTPUT_SIZE-1:0][(INPUT_BITS*2+1)+(INPUT_SIZE_INPUT_BITS)-1:0] sum
 
 generate
 for(genvar i=0; i<OUTPUT_SIZE; i++)begin
-    logic signed [PARA-1:0][INPUT_BITS*2+1-1:0] mul;
-    for(genvar k=0; k<PARA; k++)begin
+    logic signed [INPUT_PARA-1:0][INPUT_BITS*2+1-1:0] mul;
+    for(genvar k=0; k<INPUT_PARA; k++)begin
         assign mul[k] = $signed({1'b0, i_data_dly[k]}) * $signed(i_w_data[i][k]);
     end
     
@@ -110,14 +111,14 @@ always_ff @(posedge clk, negedge rstn)begin
     else begin
         if(i_ready)begin
             count_out <= (internal_clear)? 0:
-                ((((OUTPUT_SIZE+PARA-1)/PARA)-1)<=count_out)? 0:
+                ((((OUTPUT_SIZE+OUTPUT_PARA-1)/OUTPUT_PARA)-1)<=count_out)? 0:
                 (out_valid_d)? count_out+1:
                 count_out;
         end
         out_valid_d <= (internal_clear)? 0:
-            (count_in==((INPUT_SIZE+PARA-1)/PARA)-1)? 1:
+            (count_in==((INPUT_SIZE+INPUT_PARA-1)/INPUT_PARA)-1)? 1:
             (i_ready==0)? out_valid_d:
-            (count_out==((OUTPUT_SIZE+PARA-1)/PARA)-1)? 0:
+            (count_out==((OUTPUT_SIZE+OUTPUT_PARA-1)/OUTPUT_PARA)-1)? 0:
             out_valid_d;
     end
 end
@@ -144,13 +145,13 @@ always_ff @(posedge clk)begin
     end
 end
 
-logic signed [PARA-1:0][OUTPUT_BITS-1:0] o_data_d;
+logic signed [OUTPUT_PARA-1:0][OUTPUT_BITS-1:0] o_data_d;
 generate
-for(genvar i=0; i<PARA; i++)begin
+for(genvar i=0; i<OUTPUT_PARA; i++)begin
     logic signed [(INPUT_BITS+1)+(INPUT_SIZE_INPUT_BITS)-1:0] sum_sft;
     assign sum_sft =
-      ((count_out_dly*PARA+i)>=OUTPUT_SIZE)? 0: // Out out bounds
-      (($signed(sums[count_out_dly*PARA+i]))>>INPUT_BITS);
+      ((count_out_dly*OUTPUT_PARA+i)>=OUTPUT_SIZE)? 0: // Out out bounds
+      (($signed(sums[count_out_dly*OUTPUT_PARA+i]))>>INPUT_BITS);
     
     logic signed [(INPUT_BITS+1)+(INPUT_SIZE_INPUT_BITS)+1-1:0] sum_bias;
     assign sum_bias = sum_sft + $signed(i_b_data[i]);

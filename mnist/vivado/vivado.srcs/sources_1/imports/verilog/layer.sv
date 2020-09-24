@@ -37,11 +37,12 @@ module layer #(
 
     logic [$clog2((DENSE_INPUT_SIZE+INPUT_PARA-1)/INPUT_PARA)-1:0] w_addr;
     logic signed [DENSE_OUTPUT_SIZE-1:0][INPUT_PARA-1:0][INPUT_BITS+1-1:0] w_data; // weight ROM Data
-    logic [$clog2((DENSE_OUTPUT_SIZE+INPUT_PARA-1)/INPUT_PARA)-1:0] b_addr; // bias ROM Address
-    logic signed [INPUT_PARA-1:0][INPUT_BITS+1-1:0] b_data; // bias ROM Data
+    logic [$clog2((DENSE_OUTPUT_SIZE+OUTPUT_PARA-1)/OUTPUT_PARA)-1:0] b_addr; // bias ROM Address
+    logic signed [OUTPUT_PARA-1:0][INPUT_BITS+1-1:0] b_data; // bias ROM Data
 
     dense #(
-        .PARA(INPUT_PARA),
+        .INPUT_PARA(INPUT_PARA),
+        .OUTPUT_PARA(OUTPUT_PARA),
         .INPUT_BITS(INPUT_BITS),
         .OUTPUT_BITS(DENSE_OUTPUT_BITS),
         .INPUT_SIZE(DENSE_INPUT_SIZE),
@@ -87,8 +88,8 @@ module layer #(
     endgenerate
 
     rom #(
-        .BITS((INPUT_BITS+1)*INPUT_PARA),
-        .DEPTH((DENSE_OUTPUT_SIZE+INPUT_PARA-1)/INPUT_PARA),
+        .BITS((INPUT_BITS+1)*OUTPUT_PARA),
+        .DEPTH((DENSE_OUTPUT_SIZE+OUTPUT_PARA-1)/OUTPUT_PARA),
         .INIT_FILE(ROM_FILE_BIAS)
     )b_rom(
         .clk(clk),
@@ -100,7 +101,7 @@ generate
 if(ACT_FUNC=="SIGMOID")begin
     // Sigmoid
     sigmoid #(
-        .PARA(INPUT_PARA),
+        .PARA(OUTPUT_PARA),
         .INPUT_BITS(DENSE_OUTPUT_BITS),
         .OUTPUT_BITS(OUTPUT_BITS)
     )l0_sigmoid(
@@ -117,7 +118,7 @@ end
 else if(ACT_FUNC=="ARGMAX")begin
     // Argmax
     argmax #(
-        .PARA(INPUT_PARA),
+        .PARA(OUTPUT_PARA),
         .INPUT_BITS(DENSE_OUTPUT_BITS),
         .OUTPUT_BITS(OUTPUT_BITS),
         .SIZE(DENSE_OUTPUT_SIZE)

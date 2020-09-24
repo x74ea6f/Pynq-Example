@@ -180,6 +180,7 @@ proc create_root_design { parentCell } {
    CONFIG.c_m_axis_mm2s_tdata_width {32} \
    CONFIG.c_mm2s_burst_size {32} \
    CONFIG.c_s2mm_burst_size {32} \
+   CONFIG.c_s_axis_s2mm_tdata_width {8} \
    CONFIG.c_sg_include_stscntrl_strm {0} \
    CONFIG.c_sg_length_width {24} \
  ] $axi_dma
@@ -204,7 +205,6 @@ proc create_root_design { parentCell } {
   set ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0 ]
   set_property -dict [ list \
    CONFIG.C_NUM_OF_PROBES {9} \
-   CONFIG.C_SLOT_0_AXIS_TDATA_WIDTH {32} \
    CONFIG.C_SLOT_0_AXI_PROTOCOL {AXI4S} \
  ] $ila_0
 
@@ -227,7 +227,7 @@ proc create_root_design { parentCell } {
      return 1
    }
     set_property -dict [ list \
-   CONFIG.PARA {4} \
+   CONFIG.PARA {"00000000000000000000000000000100"} \
  ] $nn_axis_0
 
   # Create instance: processing_system7_0, and set properties
