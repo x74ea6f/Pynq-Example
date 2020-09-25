@@ -2,3 +2,4 @@
 __pycache__
 
 rom/*.mem
+sds_trace_data.dat
