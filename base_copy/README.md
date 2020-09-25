@@ -7,3 +7,9 @@ fork from
 ## Environment
 - for vivado 2020.01
 
+## Create IP
+@Windows
+```
+> C:\Xilinx\Vivado\2020.1\settings64.bat
+> build_ip.bat
+```

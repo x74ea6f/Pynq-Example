@@ -86,6 +86,10 @@
 !*.bmm
 !*.xmp
 
+!*.cpp
+!*.bat
+!*.sh
+
 
 *.cache/
 __old/
