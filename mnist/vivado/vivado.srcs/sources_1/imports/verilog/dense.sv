@@ -137,13 +137,22 @@ logic [OUTPUT_SIZE_INPUT_BITS-1:0] count_out_dly;
 //     .i_data({out_valid_d, count_out}),
 //     .o_data({out_valid_d_dly, count_out_dly})
 // );
-//TODO 
-always_ff @(posedge clk)begin
-    if(i_ready)begin
-        out_valid_d_dly <= out_valid_d;
-        count_out_dly <= count_out;
-    end
-end
+// always_ff @(posedge clk)begin
+//     if(i_ready)begin
+//         out_valid_d_dly <= out_valid_d;
+//         count_out_dly <= count_out;
+//     end
+// end
+
+dlyen#(
+    .DLY(ROM_LATENCY),
+    .BITS(OUTPUT_SIZE_INPUT_BITS+1)
+)dly_count_out(
+    .clk(clk),
+    .en(i_ready),
+    .i_data({out_valid_d, count_out}),
+    .o_data({out_valid_d_dly, count_out_dly})
+);
 
 logic signed [OUTPUT_PARA-1:0][OUTPUT_BITS-1:0] o_data_d;
 generate
