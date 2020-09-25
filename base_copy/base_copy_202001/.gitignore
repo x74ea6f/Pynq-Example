@@ -91,5 +91,4 @@
 __old/
 !*.md
 sim/
-## synth/
 *.runs/
