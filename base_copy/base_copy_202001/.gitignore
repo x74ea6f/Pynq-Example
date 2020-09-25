@@ -93,4 +93,4 @@ __old/
 !*.md
 sim/
 *.runs/
-!720p_edid.data
+!*_edid.data
