@@ -38,7 +38,7 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="pynq-z2"/>
-    <Option Name="WTXSimLaunchSim" Val="919"/>
+    <Option Name="WTXSimLaunchSim" Val="922"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -89,6 +89,13 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Vivado_Project/Pynq/test_mnist/verilog/dly.sv"/>
           <Attr Name="ImportTime" Val="1599790887"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/verilog/dlyen.sv">
+        <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -147,29 +154,29 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="test_mnist.bd" FileRelPathName="ip/test_mnist_xbar_0/test_mnist_xbar_0.xci">
-          <Proxy FileSetName="test_mnist_xbar_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="test_mnist.bd" FileRelPathName="ip/test_mnist_rst_ps7_0_50M_0/test_mnist_rst_ps7_0_50M_0.xci">
-          <Proxy FileSetName="test_mnist_rst_ps7_0_50M_0"/>
+        <CompFileExtendedInfo CompFileName="test_mnist.bd" FileRelPathName="ip/test_mnist_ila_0_0/test_mnist_ila_0_0.xci">
+          <Proxy FileSetName="test_mnist_ila_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="test_mnist.bd" FileRelPathName="ip/test_mnist_axi_dma_0/test_mnist_axi_dma_0.xci">
           <Proxy FileSetName="test_mnist_axi_dma_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="test_mnist.bd" FileRelPathName="ip/test_mnist_xbar_1/test_mnist_xbar_1.xci">
-          <Proxy FileSetName="test_mnist_xbar_1"/>
+        <CompFileExtendedInfo CompFileName="test_mnist.bd" FileRelPathName="ip/test_mnist_ila_2_0/test_mnist_ila_2_0.xci">
+          <Proxy FileSetName="test_mnist_ila_2_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="test_mnist.bd" FileRelPathName="ip/test_mnist_ila_0_0/test_mnist_ila_0_0.xci">
-          <Proxy FileSetName="test_mnist_ila_0_0"/>
+        <CompFileExtendedInfo CompFileName="test_mnist.bd" FileRelPathName="ip/test_mnist_xbar_0/test_mnist_xbar_0.xci">
+          <Proxy FileSetName="test_mnist_xbar_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="test_mnist.bd" FileRelPathName="ip/test_mnist_processing_system7_0_0/test_mnist_processing_system7_0_0.xci">
           <Proxy FileSetName="test_mnist_processing_system7_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="test_mnist.bd" FileRelPathName="ip/test_mnist_ila_2_0/test_mnist_ila_2_0.xci">
-          <Proxy FileSetName="test_mnist_ila_2_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="test_mnist.bd" FileRelPathName="ip/test_mnist_nn_axis_0_0/test_mnist_nn_axis_0_0.xci">
           <Proxy FileSetName="test_mnist_nn_axis_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="test_mnist.bd" FileRelPathName="ip/test_mnist_xbar_1/test_mnist_xbar_1.xci">
+          <Proxy FileSetName="test_mnist_xbar_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="test_mnist.bd" FileRelPathName="ip/test_mnist_rst_ps7_0_50M_0/test_mnist_rst_ps7_0_50M_0.xci">
+          <Proxy FileSetName="test_mnist_rst_ps7_0_50M_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/test_mnist/hdl/test_mnist_wrapper.v">
