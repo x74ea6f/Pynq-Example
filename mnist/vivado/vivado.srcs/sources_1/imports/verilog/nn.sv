@@ -1,9 +1,19 @@
 
 module nn #(
-    parameter PARA = 1,
+    parameter LAYER_NUM = 3,
     parameter BITS = 8,
-    parameter INPUT_SIZE = 28*28,
-    parameter OUTPUT_SIZE = 10
+    parameter [31:0] INPUT_PARAS[0:LAYER_NUM-1] = {4, 1, 1},
+    parameter [31:0] OUTPUT_PARAS[0:LAYER_NUM-1] = {1, 1, 1},
+
+    parameter [31:0] DENSE_INPUT_SIZES[0:LAYER_NUM-1] = {28*28, 50, 100},
+    parameter [31:0] DENSE_OUTPUT_SIZES[0:LAYER_NUM-1] = {50, 100, 10},
+    parameter [31:0] DENSE_OUTPUT_BITS[0:LAYER_NUM-1] = {BITS+5, BITS+5, BITS+5},
+    parameter [31:0] INPUT_BITS[0:LAYER_NUM-1] = {BITS, BITS, BITS},
+    parameter [31:0] OUTPUT_BITS[0:LAYER_NUM-1] = {BITS, BITS, $clog2(10)},
+    parameter [8*10-1:0] ACT_FUNCS[0:LAYER_NUM-1] = {"SIGMOID", "SIGMOID", "ARGMAX"},
+    parameter [8*10-1:0] ROM_FILE_WEIGHT_PREFIXS[0:LAYER_NUM-1] = {"W1_", "W2_", "W3_"},
+    parameter [8*10-1:0] ROM_FILE_WEIGHT_POSTFIXS[0:LAYER_NUM-1] = {".mem", ".mem", ".mem"},
+    parameter [8*10-1:0] ROM_FILE_BIASS[0:LAYER_NUM-1] = {"b1.mem", "b2.mem", "b3.mem"}
 )(
     input clk,
     input rstn,
@@ -12,101 +22,61 @@ module nn #(
 
     input i_valid, // Data Enable
     output o_ready,
-    input unsigned [PARA-1:0][BITS-1:0] i_data,
+    input unsigned [INPUT_PARAS[0]-1:0][INPUT_BITS[0]-1:0] i_data,
 
     output o_valid,
     input i_ready,
-    output unsigned [$clog2(OUTPUT_SIZE)-1:0] o_data
+    output unsigned [OUTPUT_PARAS[LAYER_NUM-1]-1:0][OUTPUT_BITS[LAYER_NUM-1]-1:0] o_data
 
 );
-    localparam L0_OUT_SIZE = 50;
-    localparam L1_OUT_SIZE = 100;
-    localparam L2_OUT_BITS = $clog2(OUTPUT_SIZE);
 
-    // L0
-    logic o_valid_l0;
-    logic i_ready_l0;
-    logic [PARA-1:0][BITS-1:0] o_data_l0;
+    localparam PARA = 4; //TODO
 
-    layer #(
-        .INPUT_PARA(PARA),
-        .OUTPUT_PARA(PARA),
-        .ACT_FUNC("SIGMOID"), // "SIGMOID" | "ARGMAX"
-        .INPUT_BITS(BITS),
-        .DENSE_OUTPUT_BITS(BITS+5),
-        .OUTPUT_BITS(BITS),
-        .DENSE_INPUT_SIZE(INPUT_SIZE),
-        .DENSE_OUTPUT_SIZE(L0_OUT_SIZE),
-        .ROM_FILE_WEIGHT_PREFIX("W1_"),
-        // .ROM_FILE_WEIGHT_FORMAT("W1_%1d.mem"),
-        .ROM_FILE_BIAS("b1.mem")
-    )l0(
-        .clk(clk),
-        .rstn(rstn),
-        .i_clear(i_clear),
-        .i_valid(i_valid),
-        .o_ready(o_ready),
-        .i_data(i_data),
-        .o_valid(o_valid_l0),
-        .i_ready(i_ready_l0),
-        .o_data(o_data_l0)
-    );
+    logic [LAYER_NUM-1:0] i_valid_l;
+    logic [LAYER_NUM-1:0] o_valid_l;
+    logic [LAYER_NUM-1:0] i_ready_l;
+    logic [LAYER_NUM-1:0] o_ready_l;
+    assign {o_valid, i_valid_l} = {o_valid_l, i_valid};
+    assign {i_ready_l, o_ready} = {i_ready, o_ready_l};
 
-    // L1
-    logic o_valid_l1;
-    logic i_ready_l1;
-    logic [PARA-1:0][BITS-1:0] o_data_l1;
+    logic [LAYER_NUM-1:0][PARA-1:0][BITS-1:0] i_data_l;
+    logic [LAYER_NUM-1:0][PARA-1:0][BITS-1:0] o_data_l;
 
-    layer #(
-        .INPUT_PARA(PARA),
-        .OUTPUT_PARA(PARA),
-        .ACT_FUNC("SIGMOID"), // "SIGMOID" | "ARGMAX"
-        .INPUT_BITS(BITS),
-        .DENSE_OUTPUT_BITS(BITS+5),
-        .OUTPUT_BITS(BITS),
-        .DENSE_INPUT_SIZE(L0_OUT_SIZE),
-        .DENSE_OUTPUT_SIZE(L1_OUT_SIZE),
-        .ROM_FILE_WEIGHT_PREFIX("W2_"),
-        // .ROM_FILE_WEIGHT_FORMAT("W2_%1d.mem"),
-        .ROM_FILE_BIAS("b2.mem")
-    )l1(
-        .clk(clk),
-        .rstn(rstn),
-        .i_clear(i_clear),
-        .i_valid(o_valid_l0),
-        .o_ready(i_ready_l0),
-        .i_data(o_data_l0),
-        .o_valid(o_valid_l1),
-        .i_ready(i_ready_l1),
-        .o_data(o_data_l1)
-    );
+    assign o_data = o_data_l[LAYER_NUM-1];
 
-    // L2
-    layer #(
-        .INPUT_PARA(PARA),
-        .OUTPUT_PARA(1),
-        .ACT_FUNC("ARGMAX"), // "SIGMOID" | "ARGMAX"
-        .INPUT_BITS(BITS),
-        .DENSE_OUTPUT_BITS(BITS+5),
-        .OUTPUT_BITS(L2_OUT_BITS),
-        .DENSE_INPUT_SIZE(L1_OUT_SIZE),
-        .DENSE_OUTPUT_SIZE(OUTPUT_SIZE),
-        .ROM_FILE_WEIGHT_PREFIX("W3_"),
-        // .ROM_FILE_WEIGHT_FORMAT("W3_%1d.mem"),
-        .ROM_FILE_BIAS("b3.mem")
-    )l2(
-        .clk(clk),
-        .rstn(rstn),
-        .i_clear(i_clear),
-        .i_valid(o_valid_l1),
-        .o_ready(i_ready_l1),
-        .i_data(o_data_l1),
-        .o_valid(o_valid),
-        .i_ready(i_ready),
-        .o_data(o_data)
-    );
+    generate
+        for(genvar lay=0; lay<LAYER_NUM; lay++)begin:gen_lay
+            for(genvar para_i=0; para_i<INPUT_PARAS[lay]; para_i++)begin
+                assign i_data_l[lay][para_i] = (lay==0)? i_data[para_i]: o_data_l[lay-1][para_i];
+            end
 
-    
+            layer #(
+                .INPUT_PARA(INPUT_PARAS[lay]),
+                .OUTPUT_PARA(OUTPUT_PARAS[lay]),
+                .ACT_FUNC(ACT_FUNCS[lay]), // "SIGMOID" | "ARGMAX"
+                .INPUT_BITS(INPUT_BITS[lay]),
+                .DENSE_OUTPUT_BITS(DENSE_OUTPUT_BITS[lay]),
+                .OUTPUT_BITS(OUTPUT_BITS[lay]),
+                .DENSE_INPUT_SIZE(DENSE_INPUT_SIZES[lay]),
+                .DENSE_OUTPUT_SIZE(DENSE_OUTPUT_SIZES[lay]),
+                .ROM_FILE_WEIGHT_PREFIX(ROM_FILE_WEIGHT_PREFIXS[lay]),
+                .ROM_FILE_WEIGHT_POSTFIX(ROM_FILE_WEIGHT_POSTFIXS[lay]),
+                .ROM_FILE_BIAS(ROM_FILE_BIASS[lay])
+            )layer(
+                .clk(clk),
+                .rstn(rstn),
+                .i_clear(i_clear),
+
+                .i_valid(i_valid_l[lay]),
+                .o_ready(o_ready_l[lay]),
+                .i_data(i_data_l[lay]),
+                .o_valid(o_valid_l[lay]),
+                .i_ready(i_ready_l[lay]),
+                .o_data(o_data_l[lay])
+            );
+        end
+    endgenerate
+
 
 endmodule
 

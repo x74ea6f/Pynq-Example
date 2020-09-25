@@ -16,6 +16,7 @@
 #########
 #Do NOT ignore VHDL, Verilog, block diagrams or EDIF files.
 !*.vhd
+!*.vh
 !*.v
 !*.sv
 !*.bd
@@ -90,7 +91,6 @@
 *.cache/
 __old/
 !*.md
-*.srcs/sources_1/bd/top_design/ip
 sim/
-synth/
 *.runs/
+!720p_edid.data

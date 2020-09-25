@@ -13,7 +13,7 @@ import code
 
 P_INT = 256
 P_INT_BITS = int(math.log2(P_INT))
-P_PARA = 1
+P_PARA = 4
 
 def int2hex(d, bits):
     d = (1<<bits) + d if (d<0) else d
@@ -160,7 +160,18 @@ def main(mode="INT_MODE"):
 
 
 def save_rom_main():
-    para = P_PARA
+    w_paras = {
+        "W1": P_PARA,
+        "W2": 1,
+        "W3": 1}
+    b_paras = {
+        "b1": 1,
+        "b2": 1,
+        "b3": 1}
+    img_para = P_PARA
+    exp_para = 1
+
+    ##TMP para = P_PARA
     ## Weight & Bias Save ROM
     network = init_network(mode="INT_MODE")
     for key in sorted(network.keys()):
@@ -168,11 +179,11 @@ def save_rom_main():
         n = network[key]
         if key.startswith("W"):
             for i in range(n.shape[1]):
-                save_to_file(f"rom/{key}_{i}.mem", n[:,i], para, P_INT_BITS+1) ## s8
+                save_to_file(f"rom/{key}_{i}.mem", n[:,i], w_paras[key], P_INT_BITS+1) ## s8
             ## for i,nn in enumerate(n):
             ##     save_to_file(f"rom/{key}_{i}.mem", nn, P_INT_BITS) ## 8bit
         else:
-            save_to_file(f"rom/{key}.mem", n, para, P_INT_BITS+1)
+            save_to_file(f"rom/{key}.mem", n, b_paras[key], P_INT_BITS+1)
 
 
     x_test, _ = get_data(mode="INT_MODE")
@@ -180,14 +191,13 @@ def save_rom_main():
     ## x_test = x_test[5649:]
     for x_index in range(10):
         ## Input File
-        save_to_file(f"rom/image{x_index}.mem", x_test[x_index], para, P_INT_BITS)
+        save_to_file(f"rom/image{x_index}.mem", x_test[x_index], img_para, P_INT_BITS)
     
         ## Expected File
         y, a = predict(network, x_test[x_index], mode="INT_MODE")
-        save_to_file(f"rom/exp_l0_{x_index}.mem", a[0], para, P_INT_BITS+5)
-        save_to_file(f"rom/exp_l1_{x_index}.mem", a[1], para, P_INT_BITS+5)
-        save_to_file(f"rom/exp_l2_{x_index}.mem", a[2], para, P_INT_BITS+5)
-        ## save_to_file(f"rom/exp0.mem", a, para, P_INT_BITS)
+        save_to_file(f"rom/exp_l0_{x_index}.mem", a[0], exp_para, P_INT_BITS+5)
+        save_to_file(f"rom/exp_l1_{x_index}.mem", a[1], exp_para, P_INT_BITS+5)
+        save_to_file(f"rom/exp_l2_{x_index}.mem", a[2], exp_para, P_INT_BITS+5)
         print(f"Expected({x_index}): {np.argmax(y)}")
 
 if __name__ == "__main__":

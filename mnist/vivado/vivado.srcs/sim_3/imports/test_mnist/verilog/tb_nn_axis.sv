@@ -1,7 +1,7 @@
 
 module tb_nn_axis();
 
-parameter PARA = 1;
+parameter PARA = 4;
 parameter BITS = 8;
 parameter INPUT_SIZE = 28*28;
 parameter OUTPUT_SIZE = 10;
@@ -231,7 +231,8 @@ initial begin
 end
 
 //-- Expected data
-parameter EXP_LAY = "l2";
+parameter EXP_LAY = "l0";
+parameter EXP_PARA = 1;
 
 parameter EXP_WIDTH = BITS + 5; // Change
 parameter EXP_SIZE = // Change
@@ -239,30 +240,46 @@ parameter EXP_SIZE = // Change
   (EXP_LAY=="l1")? 100:
   (EXP_LAY=="l2")? 10: 0;
 
-logic [EXP_WIDTH*PARA-1:0]exp_mem[0:EXP_SIZE-1];
+logic [EXP_WIDTH*EXP_PARA-1:0]exp_mem[0:EXP_SIZE-1];
 
 logic exp_target_valid;
 logic exp_target_ready;
-logic [PARA-1:0][EXP_WIDTH-1:0] exp_target_data;
-logic [PARA-1:0][EXP_WIDTH-1:0] exp_data;
+logic [EXP_PARA-1:0][EXP_WIDTH-1:0] exp_target_data;
+logic [EXP_PARA-1:0][EXP_WIDTH-1:0] exp_data;
 integer exp_count = 0;
 logic exp_error_flag;
 
 assign exp_target_valid = // Change
-  (EXP_LAY=="l0")? u_nn_axis.u_nn.l0.dense_o_valid:
-  (EXP_LAY=="l1")? u_nn_axis.u_nn.l1.dense_o_valid:
-  (EXP_LAY=="l2")? u_nn_axis.u_nn.l2.dense_o_valid:
+  (EXP_LAY=="l0")? u_nn_axis.u_nn.gen_lay[0].layer.dense_o_valid:
+  (EXP_LAY=="l1")? u_nn_axis.u_nn.gen_lay[1].layer.dense_o_valid:
+  (EXP_LAY=="l2")? u_nn_axis.u_nn.gen_lay[2].layer.dense_o_valid:
   0;
 assign exp_target_ready = // Change
-  (EXP_LAY=="l0")? u_nn_axis.u_nn.l0.dense_i_ready:
-  (EXP_LAY=="l1")? u_nn_axis.u_nn.l1.dense_i_ready:
-  (EXP_LAY=="l2")? u_nn_axis.u_nn.l2.dense_i_ready:
+  (EXP_LAY=="l0")? u_nn_axis.u_nn.gen_lay[0].layer.dense_i_ready:
+  (EXP_LAY=="l1")? u_nn_axis.u_nn.gen_lay[1].layer.dense_i_ready:
+  (EXP_LAY=="l2")? u_nn_axis.u_nn.gen_lay[2].layer.dense_i_ready:
   0;
 assign exp_target_data = // Change
-  (EXP_LAY=="l0")? u_nn_axis.u_nn.l0.dense_o_data:
-  (EXP_LAY=="l1")? u_nn_axis.u_nn.l1.dense_o_data:
-  (EXP_LAY=="l2")? u_nn_axis.u_nn.l2.dense_o_data:
+  (EXP_LAY=="l0")? u_nn_axis.u_nn.gen_lay[0].layer.dense_o_data:
+  (EXP_LAY=="l1")? u_nn_axis.u_nn.gen_lay[1].layer.dense_o_data:
+  (EXP_LAY=="l2")? u_nn_axis.u_nn.gen_lay[2].layer.dense_o_data:
   0;
+
+// assign exp_target_valid = // Change
+//   (EXP_LAY=="l0")? u_nn_axis.u_nn.l0.dense_o_valid:
+//   (EXP_LAY=="l1")? u_nn_axis.u_nn.l1.dense_o_valid:
+//   (EXP_LAY=="l2")? u_nn_axis.u_nn.l2.dense_o_valid:
+//   0;
+// assign exp_target_ready = // Change
+//   (EXP_LAY=="l0")? u_nn_axis.u_nn.l0.dense_i_ready:
+//   (EXP_LAY=="l1")? u_nn_axis.u_nn.l1.dense_i_ready:
+//   (EXP_LAY=="l2")? u_nn_axis.u_nn.l2.dense_i_ready:
+//   0;
+// assign exp_target_data = // Change
+//   (EXP_LAY=="l0")? u_nn_axis.u_nn.l0.dense_o_data:
+//   (EXP_LAY=="l1")? u_nn_axis.u_nn.l1.dense_o_data:
+//   (EXP_LAY=="l2")? u_nn_axis.u_nn.l2.dense_o_data:
+//   0;
 
 assign exp_data = exp_mem[exp_count];
 
@@ -293,15 +310,13 @@ end
 
 always_ff @(posedge aclk)begin
     if(exp_target_valid & exp_target_ready)begin
-        exp_count <= ((EXP_SIZE+PARA-1)/PARA-1<=exp_count)? 0: exp_count + 1;
+        exp_count <= ((EXP_SIZE+EXP_PARA-1)/EXP_PARA-1<=exp_count)? 0: exp_count + 1;
     end
 end
 
 nn_axis #(
     .PARA(PARA),
-    .BITS(BITS),
-    .INPUT_SIZE(INPUT_SIZE),
-    .OUTPUT_SIZE(OUTPUT_SIZE)
+    .BITS(BITS)
 )u_nn_axis(
     .*
 );

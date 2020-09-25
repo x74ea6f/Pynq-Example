@@ -18,8 +18,8 @@
 //  TDEST_WIDTH               - Tdest Width               (long) 
 //  TDATA_NUM_BYTES           - Tdata Num Bytes           (long) 
 module nn_axis#(
-    PARA = 1,
-    BITS = 8
+    parameter [31:0] PARA = 32'd4,
+    parameter [31:0] BITS = 32'd8
 ) (
 
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 slave_axis TDATA" *)
@@ -33,7 +33,7 @@ module nn_axis#(
   input s_tlast,
 
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 master_axis TDATA" *)
-  output [PARA*BITS-1:0] m_tdata, // Transfer Data (optional)
+  output [BITS-1:0] m_tdata, // Transfer Data (optional)
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 master_axis TVALID" *)
   output m_tvalid, // Transfer valid (required)
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 master_axis TREADY" *)
@@ -49,8 +49,12 @@ module nn_axis#(
 
 //  user logic here
 
+//TODO SystemVerilogに配列なパラメータを渡せない
+//TODO VerilogじゃないとBlock Designに追加できない。
+
 nn #(
-    .PARA(PARA),
+    // .INPUT_PARAS({PARA, 32'd1, 32'd1}),
+    // .OUTPUT_PARAS({32'd1, 32'd1, 32'd1}),
     .BITS(BITS)
 ) u_nn(
     .clk(aclk),
