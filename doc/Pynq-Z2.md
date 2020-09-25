@@ -467,7 +467,6 @@ Python側はここの改造`ch03/neuralnet_mnist.py`
 
 ## 機械学習 ##TODO
 - [FPGAでDeep Learningしてみる - Qiita](https://qiita.com/ykshr/items/6c8cff881a200a781dc3)
-ここらへんを実行してみる。
 
 - [【読解】 Binarized Neural Networks - Qiita](https://qiita.com/harmegiddo/items/8988a60430dc6184a033)  
 BNNの解説
