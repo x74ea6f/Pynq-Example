@@ -449,7 +449,7 @@ Python側はここの改造`ch03/neuralnet_mnist.py`
 
 ### Repos
 ## [mnist](./mnist)
-
+実装内容は、README.md参照。
 
 ### ILA(Integrated Logic Analyzer)
 - ILAをDesignに入れる。
@@ -501,6 +501,13 @@ Vivadoのコンパイルでエラーが出たときのメモ書き。
 - 拡張子を.svにしておけばOK
 - vivado 2020.1
 
+### Block Design(.bd)でのSystemVerilog
+- SystemVerilogのモジュールをbdに追加(Add Module)できない。
+- そもそも対応していない様子。
+    - [Solved: Using SystemVerilog module in Vivado 2016.4 - Community Forums](https://forums.xilinx.com/t5/Synthesis/Using-SystemVerilog-module-in-Vivado-2016-4/td-p/750777)
+- Verilogのラッパーを作れば追加できる。
+    - parameterの接続ができない。
+
 ### レジスタ設定について。
 ネットにあるサンプルではあまり見かけなかったが、こんな感じでもアクセスできて超便利。  
 補完にも出る(OL.まで打ってTab)  
@@ -514,14 +521,15 @@ OL.axi_gpio_1.register_map.GPIO_DATA = 0xF
 
 
 ### Simでの`should not contain white space, new line`
-    - File PropertyのLibraryを「work」にする。
-    - [ERROR: [XSIM 43-3268] Simulating a custon IP with ... - Community Forums](https://forums.xilinx.com/t5/Simulation-and-Verification/ERROR-XSIM-43-3268-Simulating-a-custon-IP-with-AXI4-Lite/td-p/921364)
+- File PropertyのLibraryを「work」にする。
+- [ERROR: [XSIM 43-3268] Simulating a custon IP with ... - Community Forums](https://forums.xilinx.com/t5/Simulation-and-Verification/ERROR-XSIM-43-3268-Simulating-a-custon-IP-with-AXI4-Lite/td-p/921364)
 
 ### Vivado起動時のTimeout
-    - `”Could nt locate Help files. Quick Help will not be available.”`
+- ` ”Could nt locate Help files. Quick Help will not be available.” `
     - こんなエラーが出た。
     - `Tools -> Settings -> Help -> Launguage = English` で解消
     - [Vivado 2020.1 での起動時のエラーの解消方法 - FPGAの部屋](https://marsee101.blog.fc2.com/blog-entry-4913.html?sp)
+    - → これ保存してくれてなくて毎度変えなきゃダメ状態になっている。よくわからない。
 
 ### デザイン変えた時とかの注意点
 - アドレスが割り当てらてないことがまれによくある。

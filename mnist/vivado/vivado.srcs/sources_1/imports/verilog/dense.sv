@@ -129,21 +129,6 @@ assign o_b_addr = count_out;
 logic out_valid_d_dly;
 logic [OUTPUT_SIZE_INPUT_BITS-1:0] count_out_dly;
 
-// dly#(
-//     .DLY(ROM_LATENCY),
-//     .INPUT_BITS(OUTPUT_SIZE_INPUT_BITS+1)
-// )dly_count_out(
-//     .clk(clk),
-//     .i_data({out_valid_d, count_out}),
-//     .o_data({out_valid_d_dly, count_out_dly})
-// );
-// always_ff @(posedge clk)begin
-//     if(i_ready)begin
-//         out_valid_d_dly <= out_valid_d;
-//         count_out_dly <= count_out;
-//     end
-// end
-
 dlyen#(
     .DLY(ROM_LATENCY),
     .BITS(OUTPUT_SIZE_INPUT_BITS+1)
