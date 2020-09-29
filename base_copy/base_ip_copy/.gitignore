@@ -95,4 +95,5 @@
 __old/
 !*.md
 
-!*_edid.data
+!*edid.data
+!docs/

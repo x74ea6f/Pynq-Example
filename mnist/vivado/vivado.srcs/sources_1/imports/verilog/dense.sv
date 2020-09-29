@@ -1,3 +1,4 @@
+// Dense(Fully Connected)
 
 module dense #(
     parameter INPUT_PARA = 4, // Input Parallel
@@ -36,12 +37,12 @@ assign internal_valid = i_valid & o_ready;
 logic [INPUT_SIZE_INPUT_BITS-1:0] count_in;
 
 always_ff @(posedge clk, negedge rstn)begin
-    if(rstn==0)begin
-        count_in <= 0;
+    if(rstn=='b0)begin
+        count_in <= '0;
     end
     else begin
-        count_in <= (internal_clear)? 0:
-            ((INPUT_SIZE+INPUT_PARA-1)/INPUT_PARA-1 <= count_in)? 0:
+        count_in <= (internal_clear)? '0:
+            ((INPUT_SIZE+INPUT_PARA-1)/INPUT_PARA-1 <= count_in)? '0:
             (internal_valid)? count_in + 1:
             count_in;
     end
@@ -52,7 +53,7 @@ assign o_w_addr = count_in;
 
 // Input Delay, wait for ROM
 logic [INPUT_PARA-1:0][INPUT_BITS-1:0] i_data_dly;
-logic i_valid_dly;
+logic internal_valid_dly;
 
 dly#(
     .DLY(ROM_LATENCY),
@@ -67,11 +68,12 @@ dly#(
 function signed [INPUT_BITS*2+1+$clog2(INPUT_PARA)-1:0] f_sum_para;
     input signed [INPUT_PARA-1:0][INPUT_BITS*2+1-1:0] mul;
 begin
-    integer sum = $signed(mul[0]);
+    integer s;
+    s = $signed(mul[0]);
     for(int i=1; i<INPUT_PARA; i++)begin
-        sum = sum + $signed(mul[i]);
+        s = s + $signed(mul[i]);
     end
-    f_sum_para = sum;
+    f_sum_para = s;
 end
 endfunction
 
@@ -84,14 +86,26 @@ for(genvar i=0; i<OUTPUT_SIZE; i++)begin
         assign mul[k] = $signed({1'b0, i_data_dly[k]}) * $signed(i_w_data[i][k]);
     end
     
+    logic signed [INPUT_BITS*2+1+$clog2(INPUT_PARA)-1:0] sum_para;
+    assign sum_para = f_sum_para(mul);
+
     logic signed [(INPUT_BITS*2+1)+(INPUT_SIZE_INPUT_BITS)-1:0] sum;
     logic signed [(INPUT_BITS*2+1)+(INPUT_SIZE_INPUT_BITS)-1:0] sum_d;
     assign sum = (internal_clear)? 0:
-        (internal_valid_dly)? sum_d + f_sum_para(mul):
+        (internal_valid_dly)? $signed(sum_d) + $signed(sum_para):
         sum_d;
+    // //TMP Start
+    // // '0だけでSimが、おかしな動きになるけど解明できず。
+    // logic signed [(INPUT_BITS*2+1)+(INPUT_SIZE_INPUT_BITS)-1:0] sum2;
+    // logic signed [(INPUT_BITS*2+1)+(INPUT_SIZE_INPUT_BITS)-1:0] sum2_d;
+    // assign sum2 = (internal_clear)? '0:
+    //     (internal_valid_dly)? $signed(sum2_d) + $signed(sum_para):
+    //     sum2_d;
+    // //TMP End
 
     always_ff @(posedge clk)begin
         sum_d <= sum;
+        // sum2_d <= sum; //TMP
     end
 
     assign sums[i] = sum_d;
@@ -104,14 +118,14 @@ logic [OUTPUT_SIZE_INPUT_BITS-1:0] count_out;
 logic out_valid_d;
 
 always_ff @(posedge clk, negedge rstn)begin
-    if(rstn==0)begin
-        count_out <= 0;
-        out_valid_d <= 0;
+    if(rstn=='b0)begin
+        count_out <= '0;
+        out_valid_d <= '0;
     end
     else begin
         if(i_ready)begin
-            count_out <= (internal_clear)? 0:
-                ((((OUTPUT_SIZE+OUTPUT_PARA-1)/OUTPUT_PARA)-1)<=count_out)? 0:
+            count_out <= (internal_clear)? '0:
+                ((((OUTPUT_SIZE+OUTPUT_PARA-1)/OUTPUT_PARA)-1)<=count_out)? '0:
                 (out_valid_d)? count_out+1:
                 count_out;
         end
@@ -129,28 +143,22 @@ assign o_b_addr = count_out;
 logic out_valid_d_dly;
 logic [OUTPUT_SIZE_INPUT_BITS-1:0] count_out_dly;
 
-// dly#(
-//     .DLY(ROM_LATENCY),
-//     .INPUT_BITS(OUTPUT_SIZE_INPUT_BITS+1)
-// )dly_count_out(
-//     .clk(clk),
-//     .i_data({out_valid_d, count_out}),
-//     .o_data({out_valid_d_dly, count_out_dly})
-// );
-//TODO 
-always_ff @(posedge clk)begin
-    if(i_ready)begin
-        out_valid_d_dly <= out_valid_d;
-        count_out_dly <= count_out;
-    end
-end
+dlyen#(
+    .DLY(ROM_LATENCY),
+    .BITS(OUTPUT_SIZE_INPUT_BITS+1)
+)dly_count_out(
+    .clk(clk),
+    .en(i_ready),
+    .i_data({out_valid_d, count_out}),
+    .o_data({out_valid_d_dly, count_out_dly})
+);
 
 logic signed [OUTPUT_PARA-1:0][OUTPUT_BITS-1:0] o_data_d;
 generate
 for(genvar i=0; i<OUTPUT_PARA; i++)begin
     logic signed [(INPUT_BITS+1)+(INPUT_SIZE_INPUT_BITS)-1:0] sum_sft;
     assign sum_sft =
-      ((count_out_dly*OUTPUT_PARA+i)>=OUTPUT_SIZE)? 0: // Out out bounds
+      ((count_out_dly*OUTPUT_PARA+i)>=OUTPUT_SIZE)? '0: // Out out bounds
       (($signed(sums[count_out_dly*OUTPUT_PARA+i]))>>INPUT_BITS);
     
     logic signed [(INPUT_BITS+1)+(INPUT_SIZE_INPUT_BITS)+1-1:0] sum_bias;
@@ -174,8 +182,8 @@ logic o_valid_d;
 logic o_ready_d;
 always_ff @(posedge clk, negedge rstn)begin
     if(rstn==0)begin
-        o_valid_d <= 0;
-        o_ready_d <= 0;
+        o_valid_d <= '0;
+        o_ready_d <= '0;
     end
     else begin
         if(i_ready)begin

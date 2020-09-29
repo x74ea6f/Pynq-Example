@@ -6,6 +6,7 @@ sv xil_defaultlib  --include "../../../../vivado.srcs/sources_1/bd/test_mnist/ip
 "../../../../vivado.srcs/sources_1/imports/verilog/argmax.sv" \
 "../../../../vivado.srcs/sources_1/imports/verilog/dense.sv" \
 "../../../../vivado.srcs/sources_1/imports/verilog/dly.sv" \
+"../../../../vivado.srcs/sources_1/imports/verilog/dlyen.sv" \
 "../../../../vivado.srcs/sources_1/imports/verilog/layer.sv" \
 "../../../../vivado.srcs/sources_1/imports/verilog/nn.sv" \
 "../../../../vivado.srcs/sources_1/imports/verilog/rom.sv" \
