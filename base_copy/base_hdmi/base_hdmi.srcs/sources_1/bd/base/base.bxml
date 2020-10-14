@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="base" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1602130583"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1602130583"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1602130583"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1602130583"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1602208400"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1602208400"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1602208400"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1602208400"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\base_btns_gpio_0\base_btns_gpio_0.xci" Type="IP">
         <Instance HierarchyPath="btns_gpio"/>
@@ -282,8 +282,24 @@
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\base_s00_regslice_37\base_s00_regslice_37.xci" Type="IP">
+      <File Name="ip\base_v_multi_scaler_0_2\base_v_multi_scaler_0_2.xci" Type="IP">
+        <Instance HierarchyPath="video/v_multi_scaler_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\base_s00_regslice_43\base_s00_regslice_43.xci" Type="IP">
         <Instance HierarchyPath="video/axi_interconnect_0/s00_couplers/s00_regslice"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\base_auto_ds_0\base_auto_ds_0.xci" Type="IP">
+        <Instance HierarchyPath="video/axi_interconnect_0/s00_couplers/auto_ds"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -298,7 +314,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\base_m00_regslice_37\base_m00_regslice_37.xci" Type="IP">
+      <File Name="ip\base_m00_regslice_43\base_m00_regslice_43.xci" Type="IP">
         <Instance HierarchyPath="video/axi_interconnect_0/m00_couplers/m00_regslice"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -306,7 +322,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\base_m01_regslice_37\base_m01_regslice_37.xci" Type="IP">
+      <File Name="ip\base_m01_regslice_43\base_m01_regslice_43.xci" Type="IP">
         <Instance HierarchyPath="video/axi_interconnect_0/m01_couplers/m01_regslice"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -322,7 +338,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\base_m02_regslice_37\base_m02_regslice_37.xci" Type="IP">
+      <File Name="ip\base_m02_regslice_43\base_m02_regslice_43.xci" Type="IP">
         <Instance HierarchyPath="video/axi_interconnect_0/m02_couplers/m02_regslice"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -338,7 +354,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\base_m03_regslice_37\base_m03_regslice_37.xci" Type="IP">
+      <File Name="ip\base_m03_regslice_43\base_m03_regslice_43.xci" Type="IP">
         <Instance HierarchyPath="video/axi_interconnect_0/m03_couplers/m03_regslice"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -346,7 +362,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\base_m04_regslice_31\base_m04_regslice_31.xci" Type="IP">
+      <File Name="ip\base_m04_regslice_37\base_m04_regslice_37.xci" Type="IP">
         <Instance HierarchyPath="video/axi_interconnect_0/m04_couplers/m04_regslice"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -354,7 +370,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\base_m05_regslice_31\base_m05_regslice_31.xci" Type="IP">
+      <File Name="ip\base_m05_regslice_37\base_m05_regslice_37.xci" Type="IP">
         <Instance HierarchyPath="video/axi_interconnect_0/m05_couplers/m05_regslice"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -362,7 +378,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\base_m06_regslice_31\base_m06_regslice_31.xci" Type="IP">
+      <File Name="ip\base_m06_regslice_37\base_m06_regslice_37.xci" Type="IP">
         <Instance HierarchyPath="video/axi_interconnect_0/m06_couplers/m06_regslice"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -378,7 +394,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\base_m07_regslice_31\base_m07_regslice_31.xci" Type="IP">
+      <File Name="ip\base_m07_regslice_37\base_m07_regslice_37.xci" Type="IP">
         <Instance HierarchyPath="video/axi_interconnect_0/m07_couplers/m07_regslice"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -426,7 +442,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\base_s00_regslice_36\base_s00_regslice_36.xci" Type="IP">
+      <File Name="ip\base_s00_regslice_42\base_s00_regslice_42.xci" Type="IP">
         <Instance HierarchyPath="ps7_0_axi_periph/s00_couplers/s00_regslice"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -442,7 +458,15 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\base_m00_regslice_36\base_m00_regslice_36.xci" Type="IP">
+      <File Name="ip\base_auto_us_1\base_auto_us_1.xci" Type="IP">
+        <Instance HierarchyPath="ps7_0_axi_periph/s00_couplers/auto_us"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\base_m00_regslice_42\base_m00_regslice_42.xci" Type="IP">
         <Instance HierarchyPath="ps7_0_axi_periph/m00_couplers/m00_regslice"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -450,7 +474,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\base_m01_regslice_36\base_m01_regslice_36.xci" Type="IP">
+      <File Name="ip\base_m01_regslice_42\base_m01_regslice_42.xci" Type="IP">
         <Instance HierarchyPath="ps7_0_axi_periph/m01_couplers/m01_regslice"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -458,8 +482,16 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\base_m02_regslice_36\base_m02_regslice_36.xci" Type="IP">
+      <File Name="ip\base_m02_regslice_42\base_m02_regslice_42.xci" Type="IP">
         <Instance HierarchyPath="ps7_0_axi_periph/m02_couplers/m02_regslice"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\base_auto_ds_1\base_auto_ds_1.xci" Type="IP">
+        <Instance HierarchyPath="ps7_0_axi_periph/m02_couplers/auto_ds"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -474,7 +506,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\base_m03_regslice_36\base_m03_regslice_36.xci" Type="IP">
+      <File Name="ip\base_m03_regslice_42\base_m03_regslice_42.xci" Type="IP">
         <Instance HierarchyPath="ps7_0_axi_periph/m03_couplers/m03_regslice"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -482,8 +514,16 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\base_m04_regslice_30\base_m04_regslice_30.xci" Type="IP">
+      <File Name="ip\base_m04_regslice_36\base_m04_regslice_36.xci" Type="IP">
         <Instance HierarchyPath="ps7_0_axi_periph/m04_couplers/m04_regslice"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\base_auto_ds_2\base_auto_ds_2.xci" Type="IP">
+        <Instance HierarchyPath="ps7_0_axi_periph/m04_couplers/auto_ds"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -498,8 +538,16 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\base_m05_regslice_30\base_m05_regslice_30.xci" Type="IP">
+      <File Name="ip\base_m05_regslice_36\base_m05_regslice_36.xci" Type="IP">
         <Instance HierarchyPath="ps7_0_axi_periph/m05_couplers/m05_regslice"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\base_auto_ds_3\base_auto_ds_3.xci" Type="IP">
+        <Instance HierarchyPath="ps7_0_axi_periph/m05_couplers/auto_ds"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -514,7 +562,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\base_m06_regslice_30\base_m06_regslice_30.xci" Type="IP">
+      <File Name="ip\base_m06_regslice_36\base_m06_regslice_36.xci" Type="IP">
         <Instance HierarchyPath="ps7_0_axi_periph/m06_couplers/m06_regslice"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -522,8 +570,16 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\base_m07_regslice_30\base_m07_regslice_30.xci" Type="IP">
+      <File Name="ip\base_m07_regslice_36\base_m07_regslice_36.xci" Type="IP">
         <Instance HierarchyPath="ps7_0_axi_periph/m07_couplers/m07_regslice"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\base_auto_ds_4\base_auto_ds_4.xci" Type="IP">
+        <Instance HierarchyPath="ps7_0_axi_periph/m07_couplers/auto_ds"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
