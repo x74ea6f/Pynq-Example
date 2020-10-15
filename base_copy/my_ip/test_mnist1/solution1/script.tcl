@@ -5,9 +5,9 @@
 ############################################################
 open_project test_mnist1
 set_top dense_axis
-add_files test_mnist1/src/dense.cpp
 add_files test_mnist1/src/dense.h
-add_files -tb test_mnist1/src/dense_tb.cpp -cflags "-Wno-unknown-pragmas"
+add_files test_mnist1/src/dense.cpp
+add_files -tb test_mnist1/src/dense_tb.cpp -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 open_solution "solution1"
 set_part {xc7z020-clg400-1}
 create_clock -period 10 -name default
@@ -18,4 +18,4 @@ set_clock_uncertainty 12.5%
 csim_design
 csynth_design
 cosim_design -trace_level all
-export_design -format ip_catalog
+export_design -rtl verilog -format ip_catalog

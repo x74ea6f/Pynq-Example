@@ -61,7 +61,6 @@ void dense_axi_core(hls::stream<T> &a,
 	T buf[M];
 
 	DENSE_J_N:for(int j=0; j<N; j++){
-#pragma HLS PIPELINE
 		BUF_READ_M:for(int i=0; i<M; i++){
 #pragma HLS PIPELINE
 			buf[i] = a.read();
