@@ -52,6 +52,11 @@
 			<location>C:/Vivado_Project/Pynq-Examples/base_copy/my_ip/test_mnist1/src/dense.h</location>
 		</link>
 		<link>
+			<name>source/sigmoid.cpp</name>
+			<type>1</type>
+			<location>C:/Vivado_Project/Pynq-Examples/base_copy/my_ip/test_mnist1/src/sigmoid.cpp</location>
+		</link>
+		<link>
 			<name>testbench/dense_tb.cpp</name>
 			<type>1</type>
 			<location>C:/Vivado_Project/Pynq-Examples/base_copy/my_ip/test_mnist1/src/dense_tb.cpp</location>
