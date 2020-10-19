@@ -4,11 +4,14 @@
 ## Copyright (C) 1986-2020 Xilinx, Inc. All Rights Reserved.
 ############################################################
 open_project test_mnist1
-set_top dense_axis
+set_top nn
+add_files test_mnist1/src/argmax.h
 add_files test_mnist1/src/dense.cpp
 add_files test_mnist1/src/dense.h
+add_files test_mnist1/src/nn.cpp
 add_files test_mnist1/src/sigmoid.cpp
-add_files -tb test_mnist1/src/dense_tb.cpp -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
+add_files test_mnist1/src/sigmoid.h
+add_files -tb test_mnist1/src/dense_tb.cpp -cflags "-Wno-unknown-pragmas"
 open_solution "solution1"
 set_part {xc7z020-clg400-1}
 create_clock -period 10 -name default

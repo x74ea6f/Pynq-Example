@@ -42,6 +42,11 @@
 			<location>C:/Vivado_Project/Pynq-Examples/base_copy/my_ip/test_mnist1/solution1/.tcls</location>
 		</link>
 		<link>
+			<name>source/argmax.h</name>
+			<type>1</type>
+			<location>C:/Vivado_Project/Pynq-Examples/base_copy/my_ip/test_mnist1/src/argmax.h</location>
+		</link>
+		<link>
 			<name>source/dense.cpp</name>
 			<type>1</type>
 			<location>C:/Vivado_Project/Pynq-Examples/base_copy/my_ip/test_mnist1/src/dense.cpp</location>
@@ -52,9 +57,19 @@
 			<location>C:/Vivado_Project/Pynq-Examples/base_copy/my_ip/test_mnist1/src/dense.h</location>
 		</link>
 		<link>
+			<name>source/nn.cpp</name>
+			<type>1</type>
+			<location>C:/Vivado_Project/Pynq-Examples/base_copy/my_ip/test_mnist1/src/nn.cpp</location>
+		</link>
+		<link>
 			<name>source/sigmoid.cpp</name>
 			<type>1</type>
 			<location>C:/Vivado_Project/Pynq-Examples/base_copy/my_ip/test_mnist1/src/sigmoid.cpp</location>
+		</link>
+		<link>
+			<name>source/sigmoid.h</name>
+			<type>1</type>
+			<location>C:/Vivado_Project/Pynq-Examples/base_copy/my_ip/test_mnist1/src/sigmoid.h</location>
 		</link>
 		<link>
 			<name>testbench/dense_tb.cpp</name>
