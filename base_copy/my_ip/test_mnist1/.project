@@ -42,6 +42,11 @@
 			<location>C:/Vivado_Project/Pynq-Examples/base_copy/my_ip/test_mnist1/solution1/.tcls</location>
 		</link>
 		<link>
+			<name>source/argmax.cpp</name>
+			<type>1</type>
+			<location>C:/Vivado_Project/Pynq-Examples/base_copy/my_ip/test_mnist1/src/argmax.cpp</location>
+		</link>
+		<link>
 			<name>source/argmax.h</name>
 			<type>1</type>
 			<location>C:/Vivado_Project/Pynq-Examples/base_copy/my_ip/test_mnist1/src/argmax.h</location>
@@ -62,6 +67,11 @@
 			<location>C:/Vivado_Project/Pynq-Examples/base_copy/my_ip/test_mnist1/src/nn.cpp</location>
 		</link>
 		<link>
+			<name>source/nn.h</name>
+			<type>1</type>
+			<location>C:/Vivado_Project/Pynq-Examples/base_copy/my_ip/test_mnist1/src/nn.h</location>
+		</link>
+		<link>
 			<name>source/sigmoid.cpp</name>
 			<type>1</type>
 			<location>C:/Vivado_Project/Pynq-Examples/base_copy/my_ip/test_mnist1/src/sigmoid.cpp</location>
@@ -75,6 +85,11 @@
 			<name>testbench/dense_tb.cpp</name>
 			<type>1</type>
 			<location>C:/Vivado_Project/Pynq-Examples/base_copy/my_ip/test_mnist1/src/dense_tb.cpp</location>
+		</link>
+		<link>
+			<name>testbench/nn_tb.cpp</name>
+			<type>1</type>
+			<location>C:/Vivado_Project/Pynq-Examples/base_copy/my_ip/test_mnist1/src/nn_tb.cpp</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>

@@ -56,7 +56,7 @@ using namespace std;
 //
 //}
 
-int main(void){
+int main_dense(void){
 	const int N = 3;
 	const int M = 2;
 	typedef uint8_t data_t_in;

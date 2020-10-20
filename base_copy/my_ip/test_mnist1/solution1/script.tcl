@@ -5,13 +5,16 @@
 ############################################################
 open_project test_mnist1
 set_top nn
-add_files test_mnist1/src/argmax.h
-add_files test_mnist1/src/dense.cpp
-add_files test_mnist1/src/dense.h
-add_files test_mnist1/src/nn.cpp
-add_files test_mnist1/src/sigmoid.cpp
-add_files test_mnist1/src/sigmoid.h
-add_files -tb test_mnist1/src/dense_tb.cpp -cflags "-Wno-unknown-pragmas"
+add_files test_mnist1/src/argmax.cpp -cflags "--std=c++11"
+add_files test_mnist1/src/argmax.h -cflags "--std=c++11"
+add_files test_mnist1/src/dense.cpp -cflags "--std=c++11"
+add_files test_mnist1/src/dense.h -cflags "--std=c++11"
+add_files test_mnist1/src/nn.cpp -cflags "--std=c++11"
+add_files test_mnist1/src/nn.h -cflags "--std=c++11"
+add_files test_mnist1/src/sigmoid.cpp -cflags "--std=c++11"
+add_files test_mnist1/src/sigmoid.h -cflags "--std=c++11"
+add_files -tb test_mnist1/src/dense_tb.cpp -cflags "-Wno-unknown-pragmas -std=c++0x"
+add_files -tb test_mnist1/src/nn_tb.cpp -cflags "-Wno-unknown-pragmas -std=c++0x"
 open_solution "solution1"
 set_part {xc7z020-clg400-1}
 create_clock -period 10 -name default

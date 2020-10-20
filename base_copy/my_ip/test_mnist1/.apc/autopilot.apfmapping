@@ -7,8 +7,11 @@
     <originFiles name="nn.cpp" path="C:\Vivado_Project\Pynq-Examples\base_copy\my_ip\test_mnist1\src\nn.cpp"/>
     <originFiles name="sigmoid.cpp" path="C:\Vivado_Project\Pynq-Examples\base_copy\my_ip\test_mnist1\src\sigmoid.cpp"/>
     <originFiles name="sigmoid.h" path="C:\Vivado_Project\Pynq-Examples\base_copy\my_ip\test_mnist1\src\sigmoid.h"/>
+    <originFiles name="argmax.cpp" path="C:\Vivado_Project\Pynq-Examples\base_copy\my_ip\test_mnist1\src\argmax.cpp"/>
+    <originFiles name="nn.h" path="C:\Vivado_Project\Pynq-Examples\base_copy\my_ip\test_mnist1\src\nn.h"/>
   </source>
   <testbench>
     <originFiles name="dense_tb.cpp" path="C:\Vivado_Project\Pynq-Examples\base_copy\my_ip\test_mnist1\src\dense_tb.cpp"/>
+    <originFiles name="nn_tb.cpp" path="C:\Vivado_Project\Pynq-Examples\base_copy\my_ip\test_mnist1\src\nn_tb.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

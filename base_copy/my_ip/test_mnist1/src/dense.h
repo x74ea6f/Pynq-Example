@@ -22,7 +22,7 @@
 template <int M, int N, int SFT, typename T_IN, typename T_OUT, typename T_WB>
 void dense_ref_core(T_IN a[M], T_WB w[M][N], T_WB b[N], T_OUT c[N]);
 
-template <int M = 28*28, int N = 50, int SFT = 8, typename T_IN = uint8_t, typename T_OUT = int16_t, typename T_WB = int8_t>
+template <int M = 28*28, int N = 50, int SFT = 7, typename T_IN = uint8_t, typename T_OUT = int16_t, typename T_WB = int8_t>
 void dense_strm_core(hls::stream<T_IN> &a, T_WB w[M][N], T_WB b[N], hls::stream<T_OUT> &c);
 
 

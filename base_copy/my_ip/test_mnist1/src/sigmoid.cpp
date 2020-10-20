@@ -40,7 +40,7 @@ void sigmoid_ref_core(T a[M], T_OUT c[M]){
 //}
 
 template <int M, int SFT,
-  typename T = int16_t, typename T_OUT = uint8_t, T TMAX = 255>
+  typename T, typename T_OUT, T TMAX>
 void sigmoid_strm_core(hls::stream<T> &a, hls::stream<T_OUT> &c){
 
 		for(int i=0; i<M; i++){
