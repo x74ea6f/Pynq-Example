@@ -19,7 +19,24 @@ def int2hex(d, bits):
     d = (1<<bits) + d if (d<0) else d
     return d
 
-def save_to_file(file_name, array, para, bits):
+def save_to_file_h(file_name, name, array):
+    ## for .h
+    dim2 = len(array.shape)==2
+    with open(file_name, 'w') as f:
+        f.write(f"#pragma once\n")
+        if dim2:
+            f.write(f"int8_t {name}[{array.shape[0]}][{array.shape[1]}] = {{\n")
+        else:
+            f.write(f"int8_t {name}[{array.shape[0]}] = {{\n")
+        
+        for a in array:
+            if dim2:
+                f.write(f"{{ {', '.join([str(b) for b in a])} }},\n")
+            else:
+                f.write(f"  {a},\n")
+        f.write(f"}};\n")
+
+def save_to_file_hls(file_name, array, para, bits):
     ## for hls
     with open(file_name, 'w') as f:
         for i in range(0, (len(array)+para-1)//para):
@@ -191,13 +208,14 @@ def save_rom_main():
     for key in sorted(network.keys()):
         print(f"{key}")
         n = network[key]
-        if key.startswith("W"):
-            for i in range(n.shape[1]):
-                save_to_file(f"rom/{key}_{i}.mem", n[:,i], w_paras[key], P_INT_BITS+1) ## s8
-            ## for i,nn in enumerate(n):
-            ##     save_to_file(f"rom/{key}_{i}.mem", nn, P_INT_BITS) ## 8bit
-        else:
-            save_to_file(f"rom/{key}.mem", n, b_paras[key], P_INT_BITS+1)
+        save_to_file_h(f"rom_hls/{key}.h", key, n)
+        ## if key.startswith("W"):
+        ##     for i in range(n.shape[1]):
+        ##         save_to_file(f"rom_hls/{key}_{i}.mem", n[:,i], w_paras[key], P_INT_BITS+1) ## s8
+        ##     ## for i,nn in enumerate(n):
+        ##     ##     save_to_file(f"rom_hls/{key}_{i}.mem", nn, P_INT_BITS) ## 8bit
+        ## else:
+        ##     save_to_file(f"rom_hls/{key}.mem", n, b_paras[key], P_INT_BITS+1)
 
 
     x_test, y_test = get_data(mode="INT_MODE")
@@ -205,13 +223,13 @@ def save_rom_main():
     ## x_test = x_test[5649:]
     for x_index in range(10):
         ## Input File
-        save_to_file(f"rom/image{x_index}.mem", x_test[x_index], img_para, P_INT_BITS)
+        save_to_file_hls(f"rom_hls/image{x_index}.mem", x_test[x_index], img_para, P_INT_BITS)
     
         ## Expected File
         y, a = predict(network, x_test[x_index], mode="INT_MODE")
-        save_to_file(f"rom/exp_l0_{x_index}.mem", a[0], exp_para, P_INT_BITS+5)
-        save_to_file(f"rom/exp_l1_{x_index}.mem", a[1], exp_para, P_INT_BITS+5)
-        save_to_file(f"rom/exp_l2_{x_index}.mem", a[2], exp_para, P_INT_BITS+5)
+        save_to_file_hls(f"rom_hls/exp_l0_{x_index}.mem", a[0], exp_para, P_INT_BITS+5)
+        save_to_file_hls(f"rom_hls/exp_l1_{x_index}.mem", a[1], exp_para, P_INT_BITS+5)
+        save_to_file_hls(f"rom_hls/exp_l2_{x_index}.mem", a[2], exp_para, P_INT_BITS+5)
         print(f"[{x_index}]Expected: {y_test[x_index]}, Predict: {np.argmax(y)}")
 
 if __name__ == "__main__":
