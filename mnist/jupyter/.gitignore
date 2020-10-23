@@ -1,0 +1,5 @@
+.ipynb_checkpoints
+__pycache__
+
+rom/*.mem
+sds_trace_data.dat

@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Sep 23 11:27:00 2020
+# Process ID: 7640
+# Current directory: C:/Users/iizuk/AppData/Roaming/Xilinx/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15216
+# Log file: C:/Users/iizuk/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file: C:/Users/iizuk/AppData/Roaming/Xilinx/Vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Vivado_Project/Pynq/test_mnist/vivado/vivado.xpr
+update_compile_order -fileset sources_1
+archive_project C:/Vivado_Project/Pynq/test_mnist/test_mnist_vivado.xpr.zip -temp_dir C:/Users/iizuk/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-7640-DESKTOP-OMB4GFF -force -exclude_run_results -include_config_settings

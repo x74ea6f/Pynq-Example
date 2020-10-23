@@ -94,6 +94,7 @@ ARMなので、コンパイルが必要。
 
 #### wifi Setup
 公式のドライバがコンパイルできないので、有志ので接続できた。  
+rtl8188euで検索。  
 
 おおざっぱなやり方。  
 途中で何度か`sudo reboot now`入れてる。  
@@ -411,16 +412,16 @@ extern "C" void select_mic(int iic_index) {
     - AXI_HPをInterConnectに繋げば、自作HLSからDDRアクセス可能
 
 ### Repos
-- [vivado]() ##TODO ここにrepositoryのURL入れる
-- [hls]() ##TODO ここにrepositoryのURL入れる
-- [JupyterNotebook]() ##TODO ここにrepositoryのURL入れる
+- [vivado](../Pynq_test_hls/pynq_vivado/)
+- [hls](../Pynq_test_hls/pynq_hls/)
+- [JupyterNotebook](../Pynq_test_hls/jupyter/)
 
 
 ### 解説
 hlsは、シンプルなもの。IOとレジスタ。  
-テストベンチも作成した。  
+hlsテストベンチも作成した。  
 vivadoデザインは、ZYNQ, GPIO(hlsのIO制御)、他は接続のみ。  
-詳細は、Notebook。  
+実行と詳細は、Notebook。  
 
 <!--- #### 挫折
 
@@ -439,15 +440,50 @@ dma_vmemが思った以上に設定レジスタがあって、挫折した。
 
 --->
 
-## 機械学習
-ここらへんを実装してみる。
-[FPGAでDeep Learningしてみる - Qiita](https://qiita.com/ykshr/items/6c8cff881a200a781dc3)
+### HLS + OpenCV
+#### Links
+- [ザイリンクス OpenCV ユーザー ガイド](https://japan.xilinx.com/support/documentation/sw_manuals_j/xilinx2019_1/ug1233-xilinx-opencv-user-guide.pdf)
+- [Xilinx/xfopencv](https://github.com/Xilinx/xfopencv)
+    → 下記に移行。
+- [Vitis_Libraries/vision at master · Xilinx/Vitis_Libraries](https://github.com/Xilinx/Vitis_Libraries/tree/master/vision)
+- [https://xilinx.github.io/Vitis_Libraries/](https://xilinx.github.io/Vitis_Libraries/)
 
 
+## Mnist実装
+- [ディープ・ラーニング－ハードウエア化への道](http://digitalfilter.com/deeponhw/deeponhw01.html)  
+ここ参考。
 
+- [oreilly-japan/deep-learning-from-scratch: 『ゼロから作る Deep Learning』(O'Reilly Japan, 2016)](https://github.com/oreilly-japan/deep-learning-from-scratch)  
+Python側はここの改造`ch03/neuralnet_mnist.py`
 
+### Repos
+## [mnist](./mnist)
+実装内容は、README.md参照。
 
+### ILA(Integrated Logic Analyzer)
+- ILAをDesignに入れる。
+- ILAをAXIにして、モニタしたいところを繋ぐ。
+- クロックも繋ぐ。
+- コンパイルしてBitを書き込む。
+- USBを繋ぐ(USB-JTAGになってるスゴイ!)
+- HARDWARE MANAGERを開く
+- Open Target, Auto connect
+- FPGAデバイスの中にILAが見える。
+- Trigger Setup, +, RVALIDとか
+- Run Trigger
+- (Jupyterとかで転送をする。)
+- 波形で見える。
 
+## 機械学習 ##TODO
+- [FPGAでDeep Learningしてみる - Qiita](https://qiita.com/ykshr/items/6c8cff881a200a781dc3)
+
+- [【読解】 Binarized Neural Networks - Qiita](https://qiita.com/harmegiddo/items/8988a60430dc6184a033)  
+BNNの解説
+
+- [Xilinx/BNN-PYNQ: Quantized Neural Networks (QNNs) on PYNQ](https://github.com/Xilinx/BNN-PYNQ)
+BNNのライブラリ
+
+- [FPGAでDeep Learningしてみる - きゅうりを選果する - Qiita](https://qiita.com/ykshr/items/08147098516a45203761)
 
 
 
@@ -473,6 +509,13 @@ Vivadoのコンパイルでエラーが出たときのメモ書き。
 - 拡張子を.svにしておけばOK
 - vivado 2020.1
 
+### Block Design(.bd)でのSystemVerilog
+- SystemVerilogのモジュールをbdに追加(Add Module)できない。
+- そもそも対応していない様子。
+    - [Solved: Using SystemVerilog module in Vivado 2016.4 - Community Forums](https://forums.xilinx.com/t5/Synthesis/Using-SystemVerilog-module-in-Vivado-2016-4/td-p/750777)
+- Verilogのラッパーを作れば追加できる。
+    - parameterの接続ができない。
+
 ### レジスタ設定について。
 ネットにあるサンプルではあまり見かけなかったが、こんな感じでもアクセスできて超便利。  
 補完にも出る(OL.まで打ってTab)  
@@ -486,14 +529,15 @@ OL.axi_gpio_1.register_map.GPIO_DATA = 0xF
 
 
 ### Simでの`should not contain white space, new line`
-    - File PropertyのLibraryを「work」にする。
-    - [ERROR: [XSIM 43-3268] Simulating a custon IP with ... - Community Forums](https://forums.xilinx.com/t5/Simulation-and-Verification/ERROR-XSIM-43-3268-Simulating-a-custon-IP-with-AXI4-Lite/td-p/921364)
+- File PropertyのLibraryを「work」にする。
+- [ERROR: [XSIM 43-3268] Simulating a custon IP with ... - Community Forums](https://forums.xilinx.com/t5/Simulation-and-Verification/ERROR-XSIM-43-3268-Simulating-a-custon-IP-with-AXI4-Lite/td-p/921364)
 
 ### Vivado起動時のTimeout
-    - `”Could nt locate Help files. Quick Help will not be available.”`
+- ` ”Could nt locate Help files. Quick Help will not be available.” `
     - こんなエラーが出た。
     - `Tools -> Settings -> Help -> Launguage = English` で解消
     - [Vivado 2020.1 での起動時のエラーの解消方法 - FPGAの部屋](https://marsee101.blog.fc2.com/blog-entry-4913.html?sp)
+    - → これ保存してくれてなくて毎度変えなきゃダメ状態になっている。よくわからない。
 
 ### デザイン変えた時とかの注意点
 - アドレスが割り当てらてないことがまれによくある。
@@ -523,5 +567,85 @@ ERROR: [SIM 211-100] CSim failed with errors.
 めんどい。  
 
 
+### git update
+Pynq上でのgitのアップデート  
+`add-apt-repository ppa:git-core/ppa`やるとエラーが出る。  
+こんなの登録されてない的な`/etc/lsb-release`。  
+
+- [RaspbianにUbuntu用のPPAを追加する - Qiita](https://qiita.com/hnw/items/734f82bee26a40269c1b)  
+ここに沿って実行する。
+
+- [Git stable releases : “Ubuntu Git Maintainers” team](https://launchpad.net/~git-core/+archive/ubuntu/ppa)  
+Signing KeyとリポジトリURLここから。[`Technical details about this PPA`]
+
+他のソフトでもUbuntu用にバイナリあるのであれば、行けるんじゃないかなぁ?  
+
+### vim update
+Pynq上でのvimのアップデート  
+- [Vim : Jonathon F](https://launchpad.net/~jonathonf/+archive/ubuntu/vim)
+
+これで、`apt install vim`だとvim, vim-common, vim-runtimeのバージョンが違うってインストールできない。  
+バージョン合わせる。  
+`sudo apt-cache showpkg vim`で最新ぽいのを見つける。  
+
+```
+sudo apt install vim=2:8.2.1449-0york0~18.04 vim-common=2:8.2.1449-0york0~18.04 vim-runtime=2:8.2.1449-0york0~18.04
+```
+
+### pynq update
+Python pynqパッケージのアップデート。  
+Cythonがaptに古いのしか無いのでコンパイルする。  
+あと、他にもちょいちょいエラー出るけど、単体インストールすると治ったり、ぐぐればたいてい大丈夫。  
+
+```
+## [Cython · PyPI](https://pypi.org/project/Cython/#files)
+
+$ wget https://files.pythonhosted.org/packages/6c/9f/f501ba9d178aeb1f5bf7da1ad5619b207c90ac235d9859961c11829d0160/Cython-0.29.21.tar.gz
+
+$ tar xvf Cython*.gz
+$ cd Cython*
+$ sudo python3 setup.py install
+
+$ sudo pip3 install --upgrade --upgrade-strategy only-if-needed pynq
+```
+
+### Jupyter by root
+PynqのライブラリがRootでしか動かないからか、Jupyterもroot権限で動いてる。`!whoami`  
+つまり、Jupyterに入れればやりたい放題できるようになる。  
+せめて初期パスワード(xilinx)は変えておこう。  
+
+```
+## これがよくわらんけどあったので捨てる。普通は無いかも。
+$ sudo mv /home/xilinx/jupyter_notebook_config.py /home/xilinx/__jupytr_notebook_config.py
+
+## このファイルから`c.NotebookApp.password = 'xx'`のところをコメントアウト。
+$ sudo vi /root/.jupyter/jupyter_notebook_config.py
+
+## パスワード設定
+$ sudo jupyter-notebook password
+
+## 再起動
+$ sudo systemctl restart jupyter.service
+```
 
 
+### mount img
+pynqのSDイメージをマウントしたい時。  
+moutコマンドのoffset=は、Startの所*512。  
+```
+$ fdisk -l -u pynq_z2_v2.5.img
+Disk pynq_z2_v2.5.img: 5.4 GiB, 5834895360 bytes, 11396280 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x7a649332
+
+Device            Boot  Start      End  Sectors  Size Id Type
+pynq_z2_v2.5.img1 *      2048   206847   204800  100M  c W95 FAT32 (LBA)
+pynq_z2_v2.5.img2      206848 11396279 11189432  5.3G 83 Linux
+
+$ sudo mkdir /mnt/img
+$ sudo mount -t ext4 -o loop,offset=$((206848*512)) pynq_z2_v2.5.img /mnt/img
+
+```
