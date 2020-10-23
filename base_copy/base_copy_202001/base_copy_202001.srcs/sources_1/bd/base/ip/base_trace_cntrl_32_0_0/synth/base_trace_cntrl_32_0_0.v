@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:hls:trace_cntrl_32:1.4
-// IP Revision: 2008130918
+// IP Revision: 2010071211
 
 (* X_CORE_INFO = "trace_cntrl_32,Vivado 2020.1" *)
 (* CHECK_LICENSE_TYPE = "base_trace_cntrl_32_0_0,trace_cntrl_32,{}" *)
-(* CORE_GENERATION_INFO = "base_trace_cntrl_32_0_0,trace_cntrl_32,{x_ipProduct=Vivado 2020.1,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=trace_cntrl_32,x_ipVersion=1.4,x_ipCoreRevision=2008130918,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_TRACE_CNTRL_ADDR_WIDTH=5,C_S_AXI_TRACE_CNTRL_DATA_WIDTH=32}" *)
+(* CORE_GENERATION_INFO = "base_trace_cntrl_32_0_0,trace_cntrl_32,{x_ipProduct=Vivado 2020.1,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=trace_cntrl_32,x_ipVersion=1.4,x_ipCoreRevision=2010071211,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_TRACE_CNTRL_ADDR_WIDTH=5,C_S_AXI_TRACE_CNTRL_DATA_WIDTH=32}" *)
 (* IP_DEFINITION_SOURCE = "HLS" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module base_trace_cntrl_32_0_0 (
@@ -132,7 +132,7 @@ output wire s_axi_trace_cntrl_RVALID;
 _WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_trace_cntrl RREADY" *)
 input wire s_axi_trace_cntrl_RREADY;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_clk, ASSOCIATED_BUSIF s_axi_trace_cntrl:trace_32:capture_32, ASSOCIATED_RESET ap_rst_n, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN base_ps7_0_0_FCLK_CLK3, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_clk, ASSOCIATED_BUSIF s_axi_trace_cntrl:trace_32:capture_32, ASSOCIATED_RESET ap_rst_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN base_ps7_0_0_FCLK_CLK3, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 ap_clk CLK" *)
 input wire ap_clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_rst_n, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)

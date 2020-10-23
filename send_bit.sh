@@ -16,6 +16,7 @@ bit_file=$(find ${path} -name '*.bit' | xargs ls -t -1 | head -n 1)
 hwh_file=$(find ${path} -name '*.hwh' | xargs ls -t -1 | head -n 1)
 
 ## Show send File
+echo ${hwh_file}, ${bit_file}
 ls -lt ${hwh_file} ${bit_file}
 
 ## SCP

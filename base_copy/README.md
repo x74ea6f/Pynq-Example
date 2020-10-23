@@ -13,3 +13,9 @@ fork from
 > C:\Xilinx\Vivado\2020.1\settings64.bat
 > build_ip.bat
 ```
+
+## base_hdmi
+Only for HDMI use.
+Removed Interface of PMOD, RaspberryPi, Audio.
+In Python, Modify BaseOverlay, remove code of unimplementation modules.
+

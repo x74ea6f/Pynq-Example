@@ -1,0 +1,5 @@
+                 
+
+config_rtl -encoding onehot -reset control -reset_level high
+config_schedule -effort medium -verbose
+

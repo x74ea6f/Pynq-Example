@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.13082",
-   "Default View_TopLeft":"-405,15",
+   "Default View_ScaleFactor":"0.212518",
+   "Default View_TopLeft":"1096,9",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
@@ -134,62 +134,62 @@ preplace netloc video_dout 1 1 5 420 2370 990J 2320 1410J 2450 NJ 2450 2560
 preplace netloc wire_distribution_network_dout 1 2 5 1010 2260 1480J 2480 NJ 2480 2590J 2120 3310
 preplace netloc wire_distribution_network_wire_o_t 1 2 5 1030 2240 1530J 2460 NJ 2460 2640J 2140 3320
 preplace netloc xlconcat_0_dout 1 5 1 2600 1440n
-preplace netloc iop_rpi_io 1 4 2 1970J 470 2700
-preplace netloc ps7_0_axi_periph_M06_AXI 1 2 1 840 1070n
-preplace netloc mdm_1_MBDEBUG_2 1 3 3 1510J 1060 1970J 1030 2700
-preplace netloc iop_pmodb_pmodb_gpio 1 4 4 2070 1020 NJ 1020 3350 2620 NJ
-preplace netloc ps7_0_axi_periph_1_M00_AXI 1 3 1 1370 1500n
-preplace netloc swsleds_gpio_GPIO 1 6 2 NJ 2630 3580J
-preplace netloc ps7_0_axi_periph_M05_AXI 1 2 4 850 2280 1540J 2400 NJ 2400 2750J
-preplace netloc ps7_0_axi_periph1_M03_AXI 1 3 1 1410 680n
-preplace netloc ps7_0_M_AXI_GP0 1 1 6 440 580 NJ 580 1540J 600 NJ 600 NJ 600 3240
-preplace netloc ps7_0_axi_periph_M03_AXI 1 2 4 800 2940 NJ 2940 NJ 2940 NJ
-preplace netloc mdm_1_MBDEBUG_1 1 3 1 1510 880n
-preplace netloc ps7_0_axi_periph_M02_AXI 1 2 4 820 2760 NJ 2760 NJ 2760 NJ
-preplace netloc iop_pmoda_io 1 4 2 NJ 480 2560
-preplace netloc processing_system7_0_FIXED_IO 1 6 2 NJ 1280 NJ
-preplace netloc ps7_0_axi_periph_M07_AXI 1 2 4 840 2270 1510J 2440 NJ 2440 NJ
-preplace netloc ps7_0_M_AXI_GP1 1 2 5 1040 2250 1560J 2390 NJ 2390 2680J 2130 3290
-preplace netloc trace_analyzer_pmodb_M_AXI_S2MM 1 4 1 2010 1090n
-preplace netloc rgbled_gpio_GPIO 1 6 2 NJ 2780 3570J
 preplace netloc ps7_0_axi_periph_M04_AXI 1 2 4 810 2620 NJ 2620 NJ 2620 NJ
-preplace netloc mdm_1_MBDEBUG_3 1 3 1 1390 660n
-preplace netloc ps7_0_axi_periph1_M01_AXI 1 3 1 1450 910n
-preplace netloc ps7_0_axi_periph1_M02_AXI 1 3 3 1470 1360 NJ 1360 2650J
 preplace netloc iop_arduino_IIC_0 1 6 2 NJ 1900 NJ
+preplace netloc mdm_1_MBDEBUG_1 1 3 1 1510 880n
 preplace netloc ps7_0_axi_periph1_M00_AXI 1 3 1 1380 450n
-preplace netloc ps7_0_axi_periph_M01_AXI 1 2 3 910 2110 NJ 2110 1930J
-preplace netloc trace_analyzer_pi_M_AXI 1 4 1 2020 1110n
-preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 960 1240n
+preplace netloc ps7_0_axi_periph_1_M00_AXI 1 3 1 1370 1500n
+preplace netloc trace_analyzer_pmodb_M_AXI_S2MM 1 4 1 2010 1090n
+preplace netloc ps7_0_axi_periph_M07_AXI 1 2 4 840 2270 1510J 2440 NJ 2440 NJ
+preplace netloc mdm_1_MBDEBUG_2 1 3 3 1510J 1060 1970J 1030 2700
+preplace netloc ps7_0_axi_periph1_M02_AXI 1 3 3 1470 1360 NJ 1360 2650J
 preplace netloc ps7_0_IIC_1 1 6 2 NJ 1300 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 6 2 NJ 1280 NJ
+preplace netloc iop_pmodb_pmodb_gpio 1 4 4 2070 1020 NJ 1020 3350 2620 NJ
+preplace netloc trace_analyzer_pi_M_AXI 1 4 1 2020 1110n
+preplace netloc ps7_0_axi_periph_M03_AXI 1 2 4 800 2940 NJ 2940 NJ 2940 NJ
+preplace netloc ps7_0_axi_periph_M02_AXI 1 2 4 820 2760 NJ 2760 NJ 2760 NJ
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 960 1240n
+preplace netloc rgbled_gpio_GPIO 1 6 2 NJ 2780 3570J
 preplace netloc iop_arduino_arduino_gpio1 1 6 2 NJ 1940 NJ
-preplace netloc video_TMDS1 1 5 3 NJ 2200 NJ 2200 NJ
-preplace netloc ps7_0_axi_periph_1_M01_AXI 1 3 1 1350 1520n
-preplace netloc iop3_spi_sw_shield 1 6 2 NJ 1920 NJ
-preplace netloc distributor_rpi_27_8_gpio_output 1 6 2 NJ 510 NJ
+preplace netloc ps7_0_M_AXI_GP0 1 1 6 440 580 NJ 580 1540J 600 NJ 600 NJ 600 3240
+preplace netloc ps7_0_axi_periph1_M01_AXI 1 3 1 1450 910n
+preplace netloc swsleds_gpio_GPIO 1 6 2 NJ 2630 3580J
+preplace netloc ps7_0_axi_periph_M06_AXI 1 2 1 840 1070n
+preplace netloc iop_rpi_io 1 4 2 1970J 470 2700
+preplace netloc ps7_0_M_AXI_GP1 1 2 5 1040 2250 1560J 2390 NJ 2390 2680J 2130 3290
+preplace netloc ps7_0_axi_periph1_M03_AXI 1 3 1 1410 680n
 preplace netloc axi_mem_intercon_M00_AXI1 1 5 1 2710 1180n
-preplace netloc btns_gpio_GPIO 1 6 2 NJ 2290 NJ
-preplace netloc Vaux9_1 1 0 6 30J 2340 NJ 2340 NJ 2340 NJ 2340 1990J 2350 2610J
-preplace netloc Vp_Vn_1 1 0 6 -20J 1780 NJ 1780 NJ 1780 1350J 1860 2020J 2050 2590J
-preplace netloc S03_AXI_1 1 4 1 2110 690n
-preplace netloc S_AXI_1 1 3 1 1360 1420n
-preplace netloc Vaux15_1 1 0 6 40J 2350 NJ 2350 NJ 2350 NJ 2350 1960J 2360 2630J
+preplace netloc iop3_spi_sw_shield 1 6 2 NJ 1920 NJ
 preplace netloc ps7_0_DDR 1 6 2 NJ 1260 NJ
-preplace netloc Vaux6_1 1 0 6 -40J 1770 NJ 1770 NJ 1770 1390J 1830 NJ 1830 2600J
-preplace netloc S02_AXI_1 1 4 3 2140 430 NJ 430 3300
-preplace netloc S_AXI_LITE_1 1 3 1 1380 1440n
+preplace netloc Vaux15_1 1 0 6 40J 2350 NJ 2350 NJ 2350 NJ 2350 1960J 2360 2630J
 preplace netloc axi_mem_intercon_M00_AXI 1 5 1 2560 1300n
-preplace netloc S00_AXI_2 1 4 1 2130 460n
+preplace netloc Vp_Vn_1 1 0 6 -20J 1780 NJ 1780 NJ 1780 1350J 1860 2020J 2050 2590J
+preplace netloc ps7_0_axi_periph_M01_AXI 1 2 3 910 2110 NJ 2110 1930J
+preplace netloc video_TMDS1 1 5 3 NJ 2200 NJ 2200 NJ
+preplace netloc S_AXI_LITE_1 1 3 1 1380 1440n
 preplace netloc Vaux5_1 1 0 6 -30J 1790 NJ 1790 940J 1760 1420J 1780 2060J 1700 2640J
+preplace netloc S03_AXI_1 1 4 1 2110 690n
+preplace netloc S00_AXI_2 1 4 1 2130 460n
 preplace netloc Vaux13_1 1 0 6 0J 2070 NJ 2070 870J 2080 1570J 2060 NJ 2060 2570J
+preplace netloc ps7_0_axi_periph_M05_AXI 1 2 4 850 2280 1540J 2400 NJ 2400 2750J
+preplace netloc iop_pmoda_io 1 4 2 NJ 480 2560
+preplace netloc mdm_1_MBDEBUG_3 1 3 1 1390 660n
+preplace netloc S02_AXI_1 1 4 3 2140 430 NJ 430 3300
+preplace netloc dvi2rgb_0_DDC 1 5 3 NJ 2160 NJ 2160 NJ
 preplace netloc leds_gpio_GPIO 1 6 2 NJ 2450 NJ
+preplace netloc axi_interconnect_0_M00_AXI 1 5 1 2740 810n
+preplace netloc distributor_rpi_27_8_gpio_output 1 6 2 NJ 510 NJ
+preplace netloc Vaux9_1 1 0 6 30J 2340 NJ 2340 NJ 2340 NJ 2340 1990J 2350 2610J
+preplace netloc Vaux1_1 1 0 6 -50J 1750 NJ 1750 NJ 1750 1400J 1820 NJ 1820 2630J
+preplace netloc ps7_0_axi_periph_1_M01_AXI 1 3 1 1350 1520n
+preplace netloc S_AXI_1 1 3 1 1360 1420n
+preplace netloc Vaux6_1 1 0 6 -40J 1770 NJ 1770 NJ 1770 1390J 1830 NJ 1830 2600J
+preplace netloc btns_gpio_GPIO 1 6 2 NJ 2290 NJ
 preplace netloc collector_pmoda_rpi_gpio_output 1 6 2 NJ 490 NJ
 preplace netloc microblaze_0_debug 1 3 1 1360 430n
-preplace netloc dvi2rgb_0_DDC 1 5 3 NJ 2160 NJ 2160 NJ
-preplace netloc axi_interconnect_0_M00_AXI 1 5 1 2740 810n
-preplace netloc S01_AXI_2 1 4 1 1980 680n
-preplace netloc Vaux1_1 1 0 6 -50J 1750 NJ 1750 NJ 1750 1400J 1820 NJ 1820 2630J
 preplace netloc hdmi_in_1 1 0 5 -50J 2360 NJ 2360 NJ 2360 NJ 2360 1930J
+preplace netloc S01_AXI_2 1 4 1 1980 680n
 levelinfo -pg 1 -70 220 630 1200 1750 2390 3010 3460 3610
 pagesize -pg 1 -db -bbox -sgen -170 0 3780 3380
 "

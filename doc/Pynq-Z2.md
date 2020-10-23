@@ -440,6 +440,15 @@ dma_vmemが思った以上に設定レジスタがあって、挫折した。
 
 --->
 
+### HLS + OpenCV
+#### Links
+- [ザイリンクス OpenCV ユーザー ガイド](https://japan.xilinx.com/support/documentation/sw_manuals_j/xilinx2019_1/ug1233-xilinx-opencv-user-guide.pdf)
+- [Xilinx/xfopencv](https://github.com/Xilinx/xfopencv)
+    → 下記に移行。
+- [Vitis_Libraries/vision at master · Xilinx/Vitis_Libraries](https://github.com/Xilinx/Vitis_Libraries/tree/master/vision)
+- [https://xilinx.github.io/Vitis_Libraries/](https://xilinx.github.io/Vitis_Libraries/)
+
+
 ## Mnist実装
 - [ディープ・ラーニング－ハードウエア化への道](http://digitalfilter.com/deeponhw/deeponhw01.html)  
 ここ参考。
@@ -475,7 +484,6 @@ BNNの解説
 BNNのライブラリ
 
 - [FPGAでDeep Learningしてみる - きゅうりを選果する - Qiita](https://qiita.com/ykshr/items/08147098516a45203761)
-
 
 
 
