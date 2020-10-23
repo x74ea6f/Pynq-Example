@@ -26,6 +26,7 @@ def save_to_file(file_name, array, para, bits):
             d = 0
             for p in range(para):
                 dd = array[i*para+p] if(i*para+p)<len(array) else 0
+                ## print(hex(dd), hex(int2hex(dd, bits)))
                 dd = int2hex(dd, bits)
                 d |= dd<<(bits*p)
 
@@ -64,8 +65,8 @@ def to_int(wb):
     return np.clip((wb*(P_INT-0.1)).astype(np.int), -P_INT, P_INT-1)
 
 def to_uint(wb):
-    ## (0 to 1.0) -> (-P_INT to P_INT-1)
-    return np.clip((wb*(P_INT-0.1)).astype(np.int), 0, P_INT-1)
+    ## (0 to 1.0) -> (0 to P_INT*2-1)
+    return np.clip((wb*(P_INT*2-0.1)).astype(np.int), 0, P_INT*2-1)
 
 def get_data(mode="INT_MODE"):
     (x_train, t_train), (x_test, t_test) = load_mnist(normalize=True, flatten=True, one_hot_label=False)
@@ -186,7 +187,8 @@ def save_rom_main():
             save_to_file(f"rom/{key}.mem", n, b_paras[key], P_INT_BITS+1)
 
 
-    x_test, _ = get_data(mode="INT_MODE")
+    x_test, y_test = get_data(mode="INT_MODE")
+    ## x_test, _ = get_data(mode="INT_MODE")
     ## x_test = x_test[1347:]
     ## x_test = x_test[5649:]
     for x_index in range(10):

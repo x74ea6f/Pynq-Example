@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Wed Sep 23 12:02:29 2020
+// Date        : Wed Oct 21 10:42:22 2020
 // Host        : DESKTOP-OMB4GFF running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top test_mnist_rst_ps7_0_50M_0 -prefix
 //               test_mnist_rst_ps7_0_50M_0_ test_mnist_rst_ps7_0_50M_0_sim_netlist.v

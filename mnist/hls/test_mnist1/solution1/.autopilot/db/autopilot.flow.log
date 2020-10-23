@@ -1,0 +1,715 @@
+INFO-FLOW: Workspace C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1 opened at Fri Oct 23 09:45:11 +0900 2020
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     config_clock -quiet -name default -uncertainty 1.25 -unit % 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/plb46.lib 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/fsl.lib 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/axi4.lib 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.lib 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.lib 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfft.lib 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfir.lib 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/fsl.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.154 sec.
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.215 sec.
+Command     ap_source done; 0.216 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/target_info.tcl 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute             source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xc7z020-clg400-1 
+Execute       ap_part_info -name xc7z020-clg400-1 -data single -quiet 
+Command       ap_part_info done; 0.72 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xc7z020-clg400-1 
+Execute         ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.943 sec.
+Execute     ap_part_info -data single -name xc7z020-clg400-1 
+Execute     ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     config_chip_info -quiet -speed slow 
+Execute     config_sdx -optimization_level=none 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -optimization_level' config_export -vivado_optimization_level=2 
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+Execute       config_export -vivado_optimization_level=2 
+Execute         get_config_export -vivado_impl_strategy 
+Execute         get_config_export -vivado_phys_opt 
+Execute     config_sdx -target=none 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' config_export -vivado_optimization_level=2 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+Execute       config_export -vivado_optimization_level=2 
+Execute         get_config_export -vivado_impl_strategy 
+Execute         get_config_export -vivado_phys_opt 
+Execute       get_config_compile -pipeline_loops 
+Execute       get_config_compile -name_max_length 
+Execute       get_config_schedule -enable_dsp_full_reg 
+Execute       get_config_rtl -register_reset_num 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_interface -m_axi_addr64 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' set_clock_uncertainty default 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+Execute       set_clock_uncertainty default 
+Execute     config_export -description nn mnist 
+Execute     config_export -display_name=nn_mnist_hls 
+Execute     config_export -format=ip_catalog 
+Execute     config_export -library=nn_mnist_hls 
+Execute     config_export -rtl=verilog 
+Execute     config_export -version=0.1 
+Execute     config_export -vivado_optimization_level=2 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Command   open_solution done; 1.314 sec.
+Execute   set_part xc7z020-clg400-1 
+Execute     ap_part_info -name xc7z020-clg400-1 -data single -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
+Execute       get_default_platform 
+Execute       ap_part_info -data single -name xc7z020-clg400-1 
+Execute       ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_chip_info -quiet -speed slow 
+Execute     add_library xilinx/zynq/zynq_fpv6 
+Execute       get_default_platform 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     get_default_platform 
+Command   set_part done; 0.203 sec.
+Execute   create_clock -period 10 -name default 
+Execute   config_sdx -optimization_level none -target none 
+WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement.
+Execute     send_msg_by_id INFO @200-435@%s%s 'config_sdx -optimization_level' config_export -vivado_optimization_level=2 
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+Execute     config_export -vivado_optimization_level=2 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Execute     send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' config_export -vivado_optimization_level=2 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+Execute     config_export -vivado_optimization_level=2 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Execute     get_config_compile -pipeline_loops 
+Execute     get_config_compile -name_max_length 
+Execute     get_config_schedule -enable_dsp_full_reg 
+Execute     get_config_rtl -register_reset_num 
+Execute     get_config_rtl -module_auto_prefix 
+Execute     get_config_interface -m_axi_addr64 
+Execute     send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' set_clock_uncertainty default 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+Execute     set_clock_uncertainty default 
+WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release.
+Execute   config_export -description nn mnist -display_name nn_mnist_hls -format ip_catalog -library nn_mnist_hls -rtl verilog -version 0.1 -vivado_optimization_level 2 
+Execute     get_config_export -vivado_impl_strategy 
+Execute     get_config_export -vivado_phys_opt 
+Execute   set_clock_uncertainty 12.5% 
+Execute   csynth_design 
+Execute     get_config_compile -dump_cfg 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'test_mnist1/src/argmax.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling test_mnist1/src/argmax.cpp as C++
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       is_encrypted test_mnist1/src/argmax.cpp 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2020.1/msys" -hls  -fno-exceptions  -D__llvm__  -E "test_mnist1/src/argmax.cpp"   --std=c++11  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2020.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/argmax.pp.0.cpp" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2020.1/msys -hls -fno-exceptions -D__llvm__ -E test_mnist1/src/argmax.cpp --std=c++11 -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2020.1/common/technology/autopilot -I C:/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/argmax.pp.0.cpp
+Command       clang done; 2.399 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/argmax.pp.0.cpp std=c++11 
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/argmax.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.639 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/argmax.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2020.1/msys" -hls  --std=c++11  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2020.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/argmax.pp.0.cpp"  -o "C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2020.1/msys -hls --std=c++11 -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2020.1/common/technology/autopilot -I C:/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/argmax.pp.0.cpp -o C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/useless.bc
+Command       clang done; 1.645 sec.
+INFO-FLOW: Done: GCC PP time: 4.7 seconds per iteration
+Execute       source C:/Xilinx/Vivado/2020.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source C:/Xilinx/Vivado/2020.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute         source C:/Xilinx/Vivado/2020.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/argmax.pp.0.cpp std=c++11 -directive=C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/argmax.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/argmax.pp.0.cpp std=c++11 -directive=C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/all.directive.json -quiet -fix-errors C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/argmax.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/xilinx-dataflow-lawyer.argmax.pp.0.cpp.diag.yml C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/argmax.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0 -fstrict-dataflow > C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/xilinx-dataflow-lawyer.argmax.pp.0.cpp.out.log 2> C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/xilinx-dataflow-lawyer.argmax.pp.0.cpp.err.log 
+Command       ap_eval done; 0.394 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/argmax.pp.0.cpp std=c++11 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/tidy-3.1.argmax.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/argmax.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0 > C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/tidy-3.1.argmax.pp.0.cpp.out.log 2> C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/tidy-3.1.argmax.pp.0.cpp.err.log 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/argmax.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0 > C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/xilinx-legacy-rewriter.argmax.pp.0.cpp.out.log 2> C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/xilinx-legacy-rewriter.argmax.pp.0.cpp.err.log 
+Command         ap_eval done; 0.302 sec.
+Command       tidy_31 done; 0.369 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.8 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/argmax.pragma.1.cpp std=c++11 
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/argmax.pragma.1.cpp -- -std=c++11 -fhls -ferror-limit=0
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Processing labels
+Execute       clang -src C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/argmax.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2020.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/argmax.pragma.2.cpp"  --std=c++11  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2020.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/argmax.bc" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2020.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/argmax.pragma.2.cpp --std=c++11 -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2020.1/common/technology/autopilot -I C:/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/argmax.bc
+Command       clang done; 1.664 sec.
+INFO: [HLS 200-10] Analyzing design file 'test_mnist1/src/dense.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling test_mnist1/src/dense.cpp as C++
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       is_encrypted test_mnist1/src/dense.cpp 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2020.1/msys" -hls  -fno-exceptions  -D__llvm__  -E "test_mnist1/src/dense.cpp"   --std=c++11  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2020.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/dense.pp.0.cpp" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2020.1/msys -hls -fno-exceptions -D__llvm__ -E test_mnist1/src/dense.cpp --std=c++11 -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2020.1/common/technology/autopilot -I C:/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/dense.pp.0.cpp
+Command       clang done; 1.63 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/dense.pp.0.cpp std=c++11 
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/dense.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/dense.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2020.1/msys" -hls  --std=c++11  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2020.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/dense.pp.0.cpp"  -o "C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2020.1/msys -hls --std=c++11 -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2020.1/common/technology/autopilot -I C:/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/dense.pp.0.cpp -o C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/useless.bc
+Command       clang done; 1.651 sec.
+INFO-FLOW: Done: GCC PP time: 3.4 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/dense.pp.0.cpp std=c++11 -directive=C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/dense.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/dense.pp.0.cpp std=c++11 -directive=C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/all.directive.json -quiet -fix-errors C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/dense.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/xilinx-dataflow-lawyer.dense.pp.0.cpp.diag.yml C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/dense.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0 -fstrict-dataflow > C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/xilinx-dataflow-lawyer.dense.pp.0.cpp.out.log 2> C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/xilinx-dataflow-lawyer.dense.pp.0.cpp.err.log 
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/dense.pp.0.cpp std=c++11 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/tidy-3.1.dense.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/dense.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0 > C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/tidy-3.1.dense.pp.0.cpp.out.log 2> C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/tidy-3.1.dense.pp.0.cpp.err.log 
+Execute         source C:/Xilinx/Vivado/2020.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute           source C:/Xilinx/Vivado/2020.1/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/dense.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0 > C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/xilinx-legacy-rewriter.dense.pp.0.cpp.out.log 2> C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/xilinx-legacy-rewriter.dense.pp.0.cpp.err.log 
+Command       tidy_31 done; 0.194 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.3 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/dense.pragma.1.cpp std=c++11 
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/dense.pragma.1.cpp -- -std=c++11 -fhls -ferror-limit=0
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Processing labels
+Execute       clang -src C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/dense.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2020.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/dense.pragma.2.cpp"  --std=c++11  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2020.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/dense.bc" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2020.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/dense.pragma.2.cpp --std=c++11 -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2020.1/common/technology/autopilot -I C:/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/dense.bc
+Command       clang done; 1.694 sec.
+INFO: [HLS 200-10] Analyzing design file 'test_mnist1/src/nn.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling test_mnist1/src/nn.cpp as C++
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       is_encrypted test_mnist1/src/nn.cpp 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2020.1/msys" -hls  -fno-exceptions  -D__llvm__  -E "test_mnist1/src/nn.cpp"   --std=c++11  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2020.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/nn.pp.0.cpp" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2020.1/msys -hls -fno-exceptions -D__llvm__ -E test_mnist1/src/nn.cpp --std=c++11 -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2020.1/common/technology/autopilot -I C:/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/nn.pp.0.cpp
+Command       clang done; 1.573 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/nn.pp.0.cpp std=c++11 
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/nn.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.565 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/nn.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2020.1/msys" -hls  --std=c++11  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2020.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/nn.pp.0.cpp"  -o "C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2020.1/msys -hls --std=c++11 -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2020.1/common/technology/autopilot -I C:/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/nn.pp.0.cpp -o C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/useless.bc
+Command       clang done; 1.855 sec.
+INFO-FLOW: Done: GCC PP time: 4 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/nn.pp.0.cpp std=c++11 -directive=C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/nn.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.311 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/nn.pp.0.cpp std=c++11 -directive=C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/all.directive.json -quiet -fix-errors C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/nn.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.284 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/xilinx-dataflow-lawyer.nn.pp.0.cpp.diag.yml C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/nn.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0 -fstrict-dataflow > C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/xilinx-dataflow-lawyer.nn.pp.0.cpp.out.log 2> C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/xilinx-dataflow-lawyer.nn.pp.0.cpp.err.log 
+Command       ap_eval done; 0.3 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/nn.pp.0.cpp std=c++11 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/tidy-3.1.nn.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/nn.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0 > C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/tidy-3.1.nn.pp.0.cpp.out.log 2> C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/tidy-3.1.nn.pp.0.cpp.err.log 
+Command         ap_eval done; 0.412 sec.
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/nn.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0 > C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/xilinx-legacy-rewriter.nn.pp.0.cpp.out.log 2> C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/xilinx-legacy-rewriter.nn.pp.0.cpp.err.log 
+Command         ap_eval done; 0.191 sec.
+Command       tidy_31 done; 0.685 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 1.3 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/nn.pragma.1.cpp std=c++11 
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/nn.pragma.1.cpp -- -std=c++11 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.832 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Processing labels
+Execute       clang -src C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/nn.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2020.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/nn.pragma.2.cpp"  --std=c++11  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2020.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/nn.bc" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2020.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/nn.pragma.2.cpp --std=c++11 -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2020.1/common/technology/autopilot -I C:/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/nn.bc
+Command       clang done; 1.635 sec.
+INFO: [HLS 200-10] Analyzing design file 'test_mnist1/src/sigmoid.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling test_mnist1/src/sigmoid.cpp as C++
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       is_encrypted test_mnist1/src/sigmoid.cpp 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2020.1/msys" -hls  -fno-exceptions  -D__llvm__  -E "test_mnist1/src/sigmoid.cpp"   --std=c++11  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2020.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/sigmoid.pp.0.cpp" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2020.1/msys -hls -fno-exceptions -D__llvm__ -E test_mnist1/src/sigmoid.cpp --std=c++11 -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2020.1/common/technology/autopilot -I C:/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/sigmoid.pp.0.cpp
+Command       clang done; 1.634 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/sigmoid.pp.0.cpp std=c++11 
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/sigmoid.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.123 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/sigmoid.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2020.1/msys" -hls  --std=c++11  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2020.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/sigmoid.pp.0.cpp"  -o "C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2020.1/msys -hls --std=c++11 -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2020.1/common/technology/autopilot -I C:/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/sigmoid.pp.0.cpp -o C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/useless.bc
+Command       clang done; 1.68 sec.
+INFO-FLOW: Done: GCC PP time: 3.4 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/sigmoid.pp.0.cpp std=c++11 -directive=C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/sigmoid.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/sigmoid.pp.0.cpp std=c++11 -directive=C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/all.directive.json -quiet -fix-errors C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/sigmoid.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/xilinx-dataflow-lawyer.sigmoid.pp.0.cpp.diag.yml C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/sigmoid.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0 -fstrict-dataflow > C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/xilinx-dataflow-lawyer.sigmoid.pp.0.cpp.out.log 2> C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/xilinx-dataflow-lawyer.sigmoid.pp.0.cpp.err.log 
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/sigmoid.pp.0.cpp std=c++11 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/tidy-3.1.sigmoid.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/sigmoid.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0 > C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/tidy-3.1.sigmoid.pp.0.cpp.out.log 2> C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/tidy-3.1.sigmoid.pp.0.cpp.err.log 
+Command         ap_eval done; 0.15 sec.
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/sigmoid.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0 > C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/xilinx-legacy-rewriter.sigmoid.pp.0.cpp.out.log 2> C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/xilinx-legacy-rewriter.sigmoid.pp.0.cpp.err.log 
+Command       tidy_31 done; 0.254 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.4 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/sigmoid.pragma.1.cpp std=c++11 
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/sigmoid.pragma.1.cpp -- -std=c++11 -fhls -ferror-limit=0
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Processing labels
+Execute       clang -src C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/sigmoid.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2020.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/sigmoid.pragma.2.cpp"  --std=c++11  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2020.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/sigmoid.bc" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2020.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2020.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/sigmoid.pragma.2.cpp --std=c++11 -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2020.1/common/technology/autopilot -I C:/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/sigmoid.bc
+Command       clang done; 1.539 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/argmax.g.bc C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/dense.g.bc C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/nn.g.bc C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/sigmoid.g.bc -hls-opt -except-internalize nn -LC:/Xilinx/Vivado/2020.1/win64/lib -lhlsm -lhlsmc++ -o C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/a.g 
+Command       llvm-ld done; 4.486 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:04 ; elapsed = 00:00:34 . Memory (MB): peak = 911.676 ; gain = 818.090
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:04 ; elapsed = 00:00:34 . Memory (MB): peak = 911.676 ; gain = 818.090
+Execute       get_config_sdx -target 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/a.pp.bc -o C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/a.pp.0.bc -f 
+Execute         llvm-ld C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/a.pp.0.bc -disable-opt -LC:/Xilinx/Vivado/2020.1/win64/lib -lfloatconversion -o C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/a.g.0 
+Command         llvm-ld done; 0.844 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -stream-depth-lower -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top nn -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/a.g.0.bc -o C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command         transform done; 5.331 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:09 ; elapsed = 00:00:40 . Memory (MB): peak = 911.676 ; gain = 818.090
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/a.g.1.bc -o C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [XFORM 203-602] Inlining function 'clip_u<short, unsigned char, (short)255>' into 'sigmoid_strm_core<50, 2, short, unsigned char, (short)255>' (test_mnist1/src/sigmoid.cpp:48) automatically.
+INFO: [XFORM 203-602] Inlining function 'clip_u<short, unsigned char, (short)255>' into 'sigmoid_strm_core<100, 2, short, unsigned char, (short)255>' (test_mnist1/src/sigmoid.cpp:48) automatically.
+INFO: [XFORM 203-602] Inlining function 'sigmoid_strm_core<50, 2, short, unsigned char, (short)255>' into 'nn' (test_mnist1/src/nn.cpp:41) automatically.
+INFO: [XFORM 203-602] Inlining function 'sigmoid_strm_core<100, 2, short, unsigned char, (short)255>' into 'nn' (test_mnist1/src/nn.cpp:51) automatically.
+Command         transform done; 6.838 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/a.g.2.prechk.bc -o C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:16 ; elapsed = 00:00:47 . Memory (MB): peak = 911.676 ; gain = 818.090
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/a.g.1.bc to C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/a.o.1.bc -o C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+ERROR: [XFORM 203-801] Cannot specify interface depth  (test_mnist1/src/nn.cpp:24:1) on argument 'a' (test_mnist1/src/nn.cpp:13). This interface directive will be discarded.
+Command         transform done; error code: 1; 6.353 sec.
+ERROR: [HLS 200-70] Pre-synthesis failed.
+Command       opt_and_import_c done; error code: 2; 19.493 sec.
+Command     elaborate done; error code: 2; 51.12 sec.
+Command   csynth_design done; error code: 2; 51.142 sec.
+Command ap_source done; error code: 1; 52.857 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1 opened at Fri Oct 23 09:53:12 +0900 2020
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     config_clock -quiet -name default -uncertainty 1.25 -unit % 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/plb46.lib 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/fsl.lib 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/axi4.lib 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.lib 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.lib 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfft.lib 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfir.lib 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/fsl.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.125 sec.
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.186 sec.
+Command     ap_source done; 0.187 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/target_info.tcl 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute             source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xc7z020-clg400-1 
+Execute       ap_part_info -name xc7z020-clg400-1 -data single -quiet 
+Command       ap_part_info done; 0.828 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xc7z020-clg400-1 
+Execute         ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       get_default_platform 
+Command     set_part done; 1.044 sec.
+Execute     ap_part_info -data single -name xc7z020-clg400-1 
+Execute     ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     config_chip_info -quiet -speed slow 
+Execute     config_sdx -optimization_level=none 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -optimization_level' config_export -vivado_optimization_level=2 
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+Execute       config_export -vivado_optimization_level=2 
+Execute         get_config_export -vivado_impl_strategy 
+Execute         get_config_export -vivado_phys_opt 
+Execute     config_sdx -target=none 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' config_export -vivado_optimization_level=2 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+Execute       config_export -vivado_optimization_level=2 
+Execute         get_config_export -vivado_impl_strategy 
+Execute         get_config_export -vivado_phys_opt 
+Execute       get_config_compile -pipeline_loops 
+Execute       get_config_compile -name_max_length 
+Execute       get_config_schedule -enable_dsp_full_reg 
+Execute       get_config_rtl -register_reset_num 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_interface -m_axi_addr64 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' set_clock_uncertainty default 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+Execute       set_clock_uncertainty default 
+Execute     config_export -description nn mnist 
+Execute     config_export -display_name=nn_mnist_hls 
+Execute     config_export -format=ip_catalog 
+Execute     config_export -library=nn_mnist_hls 
+Execute     config_export -rtl=verilog 
+Execute     config_export -version=0.1 
+Execute     config_export -vivado_optimization_level=2 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Command   open_solution done; 1.365 sec.
+Execute   csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/nn_tb.cpp 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/nn_tb.cpp 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/dense_tb.cpp 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/dense_tb.cpp 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/sigmoid.h 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/sigmoid.h 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/sigmoid.cpp 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/sigmoid.cpp 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/nn.h 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/nn.h 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/nn.cpp 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/nn.cpp 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/dense.h 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/dense.h 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/dense.cpp 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/dense.cpp 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/b3.h 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/b3.h 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/b2.h 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/b2.h 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/b1.h 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/b1.h 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/argmax.h 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/argmax.h 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/argmax.cpp 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/argmax.cpp 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/W3.h 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/W3.h 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/W2.h 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/W2.h 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/W1.h 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/W1.h 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; error code: 2; 7.312 sec.
+Command ap_source done; error code: 1; 8.69 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1 opened at Fri Oct 23 09:55:57 +0900 2020
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     config_clock -quiet -name default -uncertainty 1.25 -unit % 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/plb46.lib 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/fsl.lib 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/axi4.lib 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.lib 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.lib 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfft.lib 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfir.lib 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/fsl.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.11 sec.
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.169 sec.
+Command     ap_source done; 0.17 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/target_info.tcl 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute             source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xc7z020-clg400-1 
+Execute       ap_part_info -name xc7z020-clg400-1 -data single -quiet 
+Command       ap_part_info done; 0.688 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xc7z020-clg400-1 
+Execute         ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.893 sec.
+Execute     ap_part_info -data single -name xc7z020-clg400-1 
+Execute     ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     config_chip_info -quiet -speed slow 
+Execute     config_sdx -optimization_level=none 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -optimization_level' config_export -vivado_optimization_level=2 
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+Execute       config_export -vivado_optimization_level=2 
+Execute         get_config_export -vivado_impl_strategy 
+Execute         get_config_export -vivado_phys_opt 
+Execute     config_sdx -target=none 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' config_export -vivado_optimization_level=2 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+Execute       config_export -vivado_optimization_level=2 
+Execute         get_config_export -vivado_impl_strategy 
+Execute         get_config_export -vivado_phys_opt 
+Execute       get_config_compile -pipeline_loops 
+Execute       get_config_compile -name_max_length 
+Execute       get_config_schedule -enable_dsp_full_reg 
+Execute       get_config_rtl -register_reset_num 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_interface -m_axi_addr64 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' set_clock_uncertainty default 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+Execute       set_clock_uncertainty default 
+Execute     config_export -description nn mnist 
+Execute     config_export -display_name=nn_mnist_hls 
+Execute     config_export -format=ip_catalog 
+Execute     config_export -library=nn_mnist_hls 
+Execute     config_export -rtl=verilog 
+Execute     config_export -version=0.1 
+Execute     config_export -vivado_optimization_level=2 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Command   open_solution done; 1.229 sec.
+Execute   csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/nn_tb.cpp 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/nn_tb.cpp 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/dense_tb.cpp 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/dense_tb.cpp 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/sigmoid.h 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/sigmoid.h 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/sigmoid.cpp 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/sigmoid.cpp 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/nn.h 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/nn.h 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/nn.cpp 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/nn.cpp 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/dense.h 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/dense.h 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/dense.cpp 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/dense.cpp 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/b3.h 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/b3.h 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/b2.h 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/b2.h 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/b1.h 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/b1.h 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/argmax.h 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/argmax.h 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/argmax.cpp 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/argmax.cpp 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/W3.h 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/W3.h 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/W2.h 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/W2.h 
+Execute     is_encrypted C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/W1.h 
+Execute     is_xip C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/src/W1.h 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; 0.458 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 4.131 sec.
+Command ap_source done; 5.374 sec.
+Execute cleanup_all 

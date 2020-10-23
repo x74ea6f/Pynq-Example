@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_631" tag="SCHEDULE" content="Option &apos;relax_ii_for_timing&apos; is enabled, will increase II to preserve clock frequency constraints."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;test_mnist1/src/argmax.cpp&apos; ..."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;test_mnist1/src/dense.cpp&apos; ..."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;test_mnist1/src/nn.cpp&apos; ..."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;test_mnist1/src/sigmoid.cpp&apos; ..."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Linking Time (s): cpu = 00:00:04 ; elapsed = 00:00:34 . Memory (MB): peak = 911.676 ; gain = 818.090"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Pragmas Time (s): cpu = 00:00:04 ; elapsed = 00:00:34 . Memory (MB): peak = 911.676 ; gain = 818.090"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1467" tag="" content="Starting code transformations ..."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Standard Transforms Time (s): cpu = 00:00:09 ; elapsed = 00:00:40 . Memory (MB): peak = 911.676 ; gain = 818.090"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1472" tag="" content="Checking synthesizability ..."/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;clip_u&lt;short, unsigned char, (short)255&gt;&apos; into &apos;sigmoid_strm_core&lt;50, 2, short, unsigned char, (short)255&gt;&apos; (test_mnist1/src/sigmoid.cpp:48) automatically."/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;clip_u&lt;short, unsigned char, (short)255&gt;&apos; into &apos;sigmoid_strm_core&lt;100, 2, short, unsigned char, (short)255&gt;&apos; (test_mnist1/src/sigmoid.cpp:48) automatically."/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;sigmoid_strm_core&lt;50, 2, short, unsigned char, (short)255&gt;&apos; into &apos;nn&apos; (test_mnist1/src/nn.cpp:41) automatically."/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;sigmoid_strm_core&lt;100, 2, short, unsigned char, (short)255&gt;&apos; into &apos;nn&apos; (test_mnist1/src/nn.cpp:51) automatically."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Synthesizability Time (s): cpu = 00:00:16 ; elapsed = 00:00:47 . Memory (MB): peak = 911.676 ; gain = 818.090"/>
+	<Message severity="ERROR" prefix="[XFORM 203-801]" key="XFORM_IF_TY_INCOMPATIBLE_280" tag="" content="Cannot specify interface depth  (test_mnist1/src/nn.cpp:24:1) on argument &apos;a&apos; (test_mnist1/src/nn.cpp:13). This interface directive will be discarded."/>
+	<Message severity="ERROR" prefix="[HLS 200-70]" key="HLS_70_1855" tag="" content="Pre-synthesis failed."/>
+</Messages>

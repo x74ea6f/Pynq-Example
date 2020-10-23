@@ -1,0 +1,29 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'iizuk' on host 'desktop-omb4gff' (Windows NT_amd64 version 6.2) on Fri Oct 23 09:55:57 +0900 2020
+INFO: [HLS 200-10] In directory 'C:/Vivado_Project/Pynq-Examples/mnist/hls'
+Sourcing Tcl script 'C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1/csim.tcl'
+INFO: [HLS 200-10] Opening project 'C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1'.
+INFO: [HLS 200-10] Opening solution 'C:/Vivado_Project/Pynq-Examples/mnist/hls/test_mnist1/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../src/argmax.cpp in debug mode
+   Generating csim.exe
+DBG[0]
+[0]: 7(7, OK)
+[1]: 2(2, OK)
+[2]: 1(1, OK)
+[3]: 0(0, OK)
+[4]: 4(4, OK)
+[5]: 1(1, OK)
+[6]: 4(4, OK)
+[7]: 9(9, OK)
+[8]: 6(6, OK)
+[9]: 9(9, OK)
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
