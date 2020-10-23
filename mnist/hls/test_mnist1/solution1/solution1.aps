@@ -7,7 +7,7 @@
     </downStreamTool>
     <config>
         <config_sdx optimization_level="none" target="none"/>
-        <config_export description="nn mnist" display_name="nn_mnist_hls" format="ip_catalog" library="nn_mnist_hls" rtl="verilog" version="0.1" vivado_optimization_level="2"/>
+        <config_export description="nn mnist" display_name="nn_mnist_hls" format="ip_catalog" library="nn_mnist_hls" rtl="verilog" version="0.2" vivado_optimization_level="2"/>
         <schedule model="nn"/>
     </config>
     <UIConfigurations>
@@ -43,14 +43,14 @@
         </UIAutoSimConf>
     </UIConfigurations>
     <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" rtl="verilog" rtlButton="true" rtlCombo="verilog">
-        <Format description="nn mnist" display_name="nn_mnist_hls" formatName="ip_catalog" library="nn_mnist_hls" version="0.1"/>
+        <Format description="nn mnist" display_name="nn_mnist_hls" formatName="ip_catalog" library="nn_mnist_hls" version="0.2" vendor="" ipname="" driver_input_dir="" taxonomy=""/>
         <Format formatName="sysgen"/>
         <Format formatName="sysgen_ise"/>
         <Format formatName="syn_dcp"/>
         <Format formatName="pcore" use_netlist="none"/>
     </ExportDesign>
-    <Simulation argv="">
-        <SimFlow askAgain="true" clangSanitizer="false" compile="false" compileChoice="gcc" disableDeadlockDetect="false" dumpTrace="all" name="cosim" optimizeCompile="false" reduce_diskspace="false" setup="false" toolName="auto" waveDebug="false" ldflags="" mflags="" compiledLibrary="">
+    <Simulation>
+        <SimFlow askAgain="true" clangSanitizer="false" compile="false" compileChoice="gcc" disableDeadlockDetect="false" dumpTrace="all" name="cosim" optimizeCompile="false" reduce_diskspace="false" setup="false" toolName="Auto" waveDebug="false">
             <Rtl active="false" name="systemc"/>
             <Rtl active="true" name="verilog"/>
             <Rtl active="false" name="vhdl"/>
