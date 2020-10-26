@@ -10,16 +10,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1025fs"></ZoomEndTime>
+      <ZoomEndTime time="1026fs"></ZoomEndTime>
       <Cursor1Time time="562fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="400"></NameColumnWidth>
-      <ValueColumnWidth column_width="116"></ValueColumnWidth>
+      <ValueColumnWidth column_width="112"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="9" />
-   <wave_markers>
-   </wave_markers>
    <wvobject fp_name="test_mnist_i/axi_dma_0_M_AXIS_MM2S_TREADY" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">test_mnist_i/axi_dma_0_M_AXIS_MM2S_TREADY</obj_property>
