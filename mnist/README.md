@@ -35,7 +35,6 @@ Python側の以下を実装している。
         ~~
 ```
 
-
 #### [./vivado](./vivado)  
 RTLの構成は以下の通り。  
 [verilog/](vivado/vivado.srcs/sources_1/imports/verilog/)  
@@ -58,6 +57,29 @@ python3 neuralnet_mnist_int.py --rom
 ls rom/*.mem
 ```
 
+#### HLS設計 [./hls](./hls)  
+- 基本構成は、RTL側と同じ。
+  - 一部、int8_t等で実装している差分がある。
+- DMAIntErr問題(TLAST問題)
+  - 後述
+- vivadoのBlock DesignでRTL版とHLS版は、両方インプリしている。
+  - TLASTの件で、一部制御方法が違うため注意。
+
+##### DMAIntErr問題(TLAST問題)
+- AXI Streamの自動生成でTLASTが実装されない。
+  - HLSでTLASTを生成する方法を探したが見つけられなかった。
+- DMAでは、設定した転送サイズが終了時にTLASTアサートされてないとDMAIntErrをアサートする。
+- DMAIntErr時は、次の転送が開始できない。要リセット
+→ 今回は、転送開始前にDMAリセットを入れる(本当は、S2MMだけでよい)。  
+```
+    ## Stop
+    OL.axi_dma_0.register_map.MM2S_DMACR = 0x4 ## with Reset
+    OL.axi_dma_0.register_map.S2MM_DMACR = 0x4 ## with Reset
+
+    ## Run
+    OL.axi_dma_0.register_map.MM2S_DMACR = 0x1
+    OL.axi_dma_0.register_map.S2MM_DMACR = 0x1
+```
 
 ### Python & Jupyter
 #### [./jupyter](./jupyter)  

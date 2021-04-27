@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-//Date        : Fri Oct 23 10:49:05 2020
+//Date        : Fri Oct 23 15:31:55 2020
 //Host        : DESKTOP-OMB4GFF running 64-bit major release  (build 9200)
 //Command     : generate_target test_mnist_wrapper.bd
 //Design      : test_mnist_wrapper

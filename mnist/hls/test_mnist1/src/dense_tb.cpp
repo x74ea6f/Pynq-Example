@@ -75,7 +75,7 @@ int main_dense(void){
 
 	data_t_out c[N];
 
-	dense_ref_core<M, N, 0, data_t_in, data_t_out, data_t_wb>(a, w, b, c);
+	dense_ref_core<M, N, 0, data_t_in, data_t_out, int32_t, data_t_wb>(a, w, b, c);
 
 
 	for(int i=0; i<N; i++){
@@ -93,7 +93,7 @@ int main_dense(void){
 	for(int i=0; i<M; i++){
 		a_strm.write(a[i]);
 	}
-	dense_strm_core<M, N, 0, data_t_in, data_t_out, data_t_wb>(a_strm, w, b, c_strm);
+	dense_strm_core<M, N, 0, data_t_in, data_t_out, int32_t, data_t_wb>(a_strm, w, b, c_strm);
 
 	data_t_in d;
 	bool ok = true;

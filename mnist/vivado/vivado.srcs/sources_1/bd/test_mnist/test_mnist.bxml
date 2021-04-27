@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="test_mnist" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1603417755"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1603417755"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1603417755"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1603417755"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1603434726"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1603434726"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1603434726"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1603434726"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\test_mnist_axi_dma_0\test_mnist_axi_dma_0.xci" Type="IP">
         <Instance HierarchyPath="axi_dma"/>
@@ -111,17 +111,6 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="synth\test_mnist.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-      </File>
-      <File Name="sim\test_mnist.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip\test_mnist_auto_us_0_1\test_mnist_auto_us_0.xci" Type="IP">
         <Instance HierarchyPath="axi_mem_intercon/s00_couplers/auto_us"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -176,6 +165,17 @@
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="synth\test_mnist.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+      </File>
+      <File Name="sim\test_mnist.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="test_mnist_ooc.xdc" Type="XDC">

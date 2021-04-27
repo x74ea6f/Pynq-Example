@@ -31,4 +31,4 @@ set_clock_uncertainty 12.5%
 csim_design
 csynth_design
 cosim_design -trace_level all
-export_design -rtl verilog -format ip_catalog -description "nn mnist" -library "nn_mnist_hls" -version "0.1" -display_name "nn_mnist_hls"
+export_design -rtl verilog -format ip_catalog -description "nn mnist" -library "nn_mnist_hls" -version "0.2" -display_name "nn_mnist_hls"

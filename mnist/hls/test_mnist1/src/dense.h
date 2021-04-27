@@ -16,17 +16,17 @@
 //#define NN 3
 //#define MM 2
 //#define SHIFT 0
+
 //template <int M = 28*28, int N = 50, int SFT = 8, typename T_IN = uint8_t, typename T_OUT = int16_t, typename T_WB = int8_t>
 //void dense_ref_core(T_IN a[M], T_WB w[M][N], T_WB b[N], T_OUT c[N]);
 
-template <int M, int N, int SFT, typename T_IN, typename T_OUT, typename T_WB>
+template <int M = 28*28, int N = 50, int SFT = 7,
+  typename T_IN = uint8_t, typename T_OUT = int16_t, typename T_MUL = int32_t, typename T_WB = int8_t>
 void dense_ref_core(T_IN a[M], T_WB w[M][N], T_WB b[N], T_OUT c[N]);
 
-template <int M = 28*28, int N = 50, int SFT = 7, typename T_IN = uint8_t, typename T_OUT = int16_t, typename T_WB = int8_t>
+template <int M = 28*28, int N = 50, int SFT = 7,
+  typename T_IN = uint8_t, typename T_OUT = int16_t, typename T_MUL = int32_t, typename T_WB = int8_t>
 void dense_strm_core(hls::stream<T_IN> &a, T_WB w[M][N], T_WB b[N], hls::stream<T_OUT> &c);
-
-
-
 
 //void dense_ref(data_t_in a[MM], data_t_in w[MM][NN], data_t_in b[NN],
 //		data_t_out c[NN]);
