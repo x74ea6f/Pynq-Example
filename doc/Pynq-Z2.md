@@ -130,6 +130,7 @@ network:
 
 $ sudo nmtui
 ## TUIが起動するのでよしなに。
+## ファイル /etc/NetworkManager/system-connections/
 $ ifconfig -a
 ## IP v4取れてればいい。
 
